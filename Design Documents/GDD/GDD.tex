@@ -1,0 +1,127 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+% Source: https://tex.stackexchange.com/questions/227639/redefine-emph-to-be-both-bold-and-italic 
+\let\emph\relax % there's no \RedeclareTextFontCommand
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
+\graphicspath{ {./img} }
+
+\title{ijo musi : Game Design Document}
+\subtitle{"A game about learning toki pona through the exploration of mysterious ruins."}
+\author{Jeremias Kuehne}
+
+\begin{document}
+	
+	\maketitle
+	\section{Formal Aspects}
+		\begin{itemize}
+			\item Type: video game (3D).
+			\item Tools used: Godot, Blender, possibly Beepbox.
+			\item End product: browser game if stable enough. Executable otherwise.
+			\item Platforms: PC.
+			\item Needed hardware: PC and usual devices (mouse, keyboard, sound system).
+			\item Available languages: toki pona (possibly with some very occasional english).
+			\item Genre: exploration, language learning, mystery, puzzle.
+			\item Number of players: 1.
+			\item Duration of play: loop of 15 to 20 minutes. Total duration varies based on number of loops. Playtests will be necessary to estimate the total duration.
+			\item Target age group: 16+.
+		\end{itemize}
+	\section{Design Pillars}
+		The game design must:
+	\begin{itemize}
+		\item Go about language acquisition through \emph{exposition} and not through translation.
+		\item Construct the language barrier as \emph{a series of small obstacles to be overcome} and not as a list of chores to be dealt with.
+		\item Encourage the player to \emph{investigate} the environment to find clues and context that allow both to understand the story and to acquire toki pona as a language.
+		\item Regulate access to content based on both \emph{passive} (comprehension) and \emph{active} (expression) uses of toki pona skills.
+		\item Illustrate that toki pona was developped as \emph{a language for thoughts}, a weapon against depression, and not as a tool of efficient communication. 
+		\item Invite the player to reflect on some questions essential to \emph{philosophy of language}\footnote{text}. 
+	\end{itemize}
+	\section{Design Values}
+		\subsection{Experience}
+		The player will:
+		\begin{itemize}
+			\item Move through the game space. \\
+			At all stages of play, they should feel:
+			\begin{itemize}
+				\item Inquisitive
+				\item Curious
+				\item Immersed
+			\end{itemize}
+			During early stages of play, they should feel: 
+			\begin{itemize}
+				\item Wary
+				\item Disoriented
+				\item Overwhelmed
+				\item Intimidated
+			\end{itemize}
+			During late stages of play, they should feel:
+			\begin{itemize}
+				\item Confident
+				\item In control
+			\end{itemize}
+			\item Investigate scenes to find contextual clues. \\
+			These clues might give insight about the plot (such as locket containing a portrait) or help formulate theories about toki pona and its vocabulary (such as a sign displaying a message in toki pona akin to "caution: dangerous cliff ahead" in front of said cliff). In some cases, a clue can do both at once (such as a name written in toki pona on the door of a character's room).\\
+			At all stages of play, they should feel:
+			\begin{itemize}
+				\item Inquisitive
+				\item Curious
+				\item Empathetic towards the characters
+				\item Rewarded (by their better understanding of the plot, a strenghtening of their toki pona skills, and by their ability to solve puzzles thanks to environmental clues).
+			\end{itemize}
+			During early stages of play, they should feel: 
+			\begin{itemize}
+				\item a
+			\end{itemize}
+			During late stages of play, they should feel:
+			\begin{itemize}
+				\item a
+			\end{itemize}
+			Occasionnaly, they should feel:
+			\begin{itemize}
+				\item Sad for a character
+				\item Angry towards a character
+				\item Amused by a character
+				\item Annoyed by a character
+			\end{itemize}
+			\item Read texts of various forms and types that are dispersed through the game space.
+			At all stages of play, they should feel:
+			\begin{itemize}
+				\item Eager to learn more about the story and characters
+				\item 
+			\end{itemize}
+			During early stages of play, they should feel: 
+			\begin{itemize}
+				\item A small amount of frustration. It should be enough to motivat them to overcome the challenge that poses the reading of texts in a foreign language, but not 
+			\end{itemize}
+			During late stages of play, they should feel:
+			\begin{itemize}
+				\item a
+			\end{itemize}
+			Occasionnaly, they should feel:
+			\begin{itemize}
+				\item a
+			\end{itemize}
+			
+		\end{itemize}
+		\subsection{Theme}
+		\subsection{Point of View}
+		\subsection{Challenge}
+		\subsection{Decision-making}
+		\subsection{Skill, strategy, chance, and uncertainty}
+		\subsection{Context}
+		\subsection{Emotions}
+	\section{Target Audience}
+		ijo musi is aimed at adults with previous experience of video games and an interest for toki pona. 
+	\section{Conditions of Play}
+		ijo musi is meant to be played alone in a setting that allows for immersion (without too much outside stimulation). It is meant to be played on a computer using a keyboard and a mouse, or a controller. 
+	\section{Features}
+		Put my concentric circles of versions here.
+	\section{Gameloops}
+	\section{Graphics and Concept Art}
+	\section{UX and UI}
+	\section{Characters, World, Synopsis}
+	
+	
+\end{document}

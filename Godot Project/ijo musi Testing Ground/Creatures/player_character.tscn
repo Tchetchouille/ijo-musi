@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7ytl3qn31b4f"]
+
+[ext_resource type="Script" path="res://Creatures/fps_controller.gd" id="1_w3ang"]
+[ext_resource type="PackedScene" uid="uid://bdu2s41y8xgn" path="res://Items/Lamp.tscn" id="2_vagks"]
+[ext_resource type="PackedScene" uid="uid://bkrwoiahmq506" path="res://Items/Lantern.tscn" id="3_im3nf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fr6k4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4bs7j"]
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_w3ang")
+SPEED = 3.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+shape = SubResource("CapsuleShape3D_fr6k4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+visible = false
+mesh = SubResource("CapsuleMesh_4bs7j")
+
+[node name="PlayerCameraController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.4, 2.08165e-12)
+
+[node name="PlayerCamera" type="Camera3D" parent="PlayerCameraController"]
+cull_mask = 1048573
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="PlayerCameraController/PlayerCamera"]
+visible = false
+update_mode = 1
+
+[node name="Lantern" parent="PlayerCameraController/PlayerCamera" instance=ExtResource("3_im3nf")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.402483, -0.289575, -0.334479)
+visible = false
+
+[node name="Lamp" parent="PlayerCameraController/PlayerCamera/Lantern" instance=ExtResource("2_vagks")]
+visible = false

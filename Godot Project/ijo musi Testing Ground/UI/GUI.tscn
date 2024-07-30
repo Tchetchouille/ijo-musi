@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://berdsq021gin1"]
+
+[ext_resource type="Shader" uid="uid://c4mjpnmr8njl0" path="res://UI/ASCII.tres" id="1_lkmw8"]
+[ext_resource type="Shader" uid="uid://bmowejp10voff" path="res://UI/PIXEL.tres" id="1_q3atu"]
+[ext_resource type="Texture2D" uid="uid://dfoi2ahxlh22s" path="res://Assets/ascii_pona/47321.png" id="3_csfvt"]
+[ext_resource type="Texture2D" uid="uid://d1noyocgn5ltq" path="res://Assets/ascii_pona/35372.png" id="4_hx8v2"]
+[ext_resource type="Texture2D" uid="uid://bjnsnsptkq5sd" path="res://Assets/ascii_pona/27192.png" id="4_m4khm"]
+[ext_resource type="Texture2D" uid="uid://6ipigbp42bwc" path="res://Assets/ascii_pona/20867.png" id="9_8f7jk"]
+[ext_resource type="Texture2D" uid="uid://dftye23t5qhgt" path="res://Assets/ascii_pona/15174.png" id="9_gk422"]
+[ext_resource type="Texture2D" uid="uid://ykdmi2fwqaow" path="res://Assets/ascii_pona/10826.png" id="11_31oi4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ydp2n"]
+shader = ExtResource("1_q3atu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_54ujf"]
+shader = ExtResource("1_lkmw8")
+shader_parameter/Texture2DParameter5 = ExtResource("3_csfvt")
+shader_parameter/Texture2DParameter = ExtResource("4_hx8v2")
+shader_parameter/Texture2DParameter2 = ExtResource("4_hx8v2")
+shader_parameter/Texture2DParameter3 = ExtResource("4_m4khm")
+shader_parameter/Texture2DParameter4 = ExtResource("4_m4khm")
+shader_parameter/Texture2DParameter6 = ExtResource("9_8f7jk")
+shader_parameter/Texture2DParameter7 = ExtResource("9_gk422")
+shader_parameter/Texture2DParameter8 = ExtResource("11_31oi4")
+
+[node name="Gui" type="Control"]
+texture_repeat = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Pixel Filter" type="ColorRect" parent="."]
+texture_repeat = 1
+material = SubResource("ShaderMaterial_ydp2n")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Ascii Filter" type="ColorRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_54ujf")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.470588)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkrwoiahmq506"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mim5i"]
+
+[node name="Lantern" type="StaticBody3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+visible = false
+light_color = Color(1, 0.678431, 0.431373, 1)
+light_energy = 0.5
+shadow_enabled = true
+omni_attenuation = 0.203063
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_mim5i")
+skeleton = NodePath("../..")

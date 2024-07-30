@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://hoaxxldrlpc7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iflt3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xud4k"]
+
+[node name="Wall" type="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 5, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_iflt3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xud4k")
