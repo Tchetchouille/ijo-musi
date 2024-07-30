@@ -1,0 +1,9 @@
+{
+    "title" : "TEST_DIALOG_ONE",
+    "themes" : ["wisdom", "toki pona"],
+    "characters" : ["dude", "it"],
+    "room" : "library",
+    "vocabulary" : ["wile", "soweli", "wawa"],
+    "complexity" : 1,
+    "text" : "This happens in the LIBRARY. The DUDE and \"IT\" are talking about WISDOM and TOKI PONA."
+}

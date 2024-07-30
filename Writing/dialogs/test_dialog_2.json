@@ -1,0 +1,9 @@
+{
+    "title" : "TEST_DIALOG_TWO",
+    "themes" : ["despair", "hope"],
+    "characters" : ["dude", "dayani"],
+    "room" : "kitchen",
+    "vocabulary" : ["toki", "ala", "sona"],
+    "complexity" : 2,
+    "text" : "This happens in the KITCHEN. The DUDE and \"DAYANI\" are talking about DESPAIR and HOPE."
+}
