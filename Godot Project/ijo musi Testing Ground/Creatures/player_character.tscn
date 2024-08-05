@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7ytl3qn31b4f"]
+[gd_scene load_steps=7 format=3 uid="uid://c7ytl3qn31b4f"]
 
 [ext_resource type="Script" path="res://Creatures/fps_controller.gd" id="1_w3ang"]
 [ext_resource type="PackedScene" uid="uid://bdu2s41y8xgn" path="res://Items/Lamp.tscn" id="2_vagks"]
 [ext_resource type="PackedScene" uid="uid://bkrwoiahmq506" path="res://Items/Lantern.tscn" id="3_im3nf"]
+[ext_resource type="PackedScene" uid="uid://d0eotm0ea52pe" path="res://Items/Tool.tscn" id="4_qncbo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fr6k4"]
 
@@ -28,12 +29,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.4, 2.08165e-12
 cull_mask = 1048573
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="PlayerCameraController/PlayerCamera"]
-visible = false
 update_mode = 1
 
 [node name="Lantern" parent="PlayerCameraController/PlayerCamera" instance=ExtResource("3_im3nf")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.402483, -0.289575, -0.334479)
-visible = false
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="Lamp" parent="PlayerCameraController/PlayerCamera/Lantern" instance=ExtResource("2_vagks")]
 visible = false
+
+[node name="Tool" parent="PlayerCameraController/PlayerCamera" instance=ExtResource("4_qncbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -0.5)
