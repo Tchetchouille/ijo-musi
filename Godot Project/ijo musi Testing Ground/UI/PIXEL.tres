@@ -14,7 +14,7 @@ operator = 2
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_flp6w"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_514u3"]
-constant = 0.1
+constant = 0.05
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_8scub"]
 source = 1
@@ -56,7 +56,7 @@ void fragment() {
 
 
 // FloatConstant:14
-	float n_out14p0 = 0.100000;
+	float n_out14p0 = 0.050000;
 
 
 // VectorCompose:13
@@ -90,6 +90,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-1459.58, 112.352)
 mode = 1
 flags/light_only = false
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_8scub")

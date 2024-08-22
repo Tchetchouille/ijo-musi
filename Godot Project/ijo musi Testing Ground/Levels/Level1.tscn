@@ -48,6 +48,7 @@ transform = Transform3D(-2.18557e-08, 1.74393e-15, 10, 1.74393e-16, 5, -3.48787e
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.47174, -8.89926)
+visible = false
 layers = 2
 mesh = SubResource("CapsuleMesh_n2dup")
 skeleton = NodePath("")
