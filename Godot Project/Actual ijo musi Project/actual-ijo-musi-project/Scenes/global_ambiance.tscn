@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhlva7lu8v2r6"]
+
+[ext_resource type="Environment" uid="uid://dppiil1hsxgsa" path="res://Resources/Environments/global_environment.tres" id="1_x4o3b"]
+
+[node name="GlobalAmbiance" type="Node3D"]
+
+[node name="GlobalEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_x4o3b")
+
+[node name="GlobalAudio" type="Node3D" parent="."]
+
+[node name="GlobalLights" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GlobalLights"]
+transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 0, 0)

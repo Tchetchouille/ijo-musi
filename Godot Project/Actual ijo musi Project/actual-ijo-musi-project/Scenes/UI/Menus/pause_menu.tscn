@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5dam7vf7rbt4"]
+
+[ext_resource type="PackedScene" uid="uid://dhmx6k4hs1fxi" path="res://Scenes/UI/Buttons/credits_button.tscn" id="1_1t7ab"]
+[ext_resource type="PackedScene" uid="uid://p3kr4ok6akfk" path="res://Scenes/UI/Buttons/settings_button.tscn" id="2_1q12e"]
+[ext_resource type="PackedScene" uid="uid://cro2ctbtafg5f" path="res://Scenes/UI/Buttons/save_menu_button.tscn" id="3_swl1r"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsButton" parent="." instance=ExtResource("1_1t7ab")]
+layout_mode = 1
+
+[node name="SettingsButton" parent="." instance=ExtResource("2_1q12e")]
+layout_mode = 1
+
+[node name="SaveMenuButton" parent="." instance=ExtResource("3_swl1r")]
+layout_mode = 1

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0f77tjckoc2j"]
+
+[ext_resource type="PackedScene" uid="uid://dt3rl641xhb4h" path="res://Scenes/Levels/proto_level.tscn" id="1_3ntff"]
+
+[node name="LevelManager" type="Node3D"]
+
+[node name="LevelList" type="Node3D" parent="."]
+
+[node name="ProtoLevel" parent="LevelList" instance=ExtResource("1_3ntff")]

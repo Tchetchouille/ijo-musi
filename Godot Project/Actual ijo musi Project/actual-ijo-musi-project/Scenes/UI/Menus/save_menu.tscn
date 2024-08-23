@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0bwj1xdose5b"]
+
+[ext_resource type="PackedScene" uid="uid://cv8k7n6bg7a1g" path="res://Scenes/UI/Buttons/back_button.tscn" id="1_0ogyt"]
+
+[node name="SaveMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" parent="." instance=ExtResource("1_0ogyt")]
+layout_mode = 1

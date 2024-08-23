@@ -1,0 +1,103 @@
+[gd_scene load_steps=15 format=3 uid="uid://dt3rl641xhb4h"]
+
+[ext_resource type="Material" uid="uid://dfrp2bmqtphlu" path="res://Resources/Materials/basic_floor_material.tres" id="1_fhlhk"]
+[ext_resource type="Material" uid="uid://cidavfhvfnifm" path="res://Resources/Materials/basic_wall_material.tres" id="2_05hm8"]
+[ext_resource type="Material" uid="uid://7osme1sal87l" path="res://Resources/Materials/basic_ceiling_material.tres" id="3_aknbd"]
+[ext_resource type="PackedScene" uid="uid://bg40va80q0ma4" path="res://Scenes/Objects/Furniture/basic_door.tscn" id="4_nee0r"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6gt3a"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7fpy2"]
+material = ExtResource("1_fhlhk")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_psyed"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_3ub3e"]
+material = ExtResource("2_05hm8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cre7c"]
+size = Vector3(8, 4, 0.1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_n12u1"]
+material = ExtResource("2_05hm8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cx5th"]
+size = Vector3(8, 4, 0.1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_3igxq"]
+material = ExtResource("2_05hm8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hmpny"]
+size = Vector3(8, 0.1, 8)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hhp7a"]
+material = ExtResource("3_aknbd")
+
+[node name="ProtoLevel" type="Node3D"]
+
+[node name="GeneralLayout" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="GeneralLayout"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GeneralLayout/Floor"]
+shape = SubResource("WorldBoundaryShape3D_6gt3a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GeneralLayout/Floor"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_7fpy2")
+
+[node name="SouthWall" type="StaticBody3D" parent="GeneralLayout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GeneralLayout/SouthWall"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_psyed")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GeneralLayout/SouthWall"]
+transform = Transform3D(8, 0, 0, 0, 4, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("QuadMesh_3ub3e")
+
+[node name="WestWall" type="StaticBody3D" parent="GeneralLayout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GeneralLayout/WestWall"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2, 0)
+shape = SubResource("BoxShape3D_cre7c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GeneralLayout/WestWall"]
+transform = Transform3D(-3.49691e-07, 0, 1, 0, 4, 0, -8, 0, -4.37114e-08, 0, 2, 0)
+mesh = SubResource("QuadMesh_n12u1")
+
+[node name="EastWall" type="StaticBody3D" parent="GeneralLayout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GeneralLayout/EastWall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 0)
+shape = SubResource("BoxShape3D_cx5th")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GeneralLayout/EastWall"]
+transform = Transform3D(-3.49691e-07, 0, -1, 0, 4, 0, 8, 0, -4.37114e-08, 0, 2, 0)
+mesh = SubResource("QuadMesh_3igxq")
+
+[node name="Ceiling" type="StaticBody3D" parent="GeneralLayout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GeneralLayout/Ceiling"]
+shape = SubResource("BoxShape3D_hmpny")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GeneralLayout/Ceiling"]
+transform = Transform3D(8, 0, 0, 0, -3.49691e-07, -1, 0, 8, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_hhp7a")
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="BasicDoor" parent="Objects" instance=ExtResource("4_nee0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="LocalAmbiance" type="Node3D" parent="."]
+
+[node name="LocalAudio" type="Node3D" parent="LocalAmbiance"]
+
+[node name="LocalEnv" type="WorldEnvironment" parent="LocalAmbiance"]
+
+[node name="LocalLights" type="Node3D" parent="LocalAmbiance"]

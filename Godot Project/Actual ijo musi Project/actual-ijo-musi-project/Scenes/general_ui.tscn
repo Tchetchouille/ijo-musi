@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://5i77xt5nyihy"]
+
+[ext_resource type="PackedScene" uid="uid://dud833rivlcuc" path="res://Scenes/UI/Menus/main_menu.tscn" id="1_bphxx"]
+[ext_resource type="PackedScene" uid="uid://dj2syfx4qr1nk" path="res://Scenes/UI/Menus/credits_menu.tscn" id="2_pspsi"]
+[ext_resource type="PackedScene" uid="uid://c5dam7vf7rbt4" path="res://Scenes/UI/Menus/pause_menu.tscn" id="2_rmkxe"]
+[ext_resource type="PackedScene" uid="uid://c0bwj1xdose5b" path="res://Scenes/UI/Menus/save_menu.tscn" id="4_fhtr7"]
+[ext_resource type="PackedScene" uid="uid://ndgma1ga3s10" path="res://Scenes/UI/Menus/settings_menu.tscn" id="5_jbv0j"]
+
+[node name="GeneralUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenu" parent="." instance=ExtResource("1_bphxx")]
+layout_mode = 1
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_rmkxe")]
+layout_mode = 1
+
+[node name="CreditsMenu" parent="." instance=ExtResource("2_pspsi")]
+layout_mode = 1
+
+[node name="SaveMenu" parent="." instance=ExtResource("4_fhtr7")]
+layout_mode = 1
+
+[node name="SettingsMenu" parent="." instance=ExtResource("5_jbv0j")]
+layout_mode = 1

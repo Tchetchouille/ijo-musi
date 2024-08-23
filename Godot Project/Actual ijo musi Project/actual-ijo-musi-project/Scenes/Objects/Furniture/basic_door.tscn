@@ -1,0 +1,135 @@
+[gd_scene load_steps=12 format=3 uid="uid://bg40va80q0ma4"]
+
+[ext_resource type="Material" uid="uid://c3rj5ftppd5dq" path="res://Resources/Materials/basic_wood_material.tres" id="1_qk30m"]
+[ext_resource type="Material" uid="uid://d4d5hn5yujtj6" path="res://Resources/Materials/basic_metal_material.tres" id="2_fxj8f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vewko"]
+size = Vector3(3, 3.8, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_318mg"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s3r4t"]
+material = SubResource("StandardMaterial3D_318mg")
+
+[sub_resource type="BoxMesh" id="BoxMesh_p7o16"]
+material = ExtResource("1_qk30m")
+
+[sub_resource type="BoxMesh" id="BoxMesh_n8g6b"]
+material = ExtResource("1_qk30m")
+
+[sub_resource type="BoxMesh" id="BoxMesh_bplnr"]
+material = ExtResource("2_fxj8f")
+
+[sub_resource type="BoxMesh" id="BoxMesh_u86ta"]
+material = ExtResource("1_qk30m")
+
+[sub_resource type="BoxMesh" id="BoxMesh_j2xb6"]
+material = ExtResource("1_qk30m")
+
+[sub_resource type="BoxMesh" id="BoxMesh_enmk6"]
+material = ExtResource("2_fxj8f")
+
+[node name="BasicDoor" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+shape = SubResource("BoxShape3D_vewko")
+
+[node name="Meshes" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="Basis" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(2.4, 0, 0, 0, 3, 0, 0, 0, 0.01, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_s3r4t")
+skeleton = NodePath("../..")
+
+[node name="LeftPannel" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1.1, 0, 0, 0, 2.8, 0, 0, 0, 0.15, -0.56, 1.5, 0)
+mesh = SubResource("BoxMesh_p7o16")
+skeleton = NodePath("../..")
+
+[node name="RightPannel" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(1.1, 0, 0, 0, 2.8, 0, 0, 0, 0.15, 0.56, 1.5, 0)
+mesh = SubResource("BoxMesh_n8g6b")
+skeleton = NodePath("../..")
+
+[node name="HandleBase" type="MeshInstance3D" parent="Meshes"]
+transform = Transform3D(0.15, 0, 0, 0, 0.3, 0, 0, 0, 0.2, 0.4, 1.2, 0)
+visible = false
+mesh = SubResource("BoxMesh_bplnr")
+skeleton = NodePath("../..")
+
+[node name="Frame" type="Node3D" parent="Meshes"]
+
+[node name="LeftFrame" type="MeshInstance3D" parent="Meshes/Frame"]
+transform = Transform3D(0.4, 0, 0, 0, 3.4, 0, 0, 0, 0.4, -1.33, 1.6, 0)
+mesh = SubResource("BoxMesh_u86ta")
+
+[node name="RightFrame" type="MeshInstance3D" parent="Meshes/Frame"]
+transform = Transform3D(0.4, 0, 0, 0, 3.4, 0, 0, 0, 0.4, 1.33, 1.6, 0)
+mesh = SubResource("BoxMesh_u86ta")
+
+[node name="UpFrame" type="MeshInstance3D" parent="Meshes/Frame"]
+transform = Transform3D(3.2, 0, 0, 0, 0.4, 0, 0, 0, 0.55, 0, 3.1, 0)
+mesh = SubResource("BoxMesh_u86ta")
+
+[node name="UpFrame2" type="MeshInstance3D" parent="Meshes/Frame"]
+transform = Transform3D(3.6, 0, 0, 0, 0.4, 0, 0, 0, 1, 0, -0.2, 0)
+mesh = SubResource("BoxMesh_u86ta")
+
+[node name="DownFrame" type="MeshInstance3D" parent="Meshes/Frame"]
+transform = Transform3D(3.2, 0, 0, 0, 0.2, 0, 0, 0, 0.4, 0, -0.02, 0)
+mesh = SubResource("BoxMesh_u86ta")
+
+[node name="LeftCube" type="MeshInstance3D" parent="Meshes/Frame"]
+transform = Transform3D(0.499975, -0.00459483, 0.00279714, 0.00458964, 0.499977, 0.00182449, -0.00200984, -0.0012848, 0.699992, -1.38, 0, 0)
+mesh = SubResource("BoxMesh_j2xb6")
+skeleton = NodePath("../LeftFrame")
+
+[node name="LeftCube2" type="MeshInstance3D" parent="Meshes/Frame"]
+transform = Transform3D(0.499975, -0.00459483, 0.00279714, 0.00458964, 0.499977, 0.00182449, -0.00200984, -0.0012848, 0.699992, 1.38, 0, 0)
+mesh = SubResource("BoxMesh_j2xb6")
+skeleton = NodePath("../LeftFrame")
+
+[node name="Hinges" type="Node3D" parent="Meshes"]
+
+[node name="DownRight" type="MeshInstance3D" parent="Meshes/Hinges"]
+transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, 1.2, 1, 0.15)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../..")
+
+[node name="Fixation" type="MeshInstance3D" parent="Meshes/Hinges/DownRight"]
+transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, -1.6, 0, 0)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../../..")
+
+[node name="DownLeft" type="MeshInstance3D" parent="Meshes/Hinges"]
+transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, -1.2, 1, 0.15)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../..")
+
+[node name="Fixation2" type="MeshInstance3D" parent="Meshes/Hinges/DownLeft"]
+transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, 1.6, 0, 0)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../../..")
+
+[node name="UpRight" type="MeshInstance3D" parent="Meshes/Hinges"]
+transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, 1.2, 2, 0.15)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../..")
+
+[node name="Fixation" type="MeshInstance3D" parent="Meshes/Hinges/UpRight"]
+transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, -1.6, 0, 0)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../../..")
+
+[node name="UpLeft" type="MeshInstance3D" parent="Meshes/Hinges"]
+transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, -1.2, 2, 0.15)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../..")
+
+[node name="Fixation" type="MeshInstance3D" parent="Meshes/Hinges/UpLeft"]
+transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, 1.6, 0, 0)
+mesh = SubResource("BoxMesh_enmk6")
+skeleton = NodePath("../../..")
