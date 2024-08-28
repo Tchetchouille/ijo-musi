@@ -9,7 +9,7 @@
 \graphicspath{ {./img} }
 
 \title{ijo musi : Game Design Document}
-\subtitle{"A game about learning toki pona through the exploration of mysterious ruins."}
+\subtitle{A game about learning toki pona through the exploration of mysterious ruins.}
 \author{Jeremias Kuehne}
 
 \begin{document}
@@ -19,24 +19,24 @@
 		\begin{itemize}
 			\item Type: video game (3D).
 			\item Tools used: Godot, Blender, possibly Beepbox.
-			\item End product: browser game if stable enough. Executable otherwise.
+			\item End product: browser game if stable enough (unlikely). Executable otherwise.
 			\item Platforms: PC.
-			\item Needed hardware: PC and usual devices (mouse, keyboard, sound system).
-			\item Available languages: toki pona (possibly with some very occasional english).
-			\item Genre: exploration, language learning, mystery, puzzle.
+			\item Needed hardware: PC and usual devices (monitor, mouse, keyboard, sound system).
+			\item Available languages: toki pona only (with possibly some very occasional english).
+			\item Genre: exploration, narrative, language learning, mystery, puzzle.
 			\item Number of players: 1.
-			\item Duration of play: loop of 15 to 20 minutes. Total duration varies based on number of loops. Playtests will be necessary to estimate the total duration.
+			\item Duration of play: a session could be as short as a few minutes or as long as it takes someone to complete the whole game in one sitting. The total duration of the game will depend on how many levels can be created within the time constraints of this project. Furthermore, playtests will be necessary to estimate it. There is little to no replayability.
 			\item Target age group: 16+.
 		\end{itemize}
 	\section{Design Pillars}
 		The game design must:
 	\begin{itemize}
-		\item Go about language acquisition through \emph{exposition} and not through translation.
+		\item Go about language acquisition through \emph{exposition} and not through translation\footnote{To clarify: the game should never, ever, link a toki pona word to an english word in order to communicate its meaning. Of course, the player themself will often make that link in their head once they get the meaning of the word, but the \textit{act} of getting to that meaning should never pass through translation. For example, a fruit could be sitting near a label that reads "kili". This would lead to the player understanding that "kili" is a word that can refer to fruits. In their head, they will likely link the tooki pona word "kili" with the english word "fruit". But the game itself should not put the player in front of a text that explicitely makes that link \textit{in the game}.}.
 		\item Construct the language barrier as \emph{a series of small obstacles to be overcome} and not as a list of chores to be dealt with.
-		\item Encourage the player to \emph{investigate} the environment to find clues and context that allow both to understand the story and to acquire toki pona as a language. METTRE NOTE DE BAS DE PAGE POUR CURIOSITY LOOP. SEE https://youtu.be/QaGu9tGCNbI?t=361
+		\item Encourage the player to \emph{investigate} the environment to find clues and context that allow both to understand the story and to acquire toki pona as a language.
 		\item Regulate access to content based on both \emph{passive} (comprehension) and \emph{active} (expression) uses of toki pona skills.
-		\item Illustrate that toki pona was developped as \emph{a language for thoughts}, a weapon against depression, and not as a tool of efficient communication. 
-		\item Invite the player to reflect on some questions essential to \emph{philosophy of language}\footnote{text}. 
+		\item Illustrate that toki pona was developped as \emph{a language for thoughts}, and not as a tool of efficient communication. 
+		\item Invite the player to reflect on some questions essential to \emph{philosophy of language}\footnote{The idea here is not to educate on specific philosophical concepts or models, but rather to put the player in an environment prone to stimulate philosophical reflection.}. 
 	\end{itemize}
 	\section{Design Values}
 		\subsection{Experience}
@@ -61,39 +61,38 @@
 				\item Confident
 				\item In control
 			\end{itemize}
-			\item Investigate scenes to find contextual clues. \\
-			These clues might give insight about the plot (such as locket containing a portrait) or help formulate theories about toki pona and its vocabulary (such as a sign displaying a message in toki pona akin to "caution: dangerous cliff ahead" in front of said cliff). In some cases, a clue can do both at once (such as a name written in toki pona on the door of a character's room).\\
+			\item Investigate scenes to find contextual clues\footnote{These clues might give insight about the plot (such as locket containing a portrait) or help formulate theories about toki pona and its vocabulary (such as a sign displaying a message in toki pona akin to "caution: dangerous cliff ahead" in front of said cliff). As much as possible, clues should do both at once (such as a name written in toki pona on the door of a character's room).}.\\
 			At all stages of play, they should feel:
 			\begin{itemize}
 				\item Inquisitive
 				\item Curious
-				\item Empathetic towards the characters
-				\item Rewarded (by their better understanding of the plot, a strenghtening of their toki pona skills, and by their ability to solve puzzles thanks to environmental clues).
+				\item Smart (they should not feel like they stumble on knowledge or solution to puzzles, but like they conquered it)
+				\item Empathetic (the player does not have to identify with the characters or be "on their side", but they should care about each character's actions and their consequences)
+				\item Rewarded (by their better understanding of the plot, a strenghtening of their toki pona skills, and by their ability to solve puzzles thanks to environmental clues)
 			\end{itemize}
 			During early stages of play, they should feel: 
 			\begin{itemize}
-				\item a
+				\item Lost
 			\end{itemize}
 			During late stages of play, they should feel:
 			\begin{itemize}
-				\item a
+				\item In harmony with the environment (for example, the location of objects should make sense to them)
 			\end{itemize}
 			Occasionnaly, they should feel:
 			\begin{itemize}
-				\item Sad for a character
-				\item Angry towards a character
-				\item Amused by a character
-				\item Annoyed by a character
+				\item Various emotions towards characters (mostly: sad, angry, amused, annoyed)
+				\item Intrusive (like they are snooping where they don't belong)
+				\item Surprised
 			\end{itemize}
-			\item Read texts of various forms and types that are dispersed through the game space.
+			\item Read texts of various forms and types that are dispersed throughout the game space.\\
 			At all stages of play, they should feel:
 			\begin{itemize}
 				\item Eager to learn more about the story and characters
-				\item 
+				\item Active (extracting information rather than receiving it)
 			\end{itemize}
 			During early stages of play, they should feel: 
 			\begin{itemize}
-				\item A small amount of frustration. It should be enough to motivat them to overcome the challenge that poses the reading of texts in a foreign language, but not 
+				\item Frustrated (it should be enough to motivate them to overcome the challenge posed by the reading of texts in a foreign language, but not enough to make the act of learning appear as tedious)
 			\end{itemize}
 			During late stages of play, they should feel:
 			\begin{itemize}
@@ -101,11 +100,20 @@
 			\end{itemize}
 			Occasionnaly, they should feel:
 			\begin{itemize}
-				\item a
+				\item Various emotions towards characters (mostly: sad, angry, amused, annoyed)
 			\end{itemize}
 			
 		\end{itemize}
-		\subsection{Theme}
+		\subsection{Themes}
+		EXPAND THEMES BASED ON JAVET'S PRESENTATION.
+		\begin{itemize}
+			\item Language as a way to shape one's mind
+			\item The struggle for peace through simplicity
+			\item Responsibilities and how they spawn both rigidity and looseness
+			\item Hubris
+			\item Artificial consciousness
+			\item Independance and parental control
+		\end{itemize}
 		\subsection{Point of View}
 		\subsection{Challenge}
 		\subsection{Decision-making}
