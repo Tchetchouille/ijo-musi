@@ -28,15 +28,15 @@ shape = SubResource("BoxShape3D_tpvo6")
 [node name="Whiteboxing" type="Node3D" parent="."]
 
 [node name="RightWall" type="MeshInstance3D" parent="Whiteboxing"]
-transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 1, 2.5, 2, 0)
+transform = Transform3D(3, 0, 0, 0, 8, 0, 0, 0, 1, 2.5, 4, 0)
 mesh = SubResource("QuadMesh_imuy1")
 
 [node name="LeftWall" type="MeshInstance3D" parent="Whiteboxing"]
-transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 1, -2.5, 2, 0)
+transform = Transform3D(3, 0, 0, 0, 8, 0, 0, 0, 1, -2.5, 4, 0)
 mesh = SubResource("QuadMesh_imuy1")
 
 [node name="UpWall" type="MeshInstance3D" parent="Whiteboxing"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 1, 0, 2.5, 0)
+transform = Transform3D(3, 0, 0, 0, 7, 0, 0, 0, 1, 0, 4.5, 0)
 mesh = SubResource("QuadMesh_imuy1")
 
 [node name="Main" type="Node3D" parent="."]
