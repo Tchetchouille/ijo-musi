@@ -1,0 +1,415 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+% Source: https://tex.stackexchange.com/questions/227639/redefine-emph-to-be-both-bold-and-italic 
+\let\emph\relax % there's no \RedeclareTextFontCommand
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
+\graphicspath{ {./img} }
+
+\title{ijo musi\footnote{"ijo musi" can be roughly translated as "the entertaining object" or "the game thing". Please note that toki pona uses no capital letters. In this document, sentences beginning with a toki pona word - such as will often be the case when referring to the game's title - will then start with a lowercase letter.} : In-Depth Game Design Document}
+\subtitle{A game about learning toki pona through the exploration of mysterious ruins.}
+\author{Jeremias Kuehne}
+
+\begin{document}
+	
+	\maketitle
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
+	
+	\section{Formal Aspects}
+		\begin{itemize}
+			\item Type: video game (3D).
+			\item Tools used: Godot, Blender, possibly Twine for prototyping, possibly Beepbox, other software if the need arises.
+			\item End product: browser game if stable enough (unlikely). Executable otherwise.
+			\item Platforms: PC.
+			\item Needed hardware: PC and usual devices (monitor, mouse, keyboard, sound system).
+			\item Available languages: toki pona only (possibly with some \textit{very occasional} english).
+			\item Genres: exploration, "knowledgevania", language learning, mystery, narrative, puzzle, walking simulator.
+			\item Number of players: 1.
+			\item Duration of play: a session could be as short as a few minutes or as long as it takes to complete the whole game in one sitting. The total duration of the game will depend on how many levels can be created within the time constraints of this project. Furthermore, playtests will be necessary to estimate it. There is little to no replayability.
+			\item Target age group: 16+.
+		\end{itemize}
+	\section{Design Pillars}
+		The game design must:
+		\begin{itemize}
+			\item Go about language acquisition through \emph{exposition} and not through translation\footnote{To clarify: the game should \textit{never} link a toki pona word to an english word in order to communicate its meaning. Of course, the player themself will often make that link in their head once they get the meaning of the word, but the \textit{act} of getting to that meaning should never pass through translation. For example, a fruit could be sitting near a label that reads "kili". This would lead to the player understanding that "kili" is a word that can refer to fruits. In their head, they will likely link the tooki pona word "kili" with the english word "fruit". But the game itself should not put the player in front of a text that explicitely makes that link \textit{in the game}.}.
+			\item Construct the language barrier as \emph{a series of small obstacles to be overcome} and not as a list of chores to be dealt with\footnote{There are two key elements on which this distinction rests. Firstly, the difficulty: a chore is something that is merely \textit{annoying} to do, while an obstacles is something that gets one \textit{out of its comfort zone}. Secondly, the reward: chores lack rewards, whereas obstacles are what stand between the player and a desired outcome. Furthermore, chores tend to be either repetitive tasks or tasks that need to be repeated often, whereas obstacles most often need to be overcome only once or a limited number of times.}.
+			\item Encourage the player to \emph{investigate} the environment to find clues and context that allow both to understand the story and to acquire toki pona as a language.
+			\item Regulate access to content based on both \emph{passive} (comprehension) and \emph{active} (expression) uses of toki pona skills.
+			\item Illustrate that toki pona was developped as \emph{a language for thoughts}, and not as a tool of efficient communication. 
+		\end{itemize}
+	\section{Design Values (WIP)}
+		\subsection{Target Audience and Access}
+			ijo musi is aimed at adults with previous experience of video games and an interest in toki pona. There is no need to be \textit{both} an avid player and a conlang enthusiast to appreciate the game, but at least one of these two characteristics will likely be needed to enjoy it\footnote{A rather unfortunate but essential characteristic of ijo musi is that it is not fully playable by toki pona speakers, as they already understand the language. Hopefully, the narrative will be interesting enough to provide an entertaining experience to them, but they will inevitably miss most of the gameplay that consists in the translation and acquisition of a new language.}.\\
+			As such, the main way for people to hear about the game will be posts made on various forums dedicted either to toki pona or to independant game development.\\
+			The game is meant to scratch an itch similar to games like \textit{Outerl Wilds}, or \textit{Return of the Obra Dinn}, although considering my current skills and resources, its design will be much less efficient and its scope will be \textit{much} smaller.
+		\subsection{Conditions of Play}
+			ijo musi is meant to be played alone in a setting that allows for immersion (without too much outside stimulation). It is meant to be played on a computer using a keyboard and a mouse. Controller support might be added if time allows it.  
+		\subsection{Challenges}
+			The main challenges posed by the game will be the following:
+			\begin{itemize}
+				\item Navigating the space
+				\item Deducting the meaning of toki pona words based on contextual clues
+				\item Using the acquired toki pona knowledge to decipher the various texts spread across the game space
+				\item Using the acquired toki pona knowledge to modify or to fill the blanks in some of the texts in order either to reveal information or to manipulate the environment
+				\item Connecting the available pieces of information together to uncover the wider narrative
+			\end{itemize}
+		\subsection{Decision-making}
+			The decisions made by the player will be the following:
+			\begin{itemize}
+				\item \emph{What lead to investigate}\\
+				There are no right and wrong options for this type of decisions. Even the pursuit of a lead that is not well developped in the narrative should result in the player discovering information relating to other leads.
+				\item \emph{Where to go and what to look for to investigate said leads}\\
+				Player can choose "wrongly" relating to this type of decisions. For example: if they investigate the death of a character that was poisoned in the dining room, going to the library is unlikely to wield any useful information.
+				\item \emph{When filling blanks, what word to use}\\
+				There are right and wrong options for this type of decisions. While each toki pona word has a wide list of possible meanings, labeling a waterfall as a "kiwen" (which can mean things such as "hard object", "metal", "stone", "solid"), will not be validated as a good answer. There will be no consequences outside of an immediate negative feedback (such as a trembling screen).
+				\item \emph{When changing words, what word to use}\\
+				While there are no actual wrong options relating to this type of decisions, some words will be useful or not depanding on what the player is trying to accomplish. Trying to get a door to unlock will require to use the toki pona word "open", for example.
+			\end{itemize}
+		\subsection{Skills, Strategies, Chance, and Uncertainty}
+			There is no uncertainty and randomness that comes from the game side of the experience. The player might base some of their decisions on randomness, but the game itself should not react differently to the same series of inputs. Uncertainty will come from the learning experience. The player might be uncertain that they have correctly assessed the meaning of a toki pona word\footnote{In that regard, the game should contain many occasions for the player to test their hypothesis. The texts with blanks  fill this role - they should give a positive feedback when correctly filled, and a negative feedback when incorrectly filled. To a lesser extent, the texts with changeable words also provide positive feedback, though it is less direct. In that case, the words won't be validated as "correct" or "incorrect", but they will result in an alteration of the environment that might match with the supposed meaning of the word (indirectly validating the hypothesis) or not match with the supposed meaning of the word (indirectly invalidating the hypothesis).}. They might also be uncertain that they have correctly interpreted the narrative. \\ 
+			Strategies put in place by the player should relate to:
+			\begin{itemize}
+				\item The acquisition of toki pona
+				\item The use of toki pona
+				\item The navigation of the game space
+				\item The investigation of narrative elements
+			\end{itemize}		
+		\subsection{Themes (HEAVY SPOILERS)}
+			\emph{CAUTION}: ijo musi is a knowledge based game. Any reading made about the narrative before playing it will irremediably hinder the untertainment value of the game.\\
+			Note that this section can be quite obscure without a solid grasp of the narrative. It is then suggested to read the section \textit{World, Characters, Synopsis} before this one.
+			\begin{itemize}
+				\item \emph{Language as a way to relate to the world}\\
+					The story goes that Sonja Lang, creator of the toki pona language, did so during a tough depressive episode as a way to try and reclaim control over her worldview. toki pona was never meant to be a tool of communication. Or rather, interpersonal communication was always secondary to its true purpose; be a language for \textit{thoughts}.\\
+					In ijo musi, there are several ways in which this aspect of toki pona comes into play:
+					\begin{itemize}
+						\item Mechanically:
+							the player will need to learn to see the world through a toki pona lense\footnote{There are, of course, many ways to do so. It is very rare that two people would use the same toki pona sentence to describe the same scene. Nevertheless, there is a philosophy of toki pona - which allows it to function with so few words - that one must understand and adopt if one wishes to appropriately use toki pona.}. They will need, for example, to aggregate the concepts of "good" and of "simple" into the unique concept of "pona". Furthermore, the use of toki pona will allow the player to alter the environment, symbolically representing how toki pona allows us to change our representation of the world.
+						\item Narratively\footnote{A basic understanding of the game's plot is required to fully understand the next paragraph. A synopsis is available in the "World, Synopsis, Characters" part of this document.}: 
+							this theme is central to the narrative of ijo musi. All the characters actively try to use toki pona to shape their own way of thinking. The Enlightened One allegedly succeeded in reaching a form of enlightenment through it. The Rigid One and the Loose One both try to follow in their footsteps. Furthermore, they both build the Shaped One as an attempt to create a "pure" or "perfect" mind according to their faith; a mind that would natively think in toki pona. However, toki pona proves to be as much a constraint on the Shaped One's mind as any other native language might be on a human mind.
+						\item Visually: 
+							the game will use an ascii shader on top of a pixelation shader. This will result in the graphics of the game being rendered through ascii characters. The catch is that, while these character will start as letters from the latin alphabet, they will slowly change to be sitelen pona (logographs used to write toki pona). This will visually represent how the player character slowly learns to see the world "through a toki pona lense".
+					\end{itemize}		
+				\item \emph{Hubris}\\
+					All the characters in the game display a form of hubris. The Enlightened One claims to have gained access to some absolute truth and founded a whole temple dedicated to their way of thinking. The Rigid One and the Loose One both consider themselves responsible and powerful enought to be able to create a whole new form of consciousness through the Shaped One. They succeed in creating an artificial consciousness, but they fail to account for its own specificity. The Shaped One's mind eludes them, and instead of studying and trying to understand this new form of consciousness, they merely project their own desires on it. The Rigid One tries to make them an absolute incarnation of the cult doctrines, whereas the Loose One pretends to treat them as an equal, invisibilizing the power dynamics that result from them being their creator. The Shaped One also exemplifies hubris, as after they flee the temple, they themself create several artificial consciousnesses using the same magic as the cult.
+				\item \emph{Control and independance}\\
+					All of the characters struggle both with control and independance. There is an official hierarchy within the temple, with the Enlightened One at the top and the Shaped One at the bottom. But none of the characters blindly submit to this official order of things. The Rigid One murders the Enlightened One for denying him knowledge and power, and then fails to impose his own vision on the Shaped One. The Loose One neglects her duties, both as a disciple of the Enlightened One, and as a tutor of the Shaped One. The Shaped One refuses to conform to the expectations of the cult.
+				\item \emph{Consciousness and identity}\\
+					The player character is looking for a sense of identity, in the sense that they are trying to understand their own roots. The Shaped One questions the sense of their own existence. More than what constitutes consciousness or identity as concepts, the questions ijo musi aims to raise relate to the value one gives to them. How are we to treat a consciousness designed by humans? What would we owe to it? What would it owe to us? How much of its identity could/should we shape? How free would it be? Of course, the aim of ijo musi is not to propose definite answers to these various questions. It doesn't even claim to argue any position in depth. Rather, it depicts a situation in which these questions take a concrete - albeit fantastic - form.
+			\end{itemize}
+		\subsection{Experience}
+			The player will:
+			\begin{itemize}
+				\item Move through the game space. \\
+				At all stages of play, they should feel:
+				\begin{itemize}
+					\item Curious
+					\item Immersed
+					\item Inquisitive
+				\end{itemize}
+				During early stages of play, they should feel: 
+				\begin{itemize}
+					\item Disoriented
+					\item Intimidated
+					\item Overwhelmed
+					\item Wary
+				\end{itemize}
+				During late stages of play, they should feel:
+				\begin{itemize}
+					\item Confident
+					\item In control
+				\end{itemize}
+				\item Investigate scenes to find contextual clues\footnote{These clues might give insight about the plot (such as locket containing a portrait) or help formulate theories about toki pona and its vocabulary (such as a sign displaying a message in toki pona akin to "caution: dangerous cliff ahead" in front of said cliff). As much as possible, clues should do both at once (such as a name written in toki pona on the door of a character's room).}.\\
+				At all stages of play, they should feel:
+				\begin{itemize}
+					\item Curious
+					\item Empathetic (the player does not have to identify with the characters or be "on their side", but they should care about each character's actions and the consequences of said actions)
+					\item Inquisitive
+					\item Smart (they should not feel like they merely stumble on knowledge or solutions to puzzles, but like they conquer them)
+					\item Rewarded (by their better understanding of the plot, by a strenghtening of their toki pona skills, and by their ability to solve puzzles thanks to environmental clues)
+				\end{itemize}
+				During early stages of play, they should feel: 
+				\begin{itemize}
+					\item Lost
+				\end{itemize}
+				During late stages of play, they should feel:
+				\begin{itemize}
+					\item "In on" what happened (they should be able to link the state of the environment with the events that transpired in it)
+				\end{itemize}
+				Occasionnaly, they should feel:
+				\begin{itemize}
+					\item Intrusive (they should feel like they are snooping where they don't belong)
+					\item Surprised
+					\item Various emotions towards characters (mostly: sad, angry, amused, annoyed)
+				\end{itemize}
+				\item Read texts of various forms and types (mostly dialogs) that are dispersed throughout the game space.\\
+				At all stages of play, they should feel:
+				\begin{itemize}
+					\item Active (they should feel like they are extracting information rather than receiving it\footnote{For a deeper analysis, see the push/pull distinction made by Kelsey Beachum in her GDC talk \textit{Sparking Curiosity-Driven Exploration Through Narrative in 'Outer Wilds'} (Beachum, 2022).})
+					\item Eager to learn more about the story and characters
+					\item Eager to learn toki pona
+					\item Frustrated (there should always be a little piece of information that resists interpretation, up until the late stages of play)
+					\item Rewarded (sometimes, information should be \textit{identifiable} as a reward for language learning, as a way to communicate to the player that their efforts are not in vain\footnote{Of course, to \textit{actually} identify a reward as such, the player should both have a basic knowledge of game design, and make an active effort to analyse the game mechanics. The point here is more about feelings rather than knowledge; the player should \textit{feel} like they are being rewarded for an expected behavior.})
+					\item Rewarded (sometimes, information should \textit{function} as a reward, but the player should feel like they hacked a system to gain access to a secret they were not meant to know yet, rather than feel like they are recompensed for expected language learning efforts)
+				\end{itemize}
+				During early stages of play, they should feel: 
+				\begin{itemize}
+					\item Humbled (when facing the more complex toki pona texts for the first time, the player should experience feelings akin to the ones felt when getting obliterated by a high level ennemy in an RPG)
+					\item Motivated (the challenge posed by the various texts should feel inviting rather than intimidating)
+				\end{itemize}
+				During late stages of play, they should feel:
+				\begin{itemize}
+					\item Closure
+					\item Empowered (they should realize the long way they have come)
+				\end{itemize}
+				Occasionnaly, they should feel:
+				\begin{itemize}
+					\item Various emotions towards characters (mostly: sad, angry, amused, annoyed)
+				\end{itemize}
+				\item Fill the blanks or change the words in some of the toki pona texts in order to either 1) gain access to new texts or 2) manipulate the environment\footnote{For an explanation of these game mechanics, see the "Features" section of this document.}.\\
+				The emotions felt by the player when manipulating texts are expected to be very similar to the ones felt when reading them. For emotions relating to the story and characters, it is expected that the player will generaly feel emotions of a lesser intensity when manipulating texts as opposed to reading (as the aim of the texts meant to be manipulated is often to test active skills rather than relay narrative elements). On the other hand, feelings relating to the game mechanics - such as the feeling of reward - will tend to be greater when correctly applying active toki pona skills, as the reward will be more tangible and direct than when using passive skills (in the case of a correctly filled text for example, visual and auditive rewards will be displayed, and a new dialog will become accessible, whereas no such things occur in the case of a correctly interpreted dialog).
+			\end{itemize}
+	\section{Features}
+		The features have been divided into four categories: "must have", "should have", "nice to have", and "bonus". Before listing them, I have described a general overview of the game to paint a picture of what the main features should look like in the end product.
+		\subsection{General Overview}
+			The player character will find themself trapped in an old temple they are exploring. They will be able to move in 4 directions (forward, right, backward, left), and look around with a camera controlled with basic fps camera controls. There will be a basic collision and gravity system, but (likely) no possibility to jump. The player will have a tool at their disposal in the form of a tablet made of a screen framed by thicker edges\footnote{The nature of the tool might change during development as technical challenges might arise.}. Clicking on a button (likely the right mouse button) will lift the tablet in front of the player camera. Through the tablet, the camera will highlight interactive objects in a yellow, red, green, or blue outline. Clicking a button  (likely the left mouse button) while aiming at a highlighted object will cause the tablet screen to display an interface bearing a toki pona text representing the highlighted object. Doing so will freeze the camera and display the mouse cursor. The type of the interface will differ depending on the highlight color.\\
+			For objects highlighted in yellow, some of the text's words will be changeable. To change a word, the user will click on it (with the left mouse button) and either select a word from a displayed list, or type-in the word they want themself. Only a restrained list of words will be available for each changeable word. Pressing enter or clicking anywhere on the display other than on the selected word will validate the word (not the whole text). It will be impossible to validate a word if it is not from the available list. Trying to do so will result in the word changing back into the previously displayed word. Once the user is satisfied with the text, they can validate it by clicking a "process" button on the bottom right of the interface (alternatively, they might press enter when no word is selected to validate the whole text). Once the text is validated, the highlighted object will change to match its new toki pona description. As an example, water might freeze if it is labeled as "telo kiwen" (in this context: "solid water") or "telo lete" (in this context: "cold water").\\
+			For objects highlighted in red, the interface will display a text with blank spaces. The player will be able to fill in this blanks in a manner similar to the one described for yellow-highlighted objects, with the key difference being that the list of available words will be broader, as it will contain all toki pona words. When the player tries to validate the text, two things can happen. If the words are wrong, the UI will shake. If the words are correct, the UI will close, a rewarding sound will play, the cursor will disappear, the camera will unfreeze, and a dialog will appear in the game space. The dialog will take the form of floating letters in space, and will be visible only through the tablet screen.\\
+			Green and blue highlight will apply to objects whit correctly filled texts. They will appear green if the dialog is currently not displayed in the space, and blue if it is. The corresponding interface will show the correct, now un-modifiable text, and a button will allow to toggle the dialog visibility in space.
+		\subsection{Must Have Features}
+			Those are the features needed for the game to run at all.
+			\begin{itemize}
+				\item A character that can walk and rotate in 3d space
+				\item An FPS camera that can look around
+				\item Collision handling for the player character, the environment, and objects
+				\item A global light for testing
+				\item A basic skybox
+				\item Low-poly 3D assests for key elements (the main tool used by the player, the walls, some furniture, some other objects)
+				\item The ability to activate/deactivate the tablet (without animation)
+				\item Movement and rotation handling for the tablet
+				\item A placeholder indicating which objects have a label and their type (later replaced with highlights)
+				\item The ability to open and close the label interface when aiming at a highlighted object
+				\item The ability to input text via keyboard in the label interface
+				\item The ability to select a word from a list using the mouse in the label interface
+				\item The ability to validate or cancel the modification made to a label
+				\item Basic reward sound for correctly filled texts
+				\item A level manager that handles the loading and display of rooms
+				\item A prototype of the Visitor/Waiting room (see "Temple Plan V1" in the Annexes) with local lights, boundaries, multiple interactive objects and multiple texts of different difficulty levels
+				\item A prototype of the Crafting Room (see"Temple Plan V1" in the Annexes) with local lights, boundaries, multiple interactive objects and multiple texts of different difficulty levels
+				\item Enough objects to fill at least one room, some with linked dialogs (in the case of text-with-blanks labels), and some with different states (in the case of changeable labels)
+				\item A pixelating shader
+				\item A ASCII shader (sitelen pona only at this stage)
+			\end{itemize}
+		\subsection{Should Have Features}
+			Those are the features needed for the game to be an actual, proper game.
+			\begin{itemize}
+				\item A basic tutorial\footnote{It is not clear yet if english words will be used in the tutorial or if symbols and contextual clues will suffice.}
+				\item Atkinson Hyperlegible as default font
+				\item A main menu that can lead to the game (via a "new game" button or a "continue" button), a saving menu, a settings menu, a credits menu, or close the game
+				\item The ability to pause/resume the game
+				\item A pause menu that can lead back to the game, to a saving menu, a settings menu, a credits menu, or close the game
+				\item A saving menu that allows to save the current state of the game (only if accessed from pause menu), delete saves, load saves, or leave the menu
+				\item A settings menu where the user can change the resolution and sensitivity or leave the menu
+				\item A credits menu displaying the credits, with the possibility to close the menu
+				\item Basic character animations (headbob)
+				\item Basic tablet animations (putting it in front of camera and putting it away)
+				\item Highlights for objects that have a label
+				\item The ability to turn a dialog on/off via a button in the label interface
+				\item Footsteps noises
+				\item Tablet sounds (when activated/deactivated)
+				\item Prototypes of all rooms (see "Temple Plan V1" in the Annexes) and needed access (stairs, corridors)
+				\item A finished version of the Visitor/Waiting Room (see Temple Plan V1 in the Annexes)
+				\item A finished version of the Crafting Room (see "Temple Plan V1" in the Annexes)
+				\item A finished version of the Burnt Library (see "Temple Plan V1" in the Annexes)
+				\item A finished version of the Balcony (see "Temple Plan V1" in the Annexes)
+				\item A finished version of the Hall (see "Temple Plan V1" in the Annexes)
+				\item A finished version of the Dining Room (see "Temple Plan V1" in the Annexes)
+				\item A finished version of the Pond \& Sacred Resting Place (see "Temple Plan V1" in the Annexes)
+				\item A finished version of the Secret Room (see "Temple Plan V1" in the Annexes)
+				\item Ambiant noises for all finished rooms
+				\item Additional objects
+				\item Transition from latin ASCII to sitelen pona in the ASCII shader
+				\item Sitelen pona on top of latin alphabet for every toki pona text
+				\item An ending scene
+			\end{itemize}
+		\subsection{Nice to Have Features}
+			Those are the features that can add much-needed polish to the game.
+			\begin{itemize}
+				\item A finished version of all the prototyped rooms (see "Temple Plan V1" in the Annexes)
+				\item Multiple available fonts for accessibility (Atkinson Hyperlegible, Comic Sans, OpenDyslexic)
+				\item Music
+				\item A basic tool shader (that makes it look like the player is looking through a screen)
+				\item Control remap through the settings menu
+				\item Controller support
+				\item Fog (if it suits the aesthetic after some testing)
+				\item The ability to rename saves
+				\item UI sounds
+				\item Objects sounds
+				\item Self-made voice acting for every dialog
+				\item An intro sequence showing the player character rapelling into the ruins
+			\end{itemize}
+		\subsection{Bonus Features}
+			Those are features that are shiny and appealing, but not realistic to implement within the resource constraints of the project.
+			\begin{itemize}
+				\item An edge detection shader
+				\item Have the character's fingers replace the cursor when interacting with the tablet
+				\item A different voice actor/actress for each character
+			\end{itemize}
+	\section{Gameloops}
+		The gameplay loops is structured as follows:
+		\begin{itemize}
+			\item Goals - Long term (span across the game):\\
+			The player will be working towards solving one of the 4 main mysteries the game proposes (or any other question they might have).
+			\item Activities - Mid-term (take minutes):\\
+			The player will either be investigating a particular aspect of said mysteries (such as "why is the library burnt?"), or exploring freely. They might be walking around to observe the environment, reading a dialog and trying to decipher it, or filling a label, for example.
+			\item Actions - Short-term (take seconds):\\
+			The player will be trying to solve an immediate problem. For example, they might be trying to determine the meaining of a precise word in a dialog, or find the correct word for a text-with-blanks label.
+		\end{itemize}
+		The player will start the game by exploring a little,hopefully leading to them having some interrogations about the temple. Those questions will lead to them investigating, and thus starting an activity. While they perform actions to carry out this activity, they should be faced with game elements that will raise more questions. At this point, one of two things should happen. Either they will abandon the initial activity to try and answer a new question, or they will carry out the activity first and \textit{then} choose one of the new questions to answer. If the player ever find themself in a situation where they do not wish to undertake a new activity, it means that the game has failed to be entertaining.
+	\section{Graphics, UX and UI}
+		The UI design is still uncertain, as further tests need to be conducted to determine what best fits the ASCII shader, as it tends to render UI and texts in general less readable.\\
+		As for the general visual design, here are some key concepts to get a feel of how the game should look and feel:
+		\begin{itemize}
+			\item ASCII (the ASCII shader won't be fully opaque and so the colored pixel underneath will be visible)
+			\item Pixelated
+			\item Low poly
+			\item Claypunk (technology based on magic-fuelled clay objects)
+			\item Cramped, humid, and decrepit
+			\item Collapsed walls and ceillings, breaches and tunnels in the rock
+			\item Well of light and waterfall at the center of the game space
+			\item A lot of different and small light sources of various colors (clay lamps, well of light, magic stones, flames, fireflies, glowing plants/mushrooms, ...)
+		\end{itemize}
+	\section{World, Characters, Synopsis (HEAVY SPOILERS)}
+		CAUTION: ijo musi is a knowledge based game. Any reading made about the narrative before playing it will irremediably hinder the untertainment value of the game.
+		\subsection{World}
+			Somewhere, in an unnamed mountain range lies an old decrepyt temple. The world that lies outside the temple is of little importance, as the whole narrative is contained inside its walls.
+		\subsection{Characters}
+			There are 3 main characters in the story, and a single secondary one. None of them have a definitive name at the moment, but they each are designated by a concept.
+			\begin{itemize}
+				\item \emph{The Enlightened One}
+				is the only secondary character, as they do not take part in most dialogs. In the diegesis, they were the inventor of toki pona and the founder of the temple. 
+				\item \emph{The Rigid One}
+				were the first disciple of the Enlightened One. They were rigorous and tended to follow their master's teaching to the letter.
+				\item \emph{The Loose One}
+				were the second disciple of the Enlightened One. While they still observed the proper rites dictated by the Enlightened One, they tended to have a flexible interpretation of their teachings.
+				\item \emph{The Shaped One}
+				were a person created from magical clay by the Rigid One and the Loose One.
+			\end{itemize}
+		\subsection{Synopsis}
+		There are four main mysteries that the player can try to solve in the game. All of them are divided into many milestones, each representing a key aspect of the mystery they relate to. Some of these milestones are obtained from dialogs, some are to be deducted from the environment. They are divided into five game moments: early, early-mid, mid, mid-late, late. This is not a clear-cut and immutable classification. Rather, it allows to decide which elements should be easily accessible (linked to evident objects, or hidden behind simple toki pona labels) and which elements should be harder to get to. The four main mysteries are:
+		\begin{itemize}
+			\item \emph{The Skeleton}
+			\begin{itemize}
+				\item Core: Who's that skeletton? What happened to it?
+				\item Start: finding the skeletton in the Visitor/Waiting Room. Usually very early game.
+				\item Leads: its position, clothes, the surrounding objects, the room it is in, other characters' graves, other dialogs, etc.
+				\item Milestones:
+					\begin{itemize}
+						\item The cause of death was poison. (Early-Mid)
+						\item The skeletton was murdered. (Early-Mid)
+						\item The skeletton was the Rigid One. (Mid)
+						\item The murderer was the Shaped One. (Mid-Late)
+						\item The main motive: the Rigid One was keeping the Shaped One captive. (Late)
+						\item The secondary motive: the Rigid One is responsible for the death of the Loose One. (Late)
+					\end{itemize}
+			\end{itemize}
+			\item \emph{The Cult's Rituals}
+			\begin{itemize}
+				\item Core: What was happening in this weird place?
+				\item Start: Finding many weird objects/rooms, and realizing that the ruins are a temple. Usually early game.
+				\item Leads: Damaged wall paintings, discarded body pieces made of clay, some rooms' layout, dialogs, etc.
+				\item Milestones:
+					\begin{itemize}
+						\item The ruins are a temple. (Early)
+						\item The cult was whorshipping "sewi", the toki pona concept of divinity. (Early)
+						\item The cult considered "pona" (simplicity) to be the highest quality of "sewi". (Early-Mid)
+						\item The Enlightened One was the founder of the cult. (Early-Mid)
+						\item The cult made tools out of clay-magic. (Early)
+						\item The cult made the tool that the player is using. (Mid)
+						\item The tool was stolen. (Mid-Late)
+						\item The cult made a bunch of clay mannequins. (Early)
+						\item The cult believed that souls were a part of "sewi". (Early)
+						\item The cult wanted to make an artificial person (to put a part of "sewi" in an artificially made body). (Early-Mid)
+						\item The cult wanted to use clay-magic to create the artificial person. (Early-Mid)
+						\item The artificial person was supposed to become a "perfect mind". (Mid)
+						\item The cult succeeded in creating the clay-person. (Early-Mid)
+						\item The cult wanted to use toki pona to shape the mind of the clay-person. (Mid)
+						\item The Shaped One is the clay-person. (Mid)
+						\item There was a secret room accessible only by the Enlightened One. (Mid)
+						\item A mirror was needed to put the "sewi" into the clay-person. (Mid-Late)
+						\item The mirror is in the secret room. (Mid-Late)
+						\item To open the secret room, the tool acts like a key. (Mid)
+						\item To open the secret room, the user needs to "toki lon" ("speak the truth" or "tell what is", which means answering the door's questions). (Mid-Late)
+						\item The door's questions are never the same, they change with the events that occur within the temple. (Mid)
+					\end{itemize}
+				\end{itemize}
+			\item \emph{Each Character's Fate}
+				\begin{itemize}
+					\item Core: What happened to the characters?
+					\item Start: Realizing that all dialogs involve the same four characters. Usually at the end of early game.
+					\item Leads: various objects, dialogs, some rooms layout, etc.
+					\item Milsetones:
+						\begin{itemize}
+							\item The Enlightened one was the founder of the cult. (Early)
+							\item The Enlightened One is dead and burried in the sacred resting place. (Early)
+							\item The Enlightened One died of food poisoning. (Early-Mid)
+							\item The Loose One was responsible for the preparation of the meal that killed the Enlightened One. (Mid)
+							\item The Enlightened One considered the Rigid One and the Loose One to be equal disciples. (Mid)
+							\item Someone poisonned the Enlightened One's last meal. (Mid-Late)
+							\item The Enlightened One knew the meal was poisonned.	(Late)
+							\item The Rigid One poisonned the meal that killed the Enlightened One. (Late)
+							\item The Rigid One joined the cult first, the Loose One joined later. (Early-Mid)
+							\item The Loose One tended to neglect her duties. (Early)
+							\item The Loose One played a lot of musical instruments. (Early-Mid)
+							\item The Loose One died by food poisonning in the same way as the Enlightened One. (Mid)
+							\item (Red herring) It seems the Loose One committed suicide by poisonning their food. (Mid)
+							\item (Red herring) It seems the Loose One killed herself because of guilt over the Enlightened One's murder, and/or over her manipulatiion of the Shaped One. (Mid-Late)
+							\item The Loose One was murdered by the Rigid One. (Late)
+							\item The Loose One and the Shaped One had fun together. (Early-Mid)
+							\item The Loose One was manipulating the Shaped One. She used them to do her chores, was lovebombing them, etc. (Mid-Late)
+							\item The Rigid One was infuriated to learn that the Enlightened One considered him as equal to the Loose One in toki pona worship. (Mid)
+							\item The Rigid One tended to give orders to the others. (Early)
+							\item The Rigid One was pushing for the creation of the Shaped One, but the Enlightened One considered them not to be ready. (Mid)
+							\item The Rigid One showed love to both the Loose One and the Shaped One. (Mid)
+							\item The Rigid One liked plants. (Early-Mid)
+							\item The Shaped One realized that the Loose One was manipulative after a talk with the Rigid One. (Mid-Late)
+							\item The Shaped One knew nothing at first. (Early-Mid)
+							\item The Shaped One struggled with some toki pona concepts (main example: binary gender). (Mid)
+							\item The Shaped One brought new words to toki pona\footnote{In reality, those are words that come from the second toki pona book by Sonja Lang, which made official some of the most commonly used neologisms.}. (Mid)
+							\item The Loose One found the new words ingenious and useful. (Mid)
+							\item The Rigid One strongly disapproved of the new words. (Mid)
+							\item The Shaped One resented the Rigid One for its strictness. (Early)
+							\item The tool was actually made for the Shaped One. (Mid)
+							\item The tool was made long before the Shaped One. (Mid)
+							\item Before the Shaped One was made, it was forbidden to use the tool except for specific rituals. (Mid)
+							\item The Shaped One used the tool to train their toki pona skills. (Mid)
+							\item The Rigid One forbid the Shaped One to use the tool on the Enlightened One's grave. (Mid)
+							\item Using the tool on the Enlightened One's grave, the Shaped One heard a confession of the Rigid One, demanding pardon to the Enlightened One for his actions. (Mid-Late)
+							\item The Shaped One had a suspicion that the Loose One death was no accident. (Mid-Late)
+							\item The Shaped One found the bottle of poison in the Rigid One's room. (Late)
+							\item The Shaped One confronted the Rigid One for the murders of the Enlightened One and of the Loose One. (Late)
+						\end{itemize}
+				\end{itemize}
+			\item \emph{The Player Character's Identity}
+				\begin{itemize}
+					\item Core: Who am I? Why am I here?
+					\item Start: The intro scene.
+					\item Leads: The intro scene, the gear of the player character left in the first room of the game, the mirror in the secret room, the hands of the player character, etc.
+					\item Milestones:
+					\begin{itemize}
+						\item The player character is a clay-person. (Early or Late, depending on if they notice the hands)
+						\item The player character is looking for the "first person". (Early-Mid)
+						\item The "first person" is the Shaped One. (Mid)
+						\item The Shaped One founded a whole race of clay-people. (Late)
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+		\section{Bibliography}
+			\begin{itemize}
+				\item Sparking Curiosity-Driven Exploration Through Narrative in ‘Outer Wilds’, GDC, https://www.youtube.com/watch?v=QaGu9tGCNbI, 2022, [accessed 4 September 2024]
+			\end{itemize}
+\end{document}

@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://3g86xogvwrgv"]
+
+[ext_resource type="Script" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
+[ext_resource type="Script" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l2amc"]
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_04qb1")
+
+[node name="CharacterCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_l2amc")
+
+[node name="CameraController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+script = ExtResource("2_aw5yu")
+
+[node name="Camera3D" type="Camera3D" parent="CameraController"]
+
+[node name="ToolController" type="Node3D" parent="."]
+
+[node name="ToolUI" type="Control" parent="ToolController"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HighlightMode" type="Control" parent="ToolController/ToolUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InputMode" type="Control" parent="ToolController/ToolUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BasicToolFilter" type="Control" parent="ToolController/ToolUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

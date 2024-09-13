@@ -66,3 +66,9 @@ skeleton = NodePath("../../Whiteboxing")
 transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
+
+[node name="Light" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.416442, -0.0502262)
+light_color = Color(0.861067, 0.553469, 0.262489, 1)

@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Formal Aspects (REREAD)}{3}{}%
+\contentsline {section}{\numberline {2}Design Pillars (REREAD)}{3}{}%
+\contentsline {section}{\numberline {3}Design Values (WIP)}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Target Audience and Access (CHECK IF COMPLETE)}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Conditions of Play (CHECK IF COMPLETE)}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Point of View (EVERYTHING TO DO)}{4}{}%
+\contentsline {subsection}{\numberline {3.4}Challenges (CHECK IF COMPLETE)}{4}{}%
+\contentsline {subsection}{\numberline {3.5}Decision-making (CHECK IF COMPLETE)}{5}{}%
+\contentsline {subsection}{\numberline {3.6}Skills, Strategies, Chance, and Uncertainty (CHECK IF COMPLETE)}{5}{}%
+\contentsline {subsection}{\numberline {3.7}Themes (SMALL SPOILERS) (EXPAND BASED ON JAVET)}{6}{}%
+\contentsline {subsection}{\numberline {3.8}Experience (REREAD)}{7}{}%
+\contentsline {section}{\numberline {4}Features (WIP)}{9}{}%
+\contentsline {subsection}{\numberline {4.1}General Overview (WIP)}{10}{}%
+\contentsline {subsection}{\numberline {4.2}Must Have Features (WIP)}{11}{}%
+\contentsline {subsection}{\numberline {4.3}Should Have Features (WIP)}{11}{}%
+\contentsline {subsection}{\numberline {4.4}Nice to Have Features (WIP)}{11}{}%
+\contentsline {subsection}{\numberline {4.5}Bonus Features (WIP)}{11}{}%
+\contentsline {section}{\numberline {5}Gameloops (EVERYTHING TO DO)}{12}{}%
+\contentsline {section}{\numberline {6}Graphics and Concept Art (EVERYTHING TO DO)}{12}{}%
+\contentsline {section}{\numberline {7}UX and UI (EVERYTHING TO DO)}{12}{}%
+\contentsline {section}{\numberline {8}World, Synopsis, Characters (HEAVY SPOILERS) (WIP)}{12}{}%
+\contentsline {subsection}{\numberline {8.1}World (REREAD)}{12}{}%
+\contentsline {subsection}{\numberline {8.2}Synopsis (WIP)}{12}{}%
+\contentsline {subsection}{\numberline {8.3}Characters (WIP)}{12}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

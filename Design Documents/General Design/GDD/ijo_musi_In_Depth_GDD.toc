@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Formal Aspects}{3}{}%
+\contentsline {section}{\numberline {2}Design Pillars}{3}{}%
+\contentsline {section}{\numberline {3}Design Values (WIP)}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Target Audience and Access}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Conditions of Play}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Challenges}{4}{}%
+\contentsline {subsection}{\numberline {3.4}Decision-making}{5}{}%
+\contentsline {subsection}{\numberline {3.5}Skills, Strategies, Chance, and Uncertainty}{5}{}%
+\contentsline {subsection}{\numberline {3.6}Themes (HEAVY SPOILERS)}{6}{}%
+\contentsline {subsection}{\numberline {3.7}Experience}{7}{}%
+\contentsline {section}{\numberline {4}Features}{10}{}%
+\contentsline {subsection}{\numberline {4.1}General Overview}{10}{}%
+\contentsline {subsection}{\numberline {4.2}Must Have Features}{11}{}%
+\contentsline {subsection}{\numberline {4.3}Should Have Features}{12}{}%
+\contentsline {subsection}{\numberline {4.4}Nice to Have Features}{13}{}%
+\contentsline {subsection}{\numberline {4.5}Bonus Features}{14}{}%
+\contentsline {section}{\numberline {5}Gameloops}{14}{}%
+\contentsline {section}{\numberline {6}Graphics, UX and UI}{15}{}%
+\contentsline {section}{\numberline {7}World, Characters, Synopsis (HEAVY SPOILERS)}{15}{}%
+\contentsline {subsection}{\numberline {7.1}World}{15}{}%
+\contentsline {subsection}{\numberline {7.2}Characters}{16}{}%
+\contentsline {subsection}{\numberline {7.3}Synopsis}{16}{}%
+\contentsline {section}{\numberline {8}Bibliography}{20}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

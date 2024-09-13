@@ -1,0 +1,4 @@
+\contentsline {section}{\numberline {1}The Game in a Nutshell (REREAD)}{3}{}%
+\contentsline {section}{\numberline {2}Formal Aspects (REREAD)}{4}{}%
+\contentsline {section}{\numberline {3}Design Pillars (REREAD)}{4}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

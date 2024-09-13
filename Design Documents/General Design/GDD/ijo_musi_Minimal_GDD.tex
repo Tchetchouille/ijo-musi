@@ -1,0 +1,66 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+% Source: https://tex.stackexchange.com/questions/227639/redefine-emph-to-be-both-bold-and-italic 
+\let\emph\relax % there's no \RedeclareTextFontCommand
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
+\graphicspath{ {./img} }
+
+\title{ijo musi\footnote{"ijo musi" can be roughly translated as "the entertaining object" or "the game thing". Please note that toki pona uses no capital letters. In this document, sentences beginning with a toki pona word - such as will often be the case when referring to the game's title - will then start with a lowercase letter.} : Minimal Game Design Document}
+\subtitle{A game about learning toki pona through the exploration of mysterious ruins.}
+\author{Jeremias Kuehne}
+
+\begin{document}
+	
+	\maketitle
+	\clearpage
+	
+	\section{The Game in a Nutshell}
+		\begin{itemize}
+			\item Title: ijo musi
+			\item Description: ijo musi is a video game game about learning toki pona. By exploring an old temple, the player must deduct the meaning of toki pona words to try and piece together the events that transpired in this strange place. What happened to the people that used to live here? Why is this library burnt? Who is that skeletton lying in that chair?
+			\item Experience: a single player is plunged in the old ruins of a temple. Equipped with a strange tablet, they are able to reveal hidden texts written in toki pona. Those texts are linked to various objects and seem to describe them. Sometimes, changing a text allows the player to manipulate the environment. Sometimes, correctly filling the blanks in a text will reveal information about one of the game's many mysteries. A mix of simple and complex texts will allow the player to slowly build up their toki pona skills, learning something new everytime they discover a new room or come back to an old one.
+			\item Context: ijo musi's primary target audience is people who have an interest in learning toki pona and would like to do so in a ludic manner. On top of this (very small) niche, it also targets any knowledge-based game enjoyer, as well as language nerds. ijo musi is meant to be played alone in a context that minimizes outside distractions.
+			\item Challenges (from a designer's perspective): 
+				\begin{itemize}
+					\item Keeping the player engaged and motivated throughout the game. 
+					\item Writing a compelling non-linear small story in the form of (mainly) toki pona dialogs and environmental storytelling.
+					\item Making said story support the progressive learning of toki pona.
+				\end{itemize}
+			\item Challenges (from a player's perspective):
+				\begin{itemize}
+					\item Piecing together toki pona vocabulary and grammar by using contextual clues.
+					\item Actively using toki pona skills.
+					\item Navigating the game space.
+					\item Assembling the various clues into a coherent story.
+				\end{itemize}
+			\item Emotions: the player should almost feel like an unwanted intruder at first; oppressed by the unfriendly architecture, unsettled by the discoveries of cadavers and burnt books, uncertain in the face of complex toki pona texts. However, all these uncomfortable feelings should always be accompanied by a stronger feeling of curiosity. Slowly, the player should feel like they are conquering both toki pona and the game space.
+			\item Aesthetic: cramped, humid, old, decrepit, underground (the temple is inside a mountain), clay (the tablet as well as many objects will be made of clay), minimalistic (low poly), pixelated (pixelating + ascii shaders).
+				
+		\end{itemize}
+	\section{Formal Aspects}
+		\begin{itemize}
+			\item Type: video game (3D).
+			\item Tools used: Godot, Blender, possibly Twine for prototyping, possibly Beepbox, other software if the need arises.
+			\item End product: browser game if stable enough (unlikely). Executable otherwise.
+			\item Platforms: PC.
+			\item Needed hardware: PC and usual devices (monitor, mouse, keyboard, sound system).
+			\item Available languages: toki pona only (possibly with some \textit{very occasional} english).
+			\item Genres: exploration, "knowledgevania", language learning, mystery, narrative, puzzle, walking simulator.
+			\item Number of players: 1.
+			\item Duration of play: a session could be as short as a few minutes or as long as it takes to complete the whole game in one sitting. The total duration of the game will depend on how many levels can be created within the time constraints of this project. Furthermore, playtests will be necessary to estimate it. There is little to no replayability.
+			\item Target age group: 16+.
+		\end{itemize}
+	\section{Design Pillars}
+		The game design must:
+		\begin{itemize}
+			\item Go about language acquisition through \emph{exposition} and not through translation\footnote{To clarify: the game should \textit{never} link a toki pona word to an english word in order to communicate its meaning. Of course, the player themself will often make that link in their head once they get the meaning of the word, but the \textit{act} of getting to that meaning should never pass through translation. For example, a fruit could be sitting near a label that reads "kili". This would lead to the player understanding that "kili" is a word that can refer to fruits. In their head, they will likely link the toki pona word "kili" with the english word "fruit". But the game itself should not put the player in front of a text that explicitely makes that link \textit{in the game}.}.
+			\item Construct the language barrier as \emph{a series of small obstacles to be overcome} and not as a list of chores to be dealt with\footnote{There are two key elements on which this distinction rests. Firstly, the difficulty: a chore is something that is merely \textit{annoying} to do, while an obstacles is something that gets one \textit{out of its comfort zone}. Secondly, the reward: chores lack rewards, whereas obstacles are what stand between the player and a desired outcome. Furthermore, chores tend to be repetitive tasks, whereas obstacles most often need to be overcome only once or a limited number of times.}.
+			\item Encourage the player to \emph{investigate} the environment to find clues and context that allow both to understand the story and to acquire toki pona as a language.
+			\item Regulate access to content based on both \emph{passive} (comprehension) and \emph{active} (expression) uses of toki pona skills.
+			\item Illustrate that toki pona was developped as \emph{a language for thoughts}, and not as a tool of efficient communication. 
+		\end{itemize}
+	
+\end{document}

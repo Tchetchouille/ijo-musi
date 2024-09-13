@@ -45,7 +45,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Ascii Filter" type="ColorRect" parent="."]
-visible = false
 texture_repeat = 2
 material = SubResource("ShaderMaterial_54ujf")
 layout_mode = 1

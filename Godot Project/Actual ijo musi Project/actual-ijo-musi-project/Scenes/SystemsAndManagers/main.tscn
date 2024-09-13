@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://crkve7154wwcd"]
+
+[ext_resource type="PackedScene" uid="uid://ijhbxintwum4" path="res://Scenes/SystemsAndManagers/game_manager.tscn" id="1_r1mc4"]
+[ext_resource type="PackedScene" uid="uid://5i77xt5nyihy" path="res://Scenes/SystemsAndManagers/general_ui.tscn" id="2_ee76p"]
+[ext_resource type="PackedScene" uid="uid://dyc2paln3s6hi" path="res://Scenes/SystemsAndManagers/general_vfx.tscn" id="3_8uuj2"]
+[ext_resource type="PackedScene" uid="uid://bhlva7lu8v2r6" path="res://Scenes/SystemsAndManagers/global_ambiance.tscn" id="4_ouemt"]
+[ext_resource type="PackedScene" uid="uid://d0f77tjckoc2j" path="res://Scenes/SystemsAndManagers/level_manager.tscn" id="5_t6ixf"]
+[ext_resource type="PackedScene" uid="uid://3g86xogvwrgv" path="res://Scenes/SystemsAndManagers/player_character.tscn" id="6_b7g4r"]
+
+[node name="Main" type="Node"]
+
+[node name="GameManager" parent="." instance=ExtResource("1_r1mc4")]
+
+[node name="GeneralUI" parent="." instance=ExtResource("2_ee76p")]
+
+[node name="GeneralVFX" parent="." instance=ExtResource("3_8uuj2")]
+
+[node name="GlobalAmbiance" parent="." instance=ExtResource("4_ouemt")]
+
+[node name="LevelManager" parent="." instance=ExtResource("5_t6ixf")]
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("6_b7g4r")]
