@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dt3rl641xhb4h"]
+[gd_scene load_steps=20 format=3 uid="uid://dt3rl641xhb4h"]
 
 [ext_resource type="Material" uid="uid://c3rj5ftppd5dq" path="res://Resources/Materials/basic_wood_material.tres" id="1_fe3qe"]
 [ext_resource type="Material" uid="uid://dfrp2bmqtphlu" path="res://Resources/Materials/basic_floor_material.tres" id="1_fhlhk"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bg40va80q0ma4" path="res://Scenes/Objects/Furniture/basic_door.tscn" id="4_nee0r"]
 [ext_resource type="PackedScene" uid="uid://c88a03y3t1sox" path="res://Scenes/Objects/Furniture/basic_chair.tscn" id="5_k4a13"]
 [ext_resource type="PackedScene" uid="uid://bd0nqi20bb2m8" path="res://Scenes/Objects/Furniture/fireplace.tscn" id="5_mtak3"]
+[ext_resource type="PackedScene" uid="uid://dvukxgv0ubqk3" path="res://Scenes/Objects/Furniture/basic_candle.tscn" id="9_tx5j4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q0ejg"]
 size = Vector3(0.3, 4, 0.3)
@@ -203,6 +204,12 @@ visible = false
 
 [node name="Fireplace" parent="Objects" instance=ExtResource("5_mtak3")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 0)
+
+[node name="TestCandle1" parent="Objects" instance=ExtResource("9_tx5j4")]
+transform = Transform3D(-1, 1.50996e-07, 3.31896e-15, -1.39543e-07, -0.924153, 0.382022, 5.76838e-08, 0.382022, 0.924153, 0, 3.81995, -4.02999)
+
+[node name="TestCandel2" parent="Objects" instance=ExtResource("9_tx5j4")]
+transform = Transform3D(0.00626565, -0.382015, -0.924135, -1.39543e-07, -0.924153, 0.382022, -0.99998, -0.00239349, -0.00579047, 4.02871, 3.81995, -2.43755)
 
 [node name="LocalAmbiance" type="Node3D" parent="."]
 
