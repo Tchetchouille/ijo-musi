@@ -14,7 +14,7 @@ operator = 2
 [sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_flp6w"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_514u3"]
-constant = 0.05
+constant = 0.06
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_fx8dt"]
 input_name = "uv"
@@ -160,7 +160,7 @@ void fragment() {
 
 
 // FloatConstant:14
-	float n_out14p0 = 0.050000;
+	float n_out14p0 = 0.060000;
 
 
 // VectorCompose:13

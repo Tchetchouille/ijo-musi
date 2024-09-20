@@ -14,7 +14,6 @@ func _ready():
 func _input(event):
 	# I the mouse is moved, we rotate do 2 things
 	if event is InputEventMouseMotion:
-		print("test")
 		# 1) We rotate the character's body and camera controller
 		CHARACTER.transform.basis = CHARACTER.transform.basis.rotated(CHARACTER.transform.basis.y, -event.relative.x * SENSITIVITY)
 		transform.basis = transform.basis.rotated(transform.basis.x, -event.relative.y * SENSITIVITY)

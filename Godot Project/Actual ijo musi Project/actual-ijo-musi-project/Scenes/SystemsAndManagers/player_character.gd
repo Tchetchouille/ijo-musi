@@ -3,7 +3,8 @@ extends CharacterBody3D
 
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
-
+@onready var tool : Node3D = $CameraController/CharacterCamera/ToolController
+@onready var camera : Camera3D = $CameraController/CharacterCamera
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,3 +27,13 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _unhandled_input(_event: InputEvent) -> void:
+	# Tool toggling
+	if Input.is_action_just_pressed("secondary_action"):
+		# If tool active, remove it
+		if camera.get_node_or_null("ToolController"):
+			camera.remove_child(tool)
+		# If tool not active, add it
+		else:
+			camera.add_child(tool)
