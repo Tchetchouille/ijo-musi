@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://du0sda5rvmc1h"]
+
+[ext_resource type="Material" uid="uid://cshtnnffjtsfp" path="res://Resources/Materials/basic_bone_material.tres" id="1_2hdat"]
+[ext_resource type="Material" uid="uid://bnqfw05cylqh6" path="res://Resources/Materials/basic_hole_material.tres" id="2_s2aq4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lp38j"]
+material = ExtResource("1_2hdat")
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_sspcs"]
+material = ExtResource("1_2hdat")
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_eg7w3"]
+material = ExtResource("2_s2aq4")
+
+[sub_resource type="PrismMesh" id="PrismMesh_oxgem"]
+material = ExtResource("2_s2aq4")
+
+[node name="BasicSkeleton" type="StaticBody3D"]
+
+[node name="Skull" type="Node3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.889423, 0)
+
+[node name="Arcade" type="MeshInstance3D" parent="Skull"]
+transform = Transform3D(1, 0, 0, 0, 0.612403, -0.0724341, 0, 0.0884779, 0.501355, 0, 0.0536411, 0.253744)
+mesh = SubResource("BoxMesh_lp38j")
+skeleton = NodePath("../..")
+
+[node name="UpJaw" type="MeshInstance3D" parent="Skull"]
+transform = Transform3D(0.4, 0, 0, 0, 0.399605, 0.0177615, 0, -0.0177615, 0.399605, 0, -0.272596, 0.312488)
+mesh = SubResource("TubeTrailMesh_sspcs")
+skeleton = NodePath("../..")
+
+[node name="Base" type="MeshInstance3D" parent="Skull"]
+transform = Transform3D(0.859135, 0, 0, 0, 0.697835, 0.0212325, 0, -0.0174325, 0.849951, 0, 0.135815, -0.029679)
+mesh = SubResource("BoxMesh_lp38j")
+skeleton = NodePath("../..")
+
+[node name="SpineBase" type="MeshInstance3D" parent="Skull"]
+transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, 0, -0.208416, -0.24863)
+mesh = SubResource("BoxMesh_lp38j")
+skeleton = NodePath("../..")
+
+[node name="RightEye" type="MeshInstance3D" parent="Skull"]
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, -0.3, 0, 0.3, -1.31134e-08, -0.242326, 0, 0.367152)
+mesh = SubResource("TubeTrailMesh_eg7w3")
+
+[node name="LeftEye" type="MeshInstance3D" parent="Skull"]
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, -0.3, 0, 0.3, -1.31134e-08, 0.252, 0, 0.367)
+mesh = SubResource("TubeTrailMesh_eg7w3")
+
+[node name="Nose" type="MeshInstance3D" parent="Skull"]
+transform = Transform3D(0.25, 0, 0, 0, 0.249598, -0.0141732, 0, 0.0141732, 0.249598, 0, -0.202659, 0.386406)
+mesh = SubResource("PrismMesh_oxgem")
