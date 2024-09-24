@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bd0nqi20bb2m8"]
 
-[ext_resource type="Material" uid="uid://cidavfhvfnifm" path="res://Resources/Materials/basic_wall_material.tres" id="1_430g1"]
+[ext_resource type="Material" uid="uid://cidavfhvfnifm" path="res://Resources/Materials/basic_wall_material.tres" id="1_6lg7q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkbno"]
 size = Vector3(8, 4, 0.1)
@@ -9,13 +9,13 @@ size = Vector3(8, 4, 0.1)
 size = Vector3(2.18707, 1.20093, 0.803223)
 
 [sub_resource type="QuadMesh" id="QuadMesh_imuy1"]
-material = ExtResource("1_430g1")
+material = ExtResource("1_6lg7q")
 
 [sub_resource type="BoxMesh" id="BoxMesh_gn2na"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_yuch0"]
 
-[node name="Fireplace" type="StaticBody3D"]
+[node name="BasicFireplace" type="StaticBody3D"]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

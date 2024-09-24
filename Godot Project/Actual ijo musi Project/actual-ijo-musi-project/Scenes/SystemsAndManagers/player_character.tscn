@@ -22,6 +22,7 @@ albedo_texture = SubResource("ViewportTexture_66bi1")
 [sub_resource type="QuadMesh" id="QuadMesh_i6gmh"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_kojja")
+size = Vector2(1.152, 0.648)
 
 [node name="PlayerCharacter" type="CharacterBody3D"]
 script = ExtResource("1_04qb1")
@@ -38,6 +39,7 @@ script = ExtResource("2_aw5yu")
 
 [node name="ToolViewport" type="SubViewport" parent="CameraController/CharacterCamera"]
 canvas_cull_mask = 4294966273
+size = Vector2i(1152, 648)
 
 [node name="ToolCamera" type="Camera3D" parent="CameraController/CharacterCamera/ToolViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.648895, 0)
@@ -49,9 +51,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.391102, 0)
 light_energy = 0.2
 
 [node name="ToolController" type="Node3D" parent="CameraController/CharacterCamera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.212871)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.358685)
 
 [node name="ToolUI" type="Control" parent="CameraController/CharacterCamera/ToolController"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
