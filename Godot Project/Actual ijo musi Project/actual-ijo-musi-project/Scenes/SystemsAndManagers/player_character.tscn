@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://3g86xogvwrgv"]
+[gd_scene load_steps=14 format=3 uid="uid://3g86xogvwrgv"]
 
 [ext_resource type="Script" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
 [ext_resource type="Script" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
 [ext_resource type="Script" path="res://Scenes/SystemsAndManagers/tool_camera.gd" id="3_76q7t"]
 [ext_resource type="Shader" uid="uid://bmowejp10voff" path="res://Resources/Shaders/pixel_shader.tres" id="4_enxm7"]
+[ext_resource type="Script" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
+[ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources/Materials/basic_clay_material.tres" id="6_gja8t"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_l2amc"]
 
@@ -11,6 +13,7 @@
 shader = ExtResource("4_enxm7")
 
 [sub_resource type="BoxMesh" id="BoxMesh_a0a2d"]
+material = ExtResource("6_gja8t")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_66bi1"]
 viewport_path = NodePath("CameraController/CharacterCamera/ToolViewport")
@@ -23,6 +26,9 @@ albedo_texture = SubResource("ViewportTexture_66bi1")
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_kojja")
 size = Vector2(1.152, 0.648)
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_ao6r4"]
+length = 2.93408
 
 [node name="PlayerCharacter" type="CharacterBody3D"]
 script = ExtResource("1_04qb1")
@@ -44,6 +50,7 @@ size = Vector2i(1152, 648)
 [node name="ToolCamera" type="Camera3D" parent="CameraController/CharacterCamera/ToolViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.648895, 0)
 cull_mask = 1047553
+fov = 60.0
 script = ExtResource("3_76q7t")
 
 [node name="TorchTest" type="OmniLight3D" parent="CameraController/CharacterCamera"]
@@ -51,7 +58,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.391102, 0)
 light_energy = 0.2
 
 [node name="ToolController" type="Node3D" parent="CameraController/CharacterCamera"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.358685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.295882)
+script = ExtResource("4_irpfk")
 
 [node name="ToolUI" type="Control" parent="CameraController/CharacterCamera/ToolController"]
 visible = false
@@ -109,3 +117,12 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.00118034)
 mesh = SubResource("QuadMesh_i6gmh")
 skeleton = NodePath("../../../ToolUI")
+
+[node name="AimingArea" type="Area3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
+collision_mask = 2
+
+[node name="AimingAreaCollision" type="CollisionShape3D" parent="CameraController/CharacterCamera/ToolController/Tool/AimingArea"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shape = SubResource("SeparationRayShape3D_ao6r4")
+
+[connection signal="body_entered" from="CameraController/CharacterCamera/ToolController/Tool/AimingArea" to="CameraController/CharacterCamera/ToolController" method="_on_aiming_area_body_entered"]

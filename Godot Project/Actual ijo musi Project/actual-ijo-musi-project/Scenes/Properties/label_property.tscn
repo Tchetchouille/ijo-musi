@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bac2haj3k6syx"]
+
+[ext_resource type="Script" path="res://Scenes/Properties/label_property.gd" id="1_ptcji"]
+
+[node name="LabelProperty" type="Node"]
+script = ExtResource("1_ptcji")

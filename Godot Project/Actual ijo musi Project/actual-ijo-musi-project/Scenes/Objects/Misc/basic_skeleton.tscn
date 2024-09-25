@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://du0sda5rvmc1h"]
+[gd_scene load_steps=9 format=3 uid="uid://du0sda5rvmc1h"]
 
 [ext_resource type="Material" uid="uid://cshtnnffjtsfp" path="res://Resources/Materials/basic_bone_material.tres" id="1_2hdat"]
 [ext_resource type="Material" uid="uid://bnqfw05cylqh6" path="res://Resources/Materials/basic_hole_material.tres" id="2_s2aq4"]
+[ext_resource type="PackedScene" uid="uid://bac2haj3k6syx" path="res://Scenes/Properties/label_property.tscn" id="3_ou61a"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lp38j"]
 material = ExtResource("1_2hdat")
@@ -15,7 +16,10 @@ material = ExtResource("2_s2aq4")
 [sub_resource type="PrismMesh" id="PrismMesh_oxgem"]
 material = ExtResource("2_s2aq4")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rw7io"]
+
 [node name="BasicSkeleton" type="StaticBody3D"]
+collision_layer = 2
 
 [node name="Skull" type="Node3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.889423, 0)
@@ -51,3 +55,9 @@ mesh = SubResource("TubeTrailMesh_eg7w3")
 [node name="Nose" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(0.25, 0, 0, 0, 0.249598, -0.0141732, 0, 0.0141732, 0.249598, 0, -0.202659, 0.386406)
 mesh = SubResource("PrismMesh_oxgem")
+
+[node name="LabelProperty" parent="." instance=ExtResource("3_ou61a")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.889423, 0)
+shape = SubResource("BoxShape3D_rw7io")

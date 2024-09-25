@@ -1,0 +1,11 @@
+[gd_resource type="JSON" format=3 uid="uid://mb0u0n7pilr1"]
+
+[resource]
+data = {
+"basic_skeleton_label": {
+"dialog_text": "You uncovered the mystery of the skull!",
+"label_text": "This is a test label_text",
+"label_type": "fillable",
+"name": "basic_skeleton_label"
+}
+}
