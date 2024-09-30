@@ -73,15 +73,14 @@ skeleton = NodePath("../../Whiteboxing")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.416442, -0.0502262)
-light_color = Color(0.861067, 0.553469, 0.262489, 1)
+light_color = Color(0.909804, 0.407843, 0, 1)
 light_energy = 3.0
 light_cull_mask = 4294966273
 shadow_enabled = true
 omni_range = 10.0
-omni_attenuation = 0.2
 script = ExtResource("2_aakdq")
 base_intensity = 3.0
-flicker_intensity = 0.5
+flicker_intensity = 1.0
 offset_intensity = 0.08
 
 [node name="CandleFlame" parent="Light" instance=ExtResource("2_xa0q2")]

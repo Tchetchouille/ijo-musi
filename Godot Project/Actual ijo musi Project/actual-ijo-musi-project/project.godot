@@ -59,7 +59,7 @@ secondary_action={
 [layer_names]
 
 3d_render/layer_3="3"
-3d_render/layer_10="tool_screen"
+3d_render/layer_10="tool_vision"
 3d_physics/layer_1="Environment"
 3d_physics/layer_2="Labeled_Objects"
 

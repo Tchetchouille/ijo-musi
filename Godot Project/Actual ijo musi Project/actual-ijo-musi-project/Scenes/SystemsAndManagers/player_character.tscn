@@ -42,14 +42,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 script = ExtResource("2_aw5yu")
 
 [node name="CharacterCamera" type="Camera3D" parent="CameraController"]
+cull_mask = 1048063
 
 [node name="ToolViewport" type="SubViewport" parent="CameraController/CharacterCamera"]
-canvas_cull_mask = 4294966273
+canvas_cull_mask = 4294966785
 size = Vector2i(1152, 648)
 
 [node name="ToolCamera" type="Camera3D" parent="CameraController/CharacterCamera/ToolViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.648895, 0)
-cull_mask = 1047553
+cull_mask = 1048065
 fov = 60.0
 script = ExtResource("3_76q7t")
 
