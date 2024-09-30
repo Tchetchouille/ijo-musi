@@ -14,5 +14,6 @@ func _process(_delta: float) -> void:
 # Aiming at labeled objects
 # Only labeled objects are checked, as they have their own collison layer
 func _on_aiming_area_body_entered(body: Node3D) -> void:
-	var label = body.get_node("LabelProperty")
-	print(label.label_name)
+	if body.get_node("LabelProperty"):
+		var label = body.get_node("LabelProperty")
+		print(label.label_name)

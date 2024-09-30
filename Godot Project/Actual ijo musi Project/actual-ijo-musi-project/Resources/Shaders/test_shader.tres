@@ -1,0 +1,18 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://o2oqmonjmjwu"]
+
+[sub_resource type="VisualShaderNodeIf" id="VisualShaderNodeIf_qt5jp"]
+
+[sub_resource type="VisualShaderNodeBooleanParameter" id="VisualShaderNodeBooleanParameter_6v6nf"]
+parameter_name = "BooleanParameter"
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+"
+nodes/fragment/2/node = SubResource("VisualShaderNodeIf_qt5jp")
+nodes/fragment/2/position = Vector2(-240, 120)
+nodes/fragment/3/node = SubResource("VisualShaderNodeBooleanParameter_6v6nf")
+nodes/fragment/3/position = Vector2(-860, 220)

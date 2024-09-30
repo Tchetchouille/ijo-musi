@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c41fvo10jkdma"]
+[gd_scene load_steps=22 format=3 uid="uid://c41fvo10jkdma"]
 
 [ext_resource type="Material" uid="uid://c3rj5ftppd5dq" path="res://Resources/Materials/basic_wood_material.tres" id="1_fe3qe"]
 [ext_resource type="Material" uid="uid://dfrp2bmqtphlu" path="res://Resources/Materials/basic_floor_material.tres" id="1_fhlhk"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bd0nqi20bb2m8" path="res://Scenes/Objects/Furniture/basic_fireplace.tscn" id="5_mtak3"]
 [ext_resource type="PackedScene" uid="uid://dvukxgv0ubqk3" path="res://Scenes/Objects/Furniture/basic_candle.tscn" id="9_tx5j4"]
 [ext_resource type="PackedScene" uid="uid://du0sda5rvmc1h" path="res://Scenes/Objects/Misc/basic_skeleton.tscn" id="10_vvukb"]
+[ext_resource type="PackedScene" uid="uid://cco2m1ecd7fe5" path="res://Scenes/Objects/Misc/test_box.tscn" id="11_7yymd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q0ejg"]
 size = Vector3(0.3, 4, 0.3)
@@ -232,3 +233,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.9723
 
 [node name="BasicSkeleton" parent="LabeledObjects" instance=ExtResource("10_vvukb")]
 transform = Transform3D(0.063518, -0.2981, 0.952419, 0.317333, 0.910848, 0.263925, -0.946185, 0.28547, 0.152452, 0, 0.362269, 5.65497)
+
+[node name="TestBox" parent="." instance=ExtResource("11_7yymd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8791, 3.24752)
+visible = false

@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bd0nqi20bb2m8"]
+[gd_scene load_steps=9 format=3 uid="uid://bd0nqi20bb2m8"]
 
 [ext_resource type="Material" uid="uid://cidavfhvfnifm" path="res://Resources/Materials/basic_wall_material.tres" id="1_6lg7q"]
+[ext_resource type="Script" path="res://Scenes/Objects/Furniture/firplace_light.gd" id="2_aakdq"]
+[ext_resource type="PackedScene" uid="uid://b3stu2p35yo4q" path="res://Scenes/NonUIVFX/campfire_flame.tscn" id="2_xa0q2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkbno"]
 size = Vector3(8, 4, 0.1)
@@ -72,4 +74,15 @@ skeleton = NodePath("../../Whiteboxing")
 [node name="OmniLight3D" type="OmniLight3D" parent="Light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.416442, -0.0502262)
 light_color = Color(0.861067, 0.553469, 0.262489, 1)
+light_energy = 3.0
+light_cull_mask = 4294966273
 shadow_enabled = true
+omni_range = 10.0
+omni_attenuation = 0.2
+script = ExtResource("2_aakdq")
+base_intensity = 3.0
+flicker_intensity = 0.5
+offset_intensity = 0.08
+
+[node name="CandleFlame" parent="Light" instance=ExtResource("2_xa0q2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16256, -0.101297)

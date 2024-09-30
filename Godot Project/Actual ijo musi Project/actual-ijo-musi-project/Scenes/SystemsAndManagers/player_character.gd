@@ -5,6 +5,12 @@ const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 @onready var tool : Node3D = $CameraController/CharacterCamera/ToolController
 @onready var camera : Camera3D = $CameraController/CharacterCamera
+@onready var camera_controller : Node3D = $CameraController
+
+
+var t_bob = 0
+const HEADBOB_FREQ = 11
+const HEADBOB_AMP = 0.01
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,6 +32,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
+# Headbob handling
+	if velocity.length() != 0 and is_on_floor():
+		t_bob += delta * HEADBOB_FREQ * float(is_on_floor())
+		_headbob(t_bob)
+	
 	move_and_slide()
 
 func _unhandled_input(_event: InputEvent) -> void:
@@ -37,3 +48,9 @@ func _unhandled_input(_event: InputEvent) -> void:
 		# If tool not active, add it
 		else:
 			camera.add_child(tool)
+
+
+# Generates headbob
+func _headbob(time):
+	camera_controller.transform.origin.y += sin(time) * HEADBOB_AMP
+	camera_controller.transform.origin.x += cos(time / 2) * HEADBOB_AMP / 2
