@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c41fvo10jkdma"]
+[gd_scene load_steps=25 format=3 uid="uid://c41fvo10jkdma"]
 
 [ext_resource type="Material" uid="uid://c3rj5ftppd5dq" path="res://Resources/Materials/basic_wood_material.tres" id="1_fe3qe"]
 [ext_resource type="Material" uid="uid://dfrp2bmqtphlu" path="res://Resources/Materials/basic_floor_material.tres" id="1_fhlhk"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cvqd1v0rodqk7" path="res://Scenes/Objects/Furniture/basic_carpet.tscn" id="10_8erve"]
 [ext_resource type="PackedScene" uid="uid://du0sda5rvmc1h" path="res://Scenes/Objects/Misc/basic_skeleton.tscn" id="10_vvukb"]
 [ext_resource type="PackedScene" uid="uid://cco2m1ecd7fe5" path="res://Scenes/Objects/Misc/test_box.tscn" id="11_7yymd"]
+[ext_resource type="PackedScene" uid="uid://cusexy548pkov" path="res://Scenes/Objects/Furniture/basic_armchair.tscn" id="11_u56gx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q0ejg"]
 size = Vector3(0.3, 4, 0.3)
@@ -227,6 +228,12 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.9723
 
 [node name="BasicCarpet" parent="UnlabeledObjects" instance=ExtResource("10_8erve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00682318, 0)
+
+[node name="BasicArmchair" parent="UnlabeledObjects" instance=ExtResource("11_u56gx")]
+transform = Transform3D(0.883308, 0, -0.468793, 0, 1, 0, 0.468793, 0, 0.883308, 1.54307, 0.484777, -2.32887)
+
+[node name="BasicArmchair2" parent="UnlabeledObjects" instance=ExtResource("11_u56gx")]
+transform = Transform3D(-4.19385e-08, -0.959442, 0.281906, 1, -4.37114e-08, 0, 1.23225e-08, 0.281906, 0.959442, -1.71781, 0.617848, -2.65096)
 
 [node name="LocalAmbiance" type="Node3D" parent="."]
 
