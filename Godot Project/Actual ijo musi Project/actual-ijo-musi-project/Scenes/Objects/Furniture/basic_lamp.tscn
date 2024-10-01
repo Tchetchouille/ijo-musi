@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfjrc3tkoun7k"]
+
+[ext_resource type="PackedScene" uid="uid://hhrltbkhlb0d" path="res://Resources/Models/basic_lamp.glb" id="1_t76lm"]
+[ext_resource type="Material" uid="uid://dxio8j3fs5k1v" path="res://Resources/Materials/basic_blue_crystal_material.tres" id="2_juuen"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p0a20"]
+material = ExtResource("2_juuen")
+
+[node name="BasicLamp" type="StaticBody3D"]
+
+[node name="basic_lamp" parent="." instance=ExtResource("1_t76lm")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, 0, 0.0286645, 0)
+light_color = Color(0.317647, 0.627451, 1, 1)
+light_energy = 8.0
+spot_range = 10.4889
+spot_angle = 44.3207
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.042491, 0)
+light_color = Color(0.317647, 0.627451, 1, 1)
+light_energy = 0.2
+omni_range = 0.178753
+
+[node name="Crystal" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.00383559, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Crystal"]
+transform = Transform3D(0.09241, -0.0335787, 0.0182446, 0.0382151, 0.0811984, -0.0441183, 0, 0.0477419, 0.0878675, 0, 0.0705405, 0)
+mesh = SubResource("BoxMesh_p0a20")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Crystal"]
+transform = Transform3D(0.0538321, -0.0279361, -0.0521697, 0.0288264, 0.073971, -0.00986551, 0.0516832, -0.0121598, 0.0598414, -0.0373875, 0.108944, 0.0314497)
+mesh = SubResource("BoxMesh_p0a20")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Crystal"]
+transform = Transform3D(0.0451495, 0.0128319, -0.0647832, 0.0094591, 0.0764098, 0.0217272, 0.0653609, -0.019922, 0.0416061, 0.0226831, 0.0911711, -0.0526713)
+mesh = SubResource("BoxMesh_p0a20")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Crystal"]
+transform = Transform3D(0.0481212, -0.0343311, -0.0539048, 0.032286, 0.0712925, -0.016583, 0.055154, -0.0117797, 0.0567387, 0.0448832, 0.0858045, 0.00317328)
+mesh = SubResource("BoxMesh_p0a20")

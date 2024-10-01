@@ -12,14 +12,14 @@ var t_bob = 0
 const HEADBOB_FREQ = 11
 const HEADBOB_AMP = 0.01
 
+func _ready() -> void:
+	if camera.get_node_or_null("ToolController"):
+		camera.remove_child(tool)
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -48,7 +48,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 		# If tool not active, add it
 		else:
 			camera.add_child(tool)
-
 
 # Generates headbob
 func _headbob(time):

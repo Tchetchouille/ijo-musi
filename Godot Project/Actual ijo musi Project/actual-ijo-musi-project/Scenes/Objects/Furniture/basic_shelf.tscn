@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwgir4ksrxchb"]
+
+[ext_resource type="Material" uid="uid://c3rj5ftppd5dq" path="res://Resources/Materials/basic_wood_material.tres" id="1_55md8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j3d0f"]
+material = ExtResource("1_55md8")
+
+[node name="BasicShelf" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.05719, 0, 0, 0, 0.0853179, 0, 0, 0, 0.466966, 0, 0, 0)
+mesh = SubResource("BoxMesh_j3d0f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0845349, 0, 0, 0, 0.0338637, 0.473719, 0, -0.0298223, 0.537915, -0.602768, -0.253996, -0.0969548)
+mesh = SubResource("BoxMesh_j3d0f")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0845349, 0, 0, 0, 0.0338637, 0.473719, 0, -0.0298223, 0.537915, 0.603, -0.254174, -0.0969548)
+mesh = SubResource("BoxMesh_j3d0f")
