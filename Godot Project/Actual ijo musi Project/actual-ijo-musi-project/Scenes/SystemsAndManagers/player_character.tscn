@@ -1,16 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://3g86xogvwrgv"]
+[gd_scene load_steps=13 format=3 uid="uid://3g86xogvwrgv"]
 
 [ext_resource type="Script" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
 [ext_resource type="Script" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
 [ext_resource type="Script" path="res://Scenes/SystemsAndManagers/tool_camera.gd" id="3_76q7t"]
-[ext_resource type="Shader" uid="uid://bmowejp10voff" path="res://Resources/Shaders/pixel_shader.tres" id="4_enxm7"]
 [ext_resource type="Script" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
 [ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources/Materials/basic_clay_material.tres" id="6_gja8t"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_l2amc"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qv7jw"]
-shader = ExtResource("4_enxm7")
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_es7p3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_a0a2d"]
 material = ExtResource("6_gja8t")
@@ -45,12 +43,13 @@ script = ExtResource("2_aw5yu")
 cull_mask = 1048063
 
 [node name="ToolViewport" type="SubViewport" parent="CameraController/CharacterCamera"]
-canvas_cull_mask = 4294966785
+transparent_bg = true
+canvas_cull_mask = 4294966784
 size = Vector2i(1152, 648)
 
 [node name="ToolCamera" type="Camera3D" parent="CameraController/CharacterCamera/ToolViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.648895, 0)
-cull_mask = 1048065
+cull_mask = 1048064
 fov = 60.0
 script = ExtResource("3_76q7t")
 
@@ -63,11 +62,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.295882)
 script = ExtResource("4_irpfk")
 
 [node name="ToolUI" type="Control" parent="CameraController/CharacterCamera/ToolController"]
-visible = false
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.8
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -82,13 +81,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="BasicToolFilter" type="ColorRect" parent="CameraController/CharacterCamera/ToolController/ToolUI"]
-material = SubResource("ShaderMaterial_qv7jw")
+visible = false
+material = SubResource("CanvasItemMaterial_es7p3")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 1, 1, 0.176471)
 
 [node name="Tool" type="Node3D" parent="CameraController/CharacterCamera/ToolController"]
 
@@ -116,6 +117,7 @@ skeleton = NodePath("../..")
 
 [node name="ToolScreen" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.00118034)
+layers = 2
 mesh = SubResource("QuadMesh_i6gmh")
 skeleton = NodePath("../../../ToolUI")
 
