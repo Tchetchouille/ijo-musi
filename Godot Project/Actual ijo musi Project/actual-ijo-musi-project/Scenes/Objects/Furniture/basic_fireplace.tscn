@@ -33,14 +33,17 @@ shape = SubResource("BoxShape3D_tpvo6")
 
 [node name="RightWall" type="MeshInstance3D" parent="Whiteboxing"]
 transform = Transform3D(3, 0, 0, 0, 8, 0, 0, 0, 1, 2.5, 4, 0)
+layers = 3
 mesh = SubResource("QuadMesh_imuy1")
 
 [node name="LeftWall" type="MeshInstance3D" parent="Whiteboxing"]
 transform = Transform3D(3, 0, 0, 0, 8, 0, 0, 0, 1, -2.5, 4, 0)
+layers = 3
 mesh = SubResource("QuadMesh_imuy1")
 
 [node name="UpWall" type="MeshInstance3D" parent="Whiteboxing"]
 transform = Transform3D(3, 0, 0, 0, 7, 0, 0, 0, 1, 0, 4.5, 0)
+layers = 3
 mesh = SubResource("QuadMesh_imuy1")
 
 [node name="Main" type="Node3D" parent="."]
@@ -48,26 +51,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.741924, 0, 0, -0.181637)
 
 [node name="Left" type="MeshInstance3D" parent="Main"]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1.8586, -1, 0.5, 0)
+layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
 [node name="Right" type="MeshInstance3D" parent="Main"]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1.8586, 1, 0.5, 0)
+layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
 [node name="Back" type="MeshInstance3D" parent="Main"]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 0.5, -0.350631)
+layers = 3
 mesh = SubResource("BoxMesh_yuch0")
 skeleton = NodePath("../../Whiteboxing")
 
 [node name="Up" type="MeshInstance3D" parent="Main"]
 transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 1.8586, 0, 1, 0)
+layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
 [node name="Down" type="MeshInstance3D" parent="Main"]
 transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 1.8586, 0, 0, 0)
+layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
@@ -77,7 +85,7 @@ skeleton = NodePath("../../Whiteboxing")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.416442, -0.0502262)
 light_color = Color(0.909804, 0.407843, 0, 1)
 light_energy = 3.0
-light_cull_mask = 4294966273
+light_cull_mask = 4294966275
 shadow_enabled = true
 omni_range = 10.0
 script = ExtResource("2_aakdq")

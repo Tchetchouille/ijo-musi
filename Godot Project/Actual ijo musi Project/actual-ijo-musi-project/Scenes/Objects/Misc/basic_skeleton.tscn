@@ -20,40 +20,48 @@ material = ExtResource("2_s2aq4")
 
 [node name="BasicSkeleton" type="StaticBody3D"]
 collision_layer = 2
+collision_mask = 3
 
 [node name="Skull" type="Node3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.889423, 0)
 
 [node name="Arcade" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(1, 0, 0, 0, 0.612403, -0.0724341, 0, 0.0884779, 0.501355, 0, 0.0536411, 0.253744)
+layers = 513
 mesh = SubResource("BoxMesh_lp38j")
 skeleton = NodePath("../..")
 
 [node name="UpJaw" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(0.4, 0, 0, 0, 0.399605, 0.0177615, 0, -0.0177615, 0.399605, 0, -0.272596, 0.312488)
+layers = 513
 mesh = SubResource("TubeTrailMesh_sspcs")
 skeleton = NodePath("../..")
 
 [node name="Base" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(0.859135, 0, 0, 0, 0.697835, 0.0212325, 0, -0.0174325, 0.849951, 0, 0.135815, -0.029679)
+layers = 513
 mesh = SubResource("BoxMesh_lp38j")
 skeleton = NodePath("../..")
 
 [node name="SpineBase" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, 0, -0.208416, -0.24863)
+layers = 513
 mesh = SubResource("BoxMesh_lp38j")
 skeleton = NodePath("../..")
 
 [node name="RightEye" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, -0.3, 0, 0.3, -1.31134e-08, -0.242326, 0, 0.367152)
+layers = 513
 mesh = SubResource("TubeTrailMesh_eg7w3")
 
 [node name="LeftEye" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, -0.3, 0, 0.3, -1.31134e-08, 0.252, 0, 0.367)
+layers = 513
 mesh = SubResource("TubeTrailMesh_eg7w3")
 
 [node name="Nose" type="MeshInstance3D" parent="Skull"]
 transform = Transform3D(0.25, 0, 0, 0, 0.249598, -0.0141732, 0, 0.0141732, 0.249598, 0, -0.202659, 0.386406)
+layers = 513
 mesh = SubResource("PrismMesh_oxgem")
 
 [node name="LabelProperty" parent="." instance=ExtResource("3_ou61a")]

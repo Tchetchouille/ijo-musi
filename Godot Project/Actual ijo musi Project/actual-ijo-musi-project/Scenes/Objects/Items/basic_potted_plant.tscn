@@ -21,16 +21,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0767805, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pot"]
 transform = Transform3D(0.4, 0, 0, 0, 0.0909978, 0, 0, 0, 0.4, 0, 0.34366, 0)
+layers = 515
 mesh = SubResource("TubeTrailMesh_m5mki")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Pot"]
 transform = Transform3D(0.3, 0, 0, 0, 0.221402, 0, 0, 0, 0.3, 0, 0.18575, 0)
+layers = 515
 mesh = SubResource("TubeTrailMesh_m5mki")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Pot"]
 transform = Transform3D(0.3, 0, 0, 0, 0.0319085, 0, 0, 0, 0.3, 0, 0.380961, 0)
+layers = 513
 mesh = SubResource("TubeTrailMesh_ttlfv")
 skeleton = NodePath("../..")
 

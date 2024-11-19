@@ -17,6 +17,7 @@ colors = PackedColorArray(0.45, 0.2625, 0, 1, 1, 0.629167, 0.11, 1)
 [node name="CandleFlame" type="Node3D"]
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+layers = 3
 lifetime = 0.5
 mesh = SubResource("QuadMesh_jidhe")
 emission_shape = 1

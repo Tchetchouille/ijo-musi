@@ -41,22 +41,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
 
 [node name="Basis" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(2.4, 0, 0, 0, 3, 0, 0, 0, 0.01, 0, 1.5, 0)
+layers = 3
 mesh = SubResource("BoxMesh_s3r4t")
 skeleton = NodePath("../..")
 
 [node name="LeftPannel" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1.1, 0, 0, 0, 2.8, 0, 0, 0, 0.15, -0.56, 1.5, 0)
+layers = 3
 mesh = SubResource("BoxMesh_p7o16")
 skeleton = NodePath("../..")
 
 [node name="RightPannel" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(1.1, 0, 0, 0, 2.8, 0, 0, 0, 0.15, 0.56, 1.5, 0)
+layers = 3
 mesh = SubResource("BoxMesh_n8g6b")
 skeleton = NodePath("../..")
 
 [node name="HandleBase" type="MeshInstance3D" parent="Meshes"]
 transform = Transform3D(0.15, 0, 0, 0, 0.3, 0, 0, 0, 0.2, 0.4, 1.2, 0)
 visible = false
+layers = 3
 mesh = SubResource("BoxMesh_bplnr")
 skeleton = NodePath("../..")
 
@@ -64,31 +68,38 @@ skeleton = NodePath("../..")
 
 [node name="LeftFrame" type="MeshInstance3D" parent="Meshes/Frame"]
 transform = Transform3D(0.4, 0, 0, 0, 3.4, 0, 0, 0, 0.4, -1.33, 1.6, 0)
+layers = 3
 mesh = SubResource("BoxMesh_u86ta")
 
 [node name="RightFrame" type="MeshInstance3D" parent="Meshes/Frame"]
 transform = Transform3D(0.4, 0, 0, 0, 3.4, 0, 0, 0, 0.4, 1.33, 1.6, 0)
+layers = 3
 mesh = SubResource("BoxMesh_u86ta")
 
 [node name="UpFrame" type="MeshInstance3D" parent="Meshes/Frame"]
 transform = Transform3D(3.2, 0, 0, 0, 0.4, 0, 0, 0, 0.55, 0, 3.1, 0)
+layers = 3
 mesh = SubResource("BoxMesh_u86ta")
 
 [node name="UpFrame2" type="MeshInstance3D" parent="Meshes/Frame"]
 transform = Transform3D(3.6, 0, 0, 0, 0.4, 0, 0, 0, 1, 0, -0.2, 0)
+layers = 3
 mesh = SubResource("BoxMesh_u86ta")
 
 [node name="DownFrame" type="MeshInstance3D" parent="Meshes/Frame"]
 transform = Transform3D(3.2, 0, 0, 0, 0.2, 0, 0, 0, 0.4, 0, -0.02, 0)
+layers = 3
 mesh = SubResource("BoxMesh_u86ta")
 
 [node name="LeftCube" type="MeshInstance3D" parent="Meshes/Frame"]
 transform = Transform3D(0.499975, -0.00459483, 0.00279714, 0.00458964, 0.499977, 0.00182449, -0.00200984, -0.0012848, 0.699992, -1.38, 0, 0)
+layers = 3
 mesh = SubResource("BoxMesh_j2xb6")
 skeleton = NodePath("../LeftFrame")
 
 [node name="LeftCube2" type="MeshInstance3D" parent="Meshes/Frame"]
 transform = Transform3D(0.499975, -0.00459483, 0.00279714, 0.00458964, 0.499977, 0.00182449, -0.00200984, -0.0012848, 0.699992, 1.38, 0, 0)
+layers = 3
 mesh = SubResource("BoxMesh_j2xb6")
 skeleton = NodePath("../LeftFrame")
 
@@ -96,40 +107,48 @@ skeleton = NodePath("../LeftFrame")
 
 [node name="DownRight" type="MeshInstance3D" parent="Meshes/Hinges"]
 transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, 1.2, 1, 0.15)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../..")
 
 [node name="Fixation" type="MeshInstance3D" parent="Meshes/Hinges/DownRight"]
 transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, -1.6, 0, 0)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../../..")
 
 [node name="DownLeft" type="MeshInstance3D" parent="Meshes/Hinges"]
 transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, -1.2, 1, 0.15)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../..")
 
 [node name="Fixation2" type="MeshInstance3D" parent="Meshes/Hinges/DownLeft"]
 transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, 1.6, 0, 0)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../../..")
 
 [node name="UpRight" type="MeshInstance3D" parent="Meshes/Hinges"]
 transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, 1.2, 2, 0.15)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../..")
 
 [node name="Fixation" type="MeshInstance3D" parent="Meshes/Hinges/UpRight"]
 transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, -1.6, 0, 0)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../../..")
 
 [node name="UpLeft" type="MeshInstance3D" parent="Meshes/Hinges"]
 transform = Transform3D(0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, -1.2, 2, 0.15)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../..")
 
 [node name="Fixation" type="MeshInstance3D" parent="Meshes/Hinges/UpLeft"]
 transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, 1.6, 0, 0)
+layers = 3
 mesh = SubResource("BoxMesh_enmk6")
 skeleton = NodePath("../../..")
