@@ -142,4 +142,17 @@ spot_range = 17.6003
 spot_attenuation = 0.0
 spot_angle = 85.7812
 
+[node name="MainToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
+visible = false
+layers = 512
+light_energy = 2.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_cull_mask = 4294966274
+spot_range = 17.6003
+spot_attenuation = 0.0
+spot_angle = 85.7812
+
 [connection signal="body_entered" from="CameraController/CharacterCamera/ToolController/Tool/AimingArea" to="CameraController/CharacterCamera/ToolController" method="_on_aiming_area_body_entered"]
