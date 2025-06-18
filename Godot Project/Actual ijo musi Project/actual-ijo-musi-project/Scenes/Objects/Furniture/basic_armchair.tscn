@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cusexy548pkov"]
 
-[ext_resource type="Material" uid="uid://c3rj5ftppd5dq" path="res://Resources/Materials/basic_wood_material.tres" id="1_driib"]
-[ext_resource type="Material" uid="uid://d4d5hn5yujtj6" path="res://Resources/Materials/basic_metal_material.tres" id="2_6iy8a"]
+[ext_resource type="Material" uid="uid://c3rj5ftppd5dq" path="res://Resources and Assets/Materials/basic_wood_material.tres" id="1_driib"]
+[ext_resource type="Material" uid="uid://d4d5hn5yujtj6" path="res://Resources and Assets/Materials/basic_metal_material.tres" id="2_6iy8a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l2hxf"]
 size = Vector3(1.21844, 1.5907, 1.07495)

@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://3g86xogvwrgv"]
 
-[ext_resource type="Script" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
-[ext_resource type="Script" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
-[ext_resource type="Script" path="res://Scenes/SystemsAndManagers/tool_camera.gd" id="3_76q7t"]
-[ext_resource type="Script" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
-[ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources/Materials/basic_clay_material.tres" id="6_gja8t"]
+[ext_resource type="Script" uid="uid://vback6ieg3ma" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
+[ext_resource type="Script" uid="uid://dfap4erfabr63" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
+[ext_resource type="Script" uid="uid://itpa2ll6rx0w" path="res://Scenes/SystemsAndManagers/tool_camera.gd" id="3_76q7t"]
+[ext_resource type="Script" uid="uid://bqe2s58xnb5nn" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
+[ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources and Assets/Materials/basic_clay_material.tres" id="6_gja8t"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_l2amc"]
 

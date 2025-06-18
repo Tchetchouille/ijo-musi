@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://du0sda5rvmc1h"]
 
-[ext_resource type="Material" uid="uid://cshtnnffjtsfp" path="res://Resources/Materials/basic_bone_material.tres" id="1_2hdat"]
-[ext_resource type="Material" uid="uid://bnqfw05cylqh6" path="res://Resources/Materials/basic_hole_material.tres" id="2_s2aq4"]
+[ext_resource type="Material" uid="uid://cshtnnffjtsfp" path="res://Resources and Assets/Materials/basic_bone_material.tres" id="1_2hdat"]
+[ext_resource type="Material" uid="uid://bnqfw05cylqh6" path="res://Resources and Assets/Materials/basic_hole_material.tres" id="2_s2aq4"]
 [ext_resource type="PackedScene" uid="uid://bac2haj3k6syx" path="res://Scenes/Properties/label_property.tscn" id="3_ou61a"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lp38j"]

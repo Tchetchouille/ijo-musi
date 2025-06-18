@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://faq1a5v1xx7j"]
 
-[ext_resource type="Material" uid="uid://d00ivkmywpa14" path="res://Resources/Materials/flame_material.tres" id="1_bnt5k"]
-[ext_resource type="Curve" uid="uid://bltlk3tegvcvh" path="res://Resources/Functions/flame_progression.tres" id="2_s8cnt"]
+[ext_resource type="Material" uid="uid://d00ivkmywpa14" path="res://Resources and Assets/Materials/flame_material.tres" id="1_bnt5k"]
+[ext_resource type="Curve" uid="uid://bltlk3tegvcvh" path="res://Resources and Assets/Functions/flame_progression.tres" id="2_s8cnt"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_jidhe"]
 material = ExtResource("1_bnt5k")

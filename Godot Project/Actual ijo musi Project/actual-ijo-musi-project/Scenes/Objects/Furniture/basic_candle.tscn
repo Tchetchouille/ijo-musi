@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvukxgv0ubqk3"]
 
-[ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources/Materials/basic_clay_material.tres" id="1_uc3qp"]
-[ext_resource type="Script" path="res://Scenes/Objects/Furniture/candle_light.gd" id="1_y8rjl"]
+[ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources and Assets/Materials/basic_clay_material.tres" id="1_uc3qp"]
+[ext_resource type="Script" uid="uid://cx1i26xkr83qa" path="res://Scenes/Objects/Furniture/candle_light.gd" id="1_y8rjl"]
 [ext_resource type="PackedScene" uid="uid://faq1a5v1xx7j" path="res://Scenes/NonUIVFX/candle_flame.tscn" id="2_2cvd0"]
 
 [sub_resource type="TubeTrailMesh" id="TubeTrailMesh_cxcnn"]

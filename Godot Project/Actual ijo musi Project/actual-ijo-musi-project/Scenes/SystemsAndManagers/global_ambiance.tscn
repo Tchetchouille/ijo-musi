@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bhlva7lu8v2r6"]
 
-[ext_resource type="Environment" uid="uid://dppiil1hsxgsa" path="res://Resources/Environments/global_environment.tres" id="1_x4o3b"]
+[ext_resource type="Environment" uid="uid://dppiil1hsxgsa" path="res://Resources and Assets/Environments/global_environment.tres" id="1_x4o3b"]
 
 [node name="GlobalAmbiance" type="Node3D"]
 

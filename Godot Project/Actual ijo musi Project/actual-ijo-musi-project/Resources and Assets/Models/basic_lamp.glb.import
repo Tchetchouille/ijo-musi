@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://djpg3q5y63oyf"
-path="res://.godot/imported/better_potted_plant.glb-6bdb365307de1188b91db4e9169da61d.scn"
+uid="uid://hhrltbkhlb0d"
+path="res://.godot/imported/basic_lamp.glb-407bf623dcbfcebe630e849326714faf.scn"
 
 [deps]
 
-source_file="res://Resources/Models/better_potted_plant.glb"
-dest_files=["res://.godot/imported/better_potted_plant.glb-6bdb365307de1188b91db4e9169da61d.scn"]
+source_file="res://Resources and Assets/Models/basic_lamp.glb"
+dest_files=["res://.godot/imported/basic_lamp.glb-407bf623dcbfcebe630e849326714faf.scn"]
 
 [params]
 
@@ -35,7 +35,7 @@ import_script/path=""
 _subresources={
 "nodes": {
 "PATH:Circle": {
-"mesh_instance/layers": 513
+"mesh_instance/layers": 3
 }
 }
 }

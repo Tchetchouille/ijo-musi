@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0f77tjckoc2j"]
 
-[ext_resource type="PackedScene" uid="uid://c41fvo10jkdma" path="res://Scenes/Levels/proto_level.tscn" id="1_3ntff"]
+[ext_resource type="PackedScene" uid="uid://c41fvo10jkdma" path="res://Scenes/Level Prototypes and Whiteboxing/proto_level.tscn" id="1_3ntff"]
 
 [node name="LevelManager" type="Node3D"]
 
