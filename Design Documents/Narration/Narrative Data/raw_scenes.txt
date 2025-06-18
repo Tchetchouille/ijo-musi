@@ -1,0 +1,106 @@
+	\item \emph{The Skeleton}
+			\begin{itemize}
+				\item Core: Who's that skeletton? What happened to it?
+				\item Start: finding the skeletton in the Visitor/Waiting Room. Usually very early game.
+				\item Leads: its position, clothes, the surrounding objects, the room it is in, other characters' graves, other dialogs, etc.
+				\item Milestones:
+					\begin{itemize}
+						\item The cause of death was poison. (Early-Mid)
+						\item The skeletton was murdered. (Early-Mid)
+						\item The skeletton was the Rigid One. (Mid)
+						\item The murderer was the Shaped One. (Mid-Late)
+						\item The main motive: the Rigid One was keeping the Shaped One captive. (Late)
+						\item The secondary motive: the Rigid One is responsible for the death of the Loose One. (Late)
+					\end{itemize}
+			\end{itemize}
+			\item \emph{The Cult's Rituals}
+			\begin{itemize}
+				\item Core: What was happening in this weird place?
+				\item Start: Finding many weird objects/rooms, and realizing that the ruins are a temple. Usually early game.
+				\item Leads: Damaged wall paintings, discarded body pieces made of clay, some rooms' layout, dialogs, etc.
+				\item Milestones:
+					\begin{itemize}
+						\item The ruins are a temple. (Early)
+						\item The cult was whorshipping "sewi", the toki pona concept of divinity. (Early)
+						\item The cult considered "pona" (simplicity) to be the highest quality of "sewi". (Early-Mid)
+						\item The Enlightened One was the founder of the cult. (Early-Mid)
+						\item The cult made tools out of clay-magic. (Early)
+						\item The cult made the tool that the player is using. (Mid)
+						\item The tool was stolen. (Mid-Late)
+						\item The cult made a bunch of clay mannequins. (Early)
+						\item The cult believed that souls were a part of "sewi". (Early)
+						\item The cult wanted to make an artificial person (to put a part of "sewi" in an artificially made body). (Early-Mid)
+						\item The cult wanted to use clay-magic to create the artificial person. (Early-Mid)
+						\item The artificial person was supposed to become a "perfect mind". (Mid)
+						\item The cult succeeded in creating the clay-person. (Early-Mid)
+						\item The cult wanted to use toki pona to shape the mind of the clay-person. (Mid)
+						\item The Shaped One is the clay-person. (Mid)
+						\item There was a secret room accessible only by the Enlightened One. (Mid)
+						\item A mirror was needed to put the "sewi" into the clay-person. (Mid-Late)
+						\item The mirror is in the secret room. (Mid-Late)
+						\item To open the secret room, the tool acts like a key. (Mid)
+						\item To open the secret room, the user needs to "toki lon" ("speak the truth" or "tell what is", which means answering the door's questions). (Mid-Late)
+						\item The door's questions are never the same, they change with the events that occur within the temple. (Mid)
+					\end{itemize}
+				\end{itemize}
+			\item \emph{Each Character's Fate}
+				\begin{itemize}
+					\item Core: What happened to the characters?
+					\item Start: Realizing that all dialogs involve the same four characters. Usually at the end of early game.
+					\item Leads: various objects, dialogs, some rooms layout, etc.
+					\item Milsetones:
+						\begin{itemize}
+							\item The Enlightened one was the founder of the cult. (Early)
+							\item The Enlightened One is dead and burried in the sacred resting place. (Early)
+							\item The Enlightened One died of food poisoning. (Early-Mid)
+							\item The Loose One was responsible for the preparation of the meal that killed the Enlightened One. (Mid)
+							\item The Enlightened One considered the Rigid One and the Loose One to be equal disciples. (Mid)
+							\item Someone poisonned the Enlightened One's last meal. (Mid-Late)
+							\item The Enlightened One knew the meal was poisonned.	(Late)
+							\item The Rigid One poisonned the meal that killed the Enlightened One. (Late)
+							\item The Rigid One joined the cult first, the Loose One joined later. (Early-Mid)
+							\item The Loose One tended to neglect her duties. (Early)
+							\item The Loose One played a lot of musical instruments. (Early-Mid)
+							\item The Loose One died by food poisonning in the same way as the Enlightened One. (Mid)
+							\item (Red herring) It seems the Loose One committed suicide by poisonning their food. (Mid)
+							\item (Red herring) It seems the Loose One killed herself because of guilt over the Enlightened One's murder, and/or over her manipulatiion of the Shaped One. (Mid-Late)
+							\item The Loose One was murdered by the Rigid One. (Late)
+							\item The Loose One and the Shaped One had fun together. (Early-Mid)
+							\item The Loose One was manipulating the Shaped One. She used them to do her chores, was lovebombing them, etc. (Mid-Late)
+							\item The Rigid One was infuriated to learn that the Enlightened One considered him as equal to the Loose One in toki pona worship. (Mid)
+							\item The Rigid One tended to give orders to the others. (Early)
+							\item The Rigid One was pushing for the creation of the Shaped One, but the Enlightened One considered them not to be ready. (Mid)
+							\item The Rigid One showed love to both the Loose One and the Shaped One. (Mid)
+							\item The Rigid One liked plants. (Early-Mid)
+							\item The Shaped One realized that the Loose One was manipulative after a talk with the Rigid One. (Mid-Late)
+							\item The Shaped One knew nothing at first. (Early-Mid)
+							\item The Shaped One struggled with some toki pona concepts (main example: binary gender). (Mid)
+							\item The Shaped One brought new words to toki pona\footnote{In reality, those are words that come from the second toki pona book by Sonja Lang, which made official some of the most commonly used neologisms.}. (Mid)
+							\item The Loose One found the new words ingenious and useful. (Mid)
+							\item The Rigid One strongly disapproved of the new words. (Mid)
+							\item The Shaped One resented the Rigid One for its strictness. (Early)
+							\item The tool was actually made for the Shaped One. (Mid)
+							\item The tool was made long before the Shaped One. (Mid)
+							\item Before the Shaped One was made, it was forbidden to use the tool except for specific rituals. (Mid)
+							\item The Shaped One used the tool to train their toki pona skills. (Mid)
+							\item The Rigid One forbid the Shaped One to use the tool on the Enlightened One's grave. (Mid)
+							\item Using the tool on the Enlightened One's grave, the Shaped One heard a confession of the Rigid One, demanding pardon to the Enlightened One for his actions. (Mid-Late)
+							\item The Shaped One had a suspicion that the Loose One death was no accident. (Mid-Late)
+							\item The Shaped One found the bottle of poison in the Rigid One's room. (Late)
+							\item The Shaped One confronted the Rigid One for the murders of the Enlightened One and of the Loose One. (Late)
+						\end{itemize}
+				\end{itemize}
+			\item \emph{The Player Character's Identity}
+				\begin{itemize}
+					\item Core: Who am I? Why am I here?
+					\item Start: The intro scene.
+					\item Leads: The intro scene, the gear of the player character left in the first room of the game, the mirror in the secret room, the hands of the player character, etc.
+					\item Milestones:
+					\begin{itemize}
+						\item The player character is a clay-person. (Early or Late, depending on if they notice the hands)
+						\item The player character is looking for the "first person". (Early-Mid)
+						\item The "first person" is the Shaped One. (Mid)
+						\item The Shaped One founded a whole race of clay-people. (Late)
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}

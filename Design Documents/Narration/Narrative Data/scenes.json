@@ -1,0 +1,418 @@
+{
+    "The Skeleton": [
+        [
+            "The cause of death was poison. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The skeletton was murdered. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The skeletton was the Rigid One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The murderer was the Shaped One. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The main motive: the Rigid One was keeping the Shaped One captive. ",
+            [
+                "(Late)"
+            ]
+        ],
+        [
+            "The secondary motive: the Rigid One is responsible for the death of the Loose One. ",
+            [
+                "(Late)"
+            ]
+        ]
+    ],
+    "The Cult's Rituals": [
+        [
+            "The ruins are a temple. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The cult was whorshipping \"sewi\", the toki pona concept of divinity. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The cult considered \"pona\" (simplicity) to be the highest quality of \"sewi\". ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The Enlightened One was the founder of the cult. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The cult made tools out of clay-magic. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The cult made the tool that the player is using. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The tool was stolen. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The cult made a bunch of clay mannequins. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The cult believed that souls were a part of \"sewi\". ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The cult wanted to make an artificial person (to put a part of \"sewi\" in an artificially made body). ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The cult wanted to use clay-magic to create the artificial person. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The artificial person was supposed to become a \"perfect mind\". ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The cult succeeded in creating the clay-person. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The cult wanted to use toki pona to shape the mind of the clay-person. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Shaped One is the clay-person. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "There was a secret room accessible only by the Enlightened One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "A mirror was needed to put the \"sewi\" into the clay-person. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The mirror is in the secret room. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "To open the secret room, the tool acts like a key. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "To open the secret room, the user needs to \"toki lon\" (\"speak the truth\" or \"tell what is\", which means answering the door's questions). ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The door's questions are never the same, they change with the events that occur within the temple. ",
+            [
+                "(Mid)"
+            ]
+        ]
+    ],
+    "Each Character's Fate": [
+        [
+            "The Enlightened one was the founder of the cult. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The Enlightened One is dead and burried in the sacred resting place. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The Enlightened One died of food poisoning. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The Loose One was responsible for the preparation of the meal that killed the Enlightened One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Enlightened One considered the Rigid One and the Loose One to be equal disciples. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "Someone poisonned the Enlightened One's last meal. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The Enlightened One knew the meal was poisonned.",
+            [
+                "(Late)"
+            ]
+        ],
+        [
+            "The Rigid One poisonned the meal that killed the Enlightened One. ",
+            [
+                "(Late)"
+            ]
+        ],
+        [
+            "The Rigid One joined the cult first, the Loose One joined later. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The Loose One tended to neglect her duties. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The Loose One played a lot of musical instruments. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The Loose One died by food poisonning in the same way as the Enlightened One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "(Red herring) It seems the Loose One committed suicide by poisonning their food. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "(Red herring) It seems the Loose One killed herself because of guilt over the Enlightened One's murder, and/or over her manipulatiion of the Shaped One. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The Loose One was murdered by the Rigid One. ",
+            [
+                "(Late)"
+            ]
+        ],
+        [
+            "The Loose One and the Shaped One had fun together. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The Loose One was manipulating the Shaped One. She used them to do her chores, was lovebombing them, etc. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The Rigid One was infuriated to learn that the Enlightened One considered him as equal to the Loose One in toki pona worship. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Rigid One tended to give orders to the others. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The Rigid One was pushing for the creation of the Shaped One, but the Enlightened One considered them not to be ready. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Rigid One showed love to both the Loose One and the Shaped One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Rigid One liked plants. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The Shaped One realized that the Loose One was manipulative after a talk with the Rigid One. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The Shaped One knew nothing at first. ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The Shaped One struggled with some toki pona concepts (main example: binary gender). ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Shaped One brought new words to toki pona. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Loose One found the new words ingenious and useful. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Rigid One strongly disapproved of the new words. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Shaped One resented the Rigid One for its strictness. ",
+            [
+                "(Early)"
+            ]
+        ],
+        [
+            "The tool was actually made for the Shaped One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The tool was made long before the Shaped One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "Before the Shaped One was made, it was forbidden to use the tool except for specific rituals. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Shaped One used the tool to train their toki pona skills. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Rigid One forbid the Shaped One to use the tool on the Enlightened One's grave. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "Using the tool on the Enlightened One's grave, the Shaped One heard a confession of the Rigid One, demanding pardon to the Enlightened One for his actions. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The Shaped One had a suspicion that the Loose One death was no accident. ",
+            [
+                "(Mid-Late)"
+            ]
+        ],
+        [
+            "The Shaped One found the bottle of poison in the Rigid One's room. ",
+            [
+                "(Late)"
+            ]
+        ],
+        [
+            "The Shaped One confronted the Rigid One for the murders of the Enlightened One and of the Loose One. ",
+            [
+                "(Late)"
+            ]
+        ]
+    ],
+    "The Player Character's Identity": [
+        [
+            "The player character is looking for the \"first person\". ",
+            [
+                "(Early-Mid)"
+            ]
+        ],
+        [
+            "The \"first person\" is the Shaped One. ",
+            [
+                "(Mid)"
+            ]
+        ],
+        [
+            "The Shaped One founded a whole race of clay-people. ",
+            [
+                "(Late)"
+            ]
+        ]
+    ]
+}
