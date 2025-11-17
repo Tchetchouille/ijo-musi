@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0f77tjckoc2j"]
 
-[ext_resource type="PackedScene" uid="uid://btchkt84l4lm1" path="res://Scenes/Level Prototypes and Whiteboxing/sacred_resting_place.tscn" id="2_qe4kd"]
+[ext_resource type="PackedScene" uid="uid://cl2lkp7fcrkte" path="res://Scenes/Level Prototypes and Whiteboxing/global_whitebox.tscn" id="1_lhgvw"]
 
 [node name="LevelManager" type="Node3D"]
 
 [node name="LevelList" type="Node3D" parent="."]
 
-[node name="SacredRestingPlace" parent="LevelList" instance=ExtResource("2_qe4kd")]
+[node name="GlobalWhitebox" parent="LevelList" instance=ExtResource("1_lhgvw")]

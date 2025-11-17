@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 3.0
+@export var SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 @onready var tool : Node3D = $CameraController/CharacterCamera/ToolController
 @onready var camera : Camera3D = $CameraController/CharacterCamera
@@ -31,6 +31,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+	# FLYING
+	if Input.is_action_pressed("fly_up"):
+		velocity.y += 0.3
 
 # Headbob handling
 	if velocity.length() != 0 and is_on_floor():

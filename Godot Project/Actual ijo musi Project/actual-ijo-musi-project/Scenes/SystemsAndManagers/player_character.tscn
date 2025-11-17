@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bqe2s58xnb5nn" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
 [ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources and Assets/Materials/basic_clay_material.tres" id="6_gja8t"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_l2amc"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_77dal"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_es7p3"]
 
@@ -31,10 +31,11 @@ length = 2.93408
 
 [node name="PlayerCharacter" type="CharacterBody3D"]
 script = ExtResource("1_04qb1")
+SPEED = 10.0
 
 [node name="CharacterCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CylinderShape3D_l2amc")
+shape = SubResource("CapsuleShape3D_77dal")
 
 [node name="CameraController" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)

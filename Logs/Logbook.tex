@@ -1,0 +1,88 @@
+\documentclass[french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper]{geometry}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+
+\begin{document}
+
+\section*{ANCIENS LOGS (ANGLAIS)}
+
+\subsection*{23.07.24}
+I've decided to start recording devlogs. 
+This is far from being the start of the project. I have been thinking about it for ages. I was meant to start the project with Isaac Pante last year.
+Still, dev started a few days ago (maybe a week ago?).
+Using \href{https://www.youtube.com/watch?v=5PveMtmdrV4}{this tutorial}, I was able to get pretty close to what I was hoping shader-wise.
+Right now the project looks like this:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/proto_scene}
+	\caption{Test scene for the ascii shaders.}
+	\label{fig:protoscene}
+\end{figure}
+	
+\vspace{1cm}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/proto_player}
+	\caption{Early prototype of the player scene.}
+	\label{fig:protoplayer}
+\end{figure}
+
+\vspace{1cm}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/folders}
+	\caption{Folders structure.}
+	\label{fig:folders}
+\end{figure}
+
+\vspace{1cm}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/shader_graph}
+	\caption{ASCII shader graph.}
+	\label{fig:shadergraph}
+\end{figure}
+
+\vspace{1cm}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/shader_results}
+	\caption{Results from the shaders.}
+	\label{fig:shaderresults}
+\end{figure}
+
+\subsection*{01.08.24}
+The game is getting better and better with each week that passes. It is far from being a game yet. I stopped working on the Godot project for a while to tackle the story. 
+
+I developed a script to manage dialogs in json format. It took me a day of work (okay, it really took 2-ish hours but still).
+The next day I discovered \href{https://wavemaker.co.uk/}{Wavemaker} and decided to use this instead.
+I am currently working on characters and they are slowly taking shape.
+
+\subsection*{20.09.24}
+Je passe par la projection d'un viewport sur un quadmesh pour essayer de faire l'écran de la tablette.
+
+\section*{RÉSUMÉ JUSQU'AU 14.07.25}
+Durant l'été 2024, j'ai participé à la Summer School "Transpositions Ludiques". Pour valider les 3 crédits proposés, il fallait rendre un GDD (pour le 06.09.24) et un prototype (pour le 01.10.24).
+À ce stade, le jeu se concrétise. Là où mes premiers sketch de l'espace de jeu plaçaient l'intrigue sur une île, c'est à présent dans un temple abandonné que tout se déroulera. Avant-même la summer school, il avait été question d'avoir deux phases de gameplay en alternance: une phase d'exploration des ruines puis une phase "visual novel" dans le village proche des ruines pour représenter l'évolution du personnage protagoniste. Cela représentait évidemment trop de travail.\\
+Au fil de l'été, les personnages sont développés. On aura donc 5 personnages : le personnage joueur, et 4 autres personnages - jamais rencontrés - qui n'ont pas encore de noms. Ces derniers sont pour l'instant nommé d'après leur trait principal ; the Enlightened One, the Rigid One, the Loose One, the Shaped One.
+J'ai ainsi pu réduire le nombre de personnage tout en gardant des dynamiques permettant de construire une histoire intéressante. À ce stade, il est question de beaucoup de meurtres (cff GDD). Cela sera changé en juin 2025.\\
+C'est aussi durant l'été 2024 que j'ai travaillé sur la lumière du jeu. À ce stade, j'ai des flammes satisfaisantes, et des ombres acceptables.
+L'outil est l'élément qui pose le plus problème à ce stade. Apprendre à se servir des viewports n'est pas une mince affaire, et un glitch fait que l'intensité de la lumière est multipliée dans l'outil si une source de lumière est derrière le personnage joueur. Ce glitch a été réglé mais je ne sais plus comment.\\
+
+\section{REPRISE DU JOURNAL DE BORD}
+
+\subsection{14.07.25}
+J'ai remis de l'ordre dans les anciennes entrées du journal de bord. J'ai essayé de bosser sur l'histoire (définir dans quelles salles et selon quelle modalités sont transmises les infos) mais c'est extrêmement difficile de se concentrer dessus.
+
+\end{document}

@@ -13,6 +13,7 @@
 [node name="GeneralUI" parent="." instance=ExtResource("2_ee76p")]
 
 [node name="GeneralVFX" parent="." instance=ExtResource("3_8uuj2")]
+visible = false
 
 [node name="LevelManager" parent="." instance=ExtResource("5_t6ixf")]
 
