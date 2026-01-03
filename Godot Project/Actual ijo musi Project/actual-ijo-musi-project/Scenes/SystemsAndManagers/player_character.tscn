@@ -60,16 +60,8 @@ cull_mask = 1048067
 fov = 40.0
 script = ExtResource("3_76q7t")
 
-[node name="LocalReference" type="Node3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera"]
-
-[node name="X" type="Marker3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera/LocalReference"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-
-[node name="Y" type="Marker3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera/LocalReference"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="Z" type="Marker3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera/LocalReference"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+[node name="Tool_Camera_Front" type="Node3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="TorchTest" type="OmniLight3D" parent="CameraController/CharacterCamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.391102, 0)
@@ -166,7 +158,7 @@ spot_angle = 85.7812
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115793)
 
 [node name="Model" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Hand"]
-transform = Transform3D(0.861514, -0.507734, 0, 0.507734, 0.861514, 0, 0, 0, 1, 0.028063, -0.0452536, 0)
+transform = Transform3D(0.861514, -0.507734, 0, 0.507734, 0.861514, 0, 0, 0, 1, 0.0284569, -0.0514013, 0)
 
 [node name="StaticBody3D" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
 transform = Transform3D(0.02, 0, 0, 0, 0.06, 0, 0, 0, 0.02, 0, 0, 0)
