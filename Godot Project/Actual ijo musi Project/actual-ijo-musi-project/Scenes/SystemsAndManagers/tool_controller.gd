@@ -1,19 +1,12 @@
 extends Node3D
 
+@onready var game_manager : Node = $"../../../../GameManager"
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var sensitivity = 10
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-
-# Aiming at labeled objects
-# Only labeled objects are checked, as they have their own collison layer
-func _on_aiming_area_body_entered(body: Node3D) -> void:
-	if body.get_node("LabelProperty"):
-		var label = body.get_node("LabelProperty")
-		print(label.label_name)
+func _input(event):
+	if game_manager.tool_out == true:
+		# I the mouse is moved, we rotate do 2 things
+		if event is InputEventMouseMotion:
+			$Hand.transform.origin.x += event.relative.x / 100000 * sensitivity
+			$Hand.transform.origin.y -= event.relative.y / 100000 * sensitivity

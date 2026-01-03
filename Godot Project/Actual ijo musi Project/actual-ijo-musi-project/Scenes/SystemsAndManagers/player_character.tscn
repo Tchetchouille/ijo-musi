@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://3g86xogvwrgv"]
+[gd_scene load_steps=16 format=3 uid="uid://3g86xogvwrgv"]
 
 [ext_resource type="Script" uid="uid://vback6ieg3ma" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
 [ext_resource type="Script" uid="uid://dfap4erfabr63" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
 [ext_resource type="Script" uid="uid://itpa2ll6rx0w" path="res://Scenes/SystemsAndManagers/tool_camera.gd" id="3_76q7t"]
 [ext_resource type="Script" uid="uid://bqe2s58xnb5nn" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
 [ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources and Assets/Materials/basic_clay_material.tres" id="6_gja8t"]
+[ext_resource type="Script" uid="uid://cv0vo5755ai25" path="res://Scenes/SystemsAndManagers/tool_screen.gd" id="6_ilob1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_77dal"]
 
@@ -26,8 +27,12 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_kojja")
 size = Vector2(1.152, 0.648)
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_ao6r4"]
-length = 2.93408
+[sub_resource type="BoxShape3D" id="BoxShape3D_77dal"]
+size = Vector3(0.5, 0.25, 0.01)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_77dal"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ilob1"]
 
 [node name="PlayerCharacter" type="CharacterBody3D"]
 script = ExtResource("1_04qb1")
@@ -51,8 +56,8 @@ size = Vector2i(1152, 648)
 
 [node name="ToolCamera" type="Camera3D" parent="CameraController/CharacterCamera/ToolViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.648895, 0)
-cull_mask = 1048066
-fov = 60.0
+cull_mask = 1048067
+fov = 40.0
 script = ExtResource("3_76q7t")
 
 [node name="TorchTest" type="OmniLight3D" parent="CameraController/CharacterCamera"]
@@ -71,16 +76,19 @@ anchor_right = 0.9
 anchor_bottom = 0.8
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="HighlightMode" type="Control" parent="CameraController/CharacterCamera/ToolController/ToolUI"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="InputMode" type="Control" parent="CameraController/CharacterCamera/ToolController/ToolUI"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="BasicToolFilter" type="ColorRect" parent="CameraController/CharacterCamera/ToolController/ToolUI"]
 visible = false
@@ -91,6 +99,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(1, 1, 1, 0.176471)
 
 [node name="Tool" type="Node3D" parent="CameraController/CharacterCamera/ToolController"]
@@ -117,18 +126,17 @@ transform = Transform3D(0.05, 0, 0, 0, 0.35, 0, 0, 0, 0.01, 0.275, 0, 0)
 mesh = SubResource("BoxMesh_a0a2d")
 skeleton = NodePath("../..")
 
-[node name="ToolScreen" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.00118034)
+[node name="Screen" type="Area3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
+script = ExtResource("6_ilob1")
+
+[node name="ToolScreen" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.00118035)
 layers = 4
 mesh = SubResource("QuadMesh_i6gmh")
-skeleton = NodePath("../../../ToolUI")
+skeleton = NodePath("../../../../ToolUI")
 
-[node name="AimingArea" type="Area3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
-collision_mask = 2
-
-[node name="AimingAreaCollision" type="CollisionShape3D" parent="CameraController/CharacterCamera/ToolController/Tool/AimingArea"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-shape = SubResource("SeparationRayShape3D_ao6r4")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen"]
+shape = SubResource("BoxShape3D_77dal")
 
 [node name="GreenToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
@@ -143,17 +151,31 @@ spot_range = 17.6003
 spot_attenuation = 0.0
 spot_angle = 85.7812
 
-[node name="MainToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
-visible = false
-layers = 512
-light_energy = 2.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_specular = 0.0
-light_cull_mask = 4294966274
-spot_range = 17.6003
-spot_attenuation = 0.0
-spot_angle = 85.7812
+[node name="Hand" type="Node3D" parent="CameraController/CharacterCamera/ToolController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115793)
 
-[connection signal="body_entered" from="CameraController/CharacterCamera/ToolController/Tool/AimingArea" to="CameraController/CharacterCamera/ToolController" method="_on_aiming_area_body_entered"]
+[node name="Model" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Hand"]
+transform = Transform3D(0.861514, -0.507734, 0, 0.507734, 0.861514, 0, 0, 0, 1, 0.028063, -0.0452536, 0)
+
+[node name="StaticBody3D" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
+transform = Transform3D(0.02, 0, 0, 0, 0.06, 0, 0, 0, 0.02, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_77dal")
+
+[node name="StaticBody3D2" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.02, 0.0130032, -0.0394205, 0)
+mesh = SubResource("BoxMesh_ilob1")
+
+[node name="StaticBody3D3" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
+transform = Transform3D(0.0385339, 1.49012e-08, 0, 0, 0.167154, 0, 0, 0, 0.02, 0.0101811, -0.124598, 0)
+mesh = SubResource("BoxMesh_ilob1")
+
+[node name="LocalReference" type="Node3D" parent="CameraController"]
+
+[node name="X" type="Marker3D" parent="CameraController/LocalReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Y" type="Marker3D" parent="CameraController/LocalReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Z" type="Marker3D" parent="CameraController/LocalReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)

@@ -294,6 +294,7 @@ mesh = SubResource("TorusMesh_fpd88")
 
 [node name="R1" type="Label3D" parent="TestStuff/TestDialog"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.676, 1.8, 1.19)
+visible = false
 layers = 512
 billboard = 1
 double_sided = false
@@ -304,6 +305,7 @@ outline_size = 20
 
 [node name="L1" type="Label3D" parent="TestStuff/TestDialog"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.518, 1.6, -0.43)
+visible = false
 layers = 512
 billboard = 1
 outline_modulate = Color(0.266876, 0.51502, 0.471045, 1)

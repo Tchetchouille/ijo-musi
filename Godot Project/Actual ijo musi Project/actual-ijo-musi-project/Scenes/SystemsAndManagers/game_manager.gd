@@ -1,5 +1,7 @@
 extends Node
 
+@export var tool_out = false
+
 # Handling our custom inputs (I think that's the way to do it?)
 func _input(event):
 	# Right now escape quits.
