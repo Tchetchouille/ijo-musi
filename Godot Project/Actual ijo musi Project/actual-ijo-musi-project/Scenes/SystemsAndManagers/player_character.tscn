@@ -60,6 +60,17 @@ cull_mask = 1048067
 fov = 40.0
 script = ExtResource("3_76q7t")
 
+[node name="LocalReference" type="Node3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera"]
+
+[node name="X" type="Marker3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera/LocalReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Y" type="Marker3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera/LocalReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Z" type="Marker3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera/LocalReference"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
 [node name="TorchTest" type="OmniLight3D" parent="CameraController/CharacterCamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.391102, 0)
 light_energy = 0.2
@@ -168,14 +179,3 @@ mesh = SubResource("BoxMesh_ilob1")
 [node name="StaticBody3D3" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
 transform = Transform3D(0.0385339, 1.49012e-08, 0, 0, 0.167154, 0, 0, 0, 0.02, 0.0101811, -0.124598, 0)
 mesh = SubResource("BoxMesh_ilob1")
-
-[node name="LocalReference" type="Node3D" parent="CameraController"]
-
-[node name="X" type="Marker3D" parent="CameraController/LocalReference"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-
-[node name="Y" type="Marker3D" parent="CameraController/LocalReference"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="Z" type="Marker3D" parent="CameraController/LocalReference"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
