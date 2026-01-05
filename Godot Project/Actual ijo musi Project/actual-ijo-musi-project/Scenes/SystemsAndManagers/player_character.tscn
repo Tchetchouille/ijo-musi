@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://3g86xogvwrgv"]
+[gd_scene load_steps=17 format=3 uid="uid://3g86xogvwrgv"]
 
 [ext_resource type="Script" uid="uid://vback6ieg3ma" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
 [ext_resource type="Script" uid="uid://dfap4erfabr63" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
@@ -6,10 +6,9 @@
 [ext_resource type="Script" uid="uid://bqe2s58xnb5nn" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
 [ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources and Assets/Materials/basic_clay_material.tres" id="6_gja8t"]
 [ext_resource type="Script" uid="uid://cv0vo5755ai25" path="res://Scenes/SystemsAndManagers/tool_screen.gd" id="6_ilob1"]
+[ext_resource type="PackedScene" uid="uid://cqhnwvia67d5k" path="res://Scenes/UI/ToolUI/red_mode.tscn" id="7_veynb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_77dal"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_es7p3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_a0a2d"]
 material = ExtResource("6_gja8t")
@@ -29,6 +28,9 @@ size = Vector2(1.152, 0.648)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_77dal"]
 size = Vector3(0.5, 0.25, 0.01)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ilob1"]
+viewport_path = NodePath("ToolUI")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_77dal"]
 
@@ -71,40 +73,6 @@ light_energy = 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.295882)
 script = ExtResource("4_irpfk")
 
-[node name="ToolUI" type="Control" parent="CameraController/CharacterCamera/ToolController"]
-layout_mode = 3
-anchor_left = 0.1
-anchor_top = 0.2
-anchor_right = 0.9
-anchor_bottom = 0.8
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="HighlightMode" type="Control" parent="CameraController/CharacterCamera/ToolController/ToolUI"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="InputMode" type="Control" parent="CameraController/CharacterCamera/ToolController/ToolUI"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-
-[node name="BasicToolFilter" type="ColorRect" parent="CameraController/CharacterCamera/ToolController/ToolUI"]
-visible = false
-material = SubResource("CanvasItemMaterial_es7p3")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0.176471)
-
 [node name="Tool" type="Node3D" parent="CameraController/CharacterCamera/ToolController"]
 
 [node name="ToolModel" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
@@ -136,7 +104,7 @@ script = ExtResource("6_ilob1")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.00118035)
 layers = 4
 mesh = SubResource("QuadMesh_i6gmh")
-skeleton = NodePath("../../../../ToolUI")
+skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen"]
 shape = SubResource("BoxShape3D_77dal")
@@ -153,6 +121,10 @@ light_cull_mask = 4294966784
 spot_range = 17.6003
 spot_attenuation = 0.0
 spot_angle = 85.7812
+
+[node name="Sprite3D" type="Sprite3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
+transform = Transform3D(0.0976715, 0, 0, 0, 0.0482288, 0, 0, 0, 1, 0, 0, 0.00360131)
+texture = SubResource("ViewportTexture_ilob1")
 
 [node name="Hand" type="Node3D" parent="CameraController/CharacterCamera/ToolController"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115793)
@@ -171,3 +143,8 @@ mesh = SubResource("BoxMesh_ilob1")
 [node name="StaticBody3D3" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
 transform = Transform3D(0.0385339, 1.49012e-08, 0, 0, 0.167154, 0, 0, 0, 0.02, 0.0101811, -0.124598, 0)
 mesh = SubResource("BoxMesh_ilob1")
+
+[node name="ToolUI" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="YellowMode" parent="ToolUI" instance=ExtResource("7_veynb")]

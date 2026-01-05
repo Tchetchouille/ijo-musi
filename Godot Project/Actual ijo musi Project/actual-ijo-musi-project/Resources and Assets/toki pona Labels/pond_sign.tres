@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dy8n72spk1s67"]
+
+[sub_resource type="GDScript" id="GDScript_vrgeu"]
+script/source = "class_name PondSign
+extends Resource
+
+@export var base_label : Array = [\"_\", \" \", \"ni\", \" \", \"li\", \" \", \"_\", \".\"]
+@export var complete_label : Array = [\"lipu\", \" \", \"ni\", \" \", \"li\", \" \", \"pakala\", \".\"]
+"
+
+[resource]
+script = SubResource("GDScript_vrgeu")
+base_label = ["_", " ", "ni", " ", "li", " ", "_", "."]
+complete_label = ["lipu", " ", "ni", " ", "li", " ", "pakala", "."]

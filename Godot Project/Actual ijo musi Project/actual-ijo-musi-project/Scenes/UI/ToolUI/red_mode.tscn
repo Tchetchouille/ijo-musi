@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqhnwvia67d5k"]
+
+[ext_resource type="Texture2D" uid="uid://bns5dochoqgr0" path="res://Assets/ascii_pona/18807.png" id="1_3dvgk"]
+[ext_resource type="Theme" uid="uid://clx4cit5x2ngp" path="res://Resources and Assets/Themes/tool.tres" id="1_5d0k5"]
+[ext_resource type="Script" uid="uid://cl7tetnc3ihl4" path="res://Scenes/UI/ToolUI/red_mode.gd" id="1_bfdyk"]
+[ext_resource type="Resource" uid="uid://dy8n72spk1s67" path="res://Resources and Assets/toki pona Labels/pond_sign.tres" id="2_55qch"]
+[ext_resource type="Texture2D" uid="uid://bvyih2ep8gopk" path="res://Assets/ascii_pona/11561.png" id="3_kg0d0"]
+
+[node name="RedMode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfdyk")
+current_label = ExtResource("2_55qch")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.461652, 0, 0.00880718, 0.721569)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5d0k5")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TextArea" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.48
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="Words" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TextArea"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="piniButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("1_3dvgk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Empty" type="Control" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.0
+
+[node name="lonButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("3_kg0d0")
+icon_alignment = 1
+expand_icon = true
