@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://d0f77tjckoc2j"]
 
-[ext_resource type="PackedScene" uid="uid://c41fvo10jkdma" path="res://Scenes/Level Prototypes and Whiteboxing/proto_level.tscn" id="1_lhgvw"]
+[ext_resource type="PackedScene" uid="uid://c6fca6orqkrh4" path="res://Scenes/Level Prototypes and Whiteboxing/whitebox_waiting_room.tscn" id="1_lhgvw"]
 
 [node name="LevelManager" type="Node3D"]
 
 [node name="LevelList" type="Node3D" parent="."]
 
-[node name="ProtoLevel" parent="LevelList" instance=ExtResource("1_lhgvw")]
+[node name="WhiteboxWaitingRoom" parent="LevelList" instance=ExtResource("1_lhgvw")]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://ocyhjjfip87i"]
+
+[ext_resource type="Theme" uid="uid://clx4cit5x2ngp" path="res://Resources and Assets/Themes/tool.tres" id="1_amhuu"]
+
+[node name="TPLabelWordBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.372251, 0.372251, 0.372251, 1)
+
+[node name="Label" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_amhuu")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -38,7 +38,7 @@ viewport_path = NodePath("ToolUI")
 
 [node name="PlayerCharacter" type="CharacterBody3D"]
 script = ExtResource("1_04qb1")
-SPEED = 10.0
+SPEED = 6.0
 
 [node name="CharacterCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
