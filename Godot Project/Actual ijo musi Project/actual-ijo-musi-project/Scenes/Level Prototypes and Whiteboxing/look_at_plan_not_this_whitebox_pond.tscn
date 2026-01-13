@@ -30,7 +30,7 @@ material = ExtResource("4_aifq8")
 [sub_resource type="BoxMesh" id="BoxMesh_vqm8g"]
 material = ExtResource("5_0hu73")
 
-[node name="GlobalWhitebox" type="Node3D"]
+[node name="DontUseThisForAssets" type="Node3D"]
 
 [node name="BasicLight" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.5, -0.612372, 0.612372, 0, 0.707107, 0.707107, -0.866025, 0.353553, -0.353553, 0, 42.6908, 0)
@@ -46,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 [node name="Floors" type="Node3D" parent="Pond"]
 
 [node name="FirstGrass" type="Node3D" parent="Pond/Floors"]
-transform = Transform3D(7.85598, 0, 18.6644, 0, 0.255516, 0, -6.22948, 0, 23.5376, 0, 0, 12.3789)
+transform = Transform3D(2.05779, 0, 97.2323, 0, 0.255516, 0, -39.6894, 0, 5.04119, -18.9233, -3.8147e-06, 7.87212)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Pond/Floors/FirstGrass"]
 
@@ -133,7 +133,7 @@ mesh = SubResource("BoxMesh_cadp8")
 skeleton = NodePath("../../..")
 
 [node name="Mound" type="Node3D" parent="Pond/Floors"]
-transform = Transform3D(22.0776, 0, 0, 0, 2.79817, 0, 0, 0, 12.782, 18.0735, 0, 25.1935)
+transform = Transform3D(17.4012, 0, 0, 0, 2.79817, 0, 0, 0, 12.782, 15.7177, 0, 24.6436)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Pond/Floors/Mound"]
 
