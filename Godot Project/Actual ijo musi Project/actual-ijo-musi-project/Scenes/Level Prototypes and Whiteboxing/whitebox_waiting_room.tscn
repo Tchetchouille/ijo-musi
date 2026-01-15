@@ -1,7 +1,6 @@
-[gd_scene load_steps=107 format=3 uid="uid://c6fca6orqkrh4"]
+[gd_scene load_steps=124 format=3 uid="uid://c6fca6orqkrh4"]
 
 [ext_resource type="Texture2D" uid="uid://ch880hx1kx5ot" path="res://Resources and Assets/Textures/whitebox_texture.png" id="1_nvjux"]
-[ext_resource type="PackedScene" uid="uid://cl2lkp7fcrkte" path="res://Scenes/Level Prototypes and Whiteboxing/look_at_plan_not_this_whitebox_pond.tscn" id="2_ystdp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ystdp"]
 albedo_texture = ExtResource("1_nvjux")
@@ -335,6 +334,61 @@ uv1_triplanar = true
 material = SubResource("StandardMaterial3D_1s5lu")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ra813"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fydox"]
+albedo_texture = ExtResource("1_nvjux")
+uv1_scale = Vector3(30, 20, 30)
+uv1_triplanar = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ystdp"]
+material = SubResource("StandardMaterial3D_fydox")
+flip_faces = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op3qr"]
+albedo_texture = ExtResource("1_nvjux")
+uv1_scale = Vector3(30, 0.1, 30)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_my0ki"]
+material = SubResource("StandardMaterial3D_op3qr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r685e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1byb"]
+albedo_texture = ExtResource("1_nvjux")
+uv1_scale = Vector3(15, 5, 20)
+uv1_triplanar = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nvjux"]
+material = SubResource("StandardMaterial3D_x1byb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my0ki"]
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vgo41"]
+material = SubResource("StandardMaterial3D_my0ki")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ystdp"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5tdr4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jn2ir"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vgo41"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ur8w8"]
+albedo_texture = ExtResource("1_nvjux")
+uv1_scale = Vector3(4, 1, 3)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_r685e"]
+material = SubResource("StandardMaterial3D_ur8w8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ifvb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x0b1f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ifvb"]
 
 [node name="Whitebox" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0085, 0, -6.04989)
@@ -1846,9 +1900,6 @@ transform = Transform3D(0.0827278, -3.81988e-11, -19.9998, 0.0174531, 4, 7.21934
 mesh = SubResource("BoxMesh_vlhxa")
 skeleton = NodePath("../Hall")
 
-[node name="DontUseThisForAssets" parent="." instance=ExtResource("2_ystdp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.119, -33.6369, 11.8636)
-
 [node name="Stairs" type="Node3D" parent="."]
 
 [node name="Stair1" type="Node3D" parent="Stairs"]
@@ -2055,3 +2106,197 @@ mesh = SubResource("BoxMesh_x1byb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stairs/ToPond/StaticBody3D5"]
 shape = SubResource("BoxShape3D_ra813")
+
+[node name="Grave" type="Node3D" parent="."]
+
+[node name="Walls" type="Node3D" parent="Grave"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Walls"]
+transform = Transform3D(30, 0, 0, 0, 20, 0, 0, 0, 30, -56.4378, -37.2808, -23.767)
+mesh = SubResource("CapsuleMesh_ystdp")
+skeleton = NodePath("../..")
+
+[node name="Floor" type="Node3D" parent="Grave"]
+
+[node name="Base" type="StaticBody3D" parent="Grave/Floor"]
+transform = Transform3D(30, 0, 0, 0, 0.1, 0, 0, 0, 30, -56.4378, -35.7621, -23.767)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Floor/Base"]
+mesh = SubResource("BoxMesh_my0ki")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Floor/Base"]
+shape = SubResource("BoxShape3D_r685e")
+
+[node name="Mound" type="StaticBody3D" parent="Grave/Floor"]
+transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 20, -56.4378, -38.6809, -34.2589)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Floor/Mound"]
+mesh = SubResource("CapsuleMesh_nvjux")
+
+[node name="Water" type="MeshInstance3D" parent="Grave/Floor"]
+transform = Transform3D(30, 0, 0, 0, 0.5, 0, 0, 0, 30, -56.4378, -35.5785, -23.767)
+mesh = SubResource("BoxMesh_vgo41")
+
+[node name="Pillars" type="Node3D" parent="Grave"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.438, -39, -23.767)
+
+[node name="Pillar" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.574533, 0, -0.482091, 0, 5, 0, 0.482091, 0, -0.574533, -8.9871, 3.99641, 7.54105)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar7" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.574533, 0, -0.482091, 0, 5, 0, 0.482091, 0, -0.574533, 8.987, 3.996, 7.541)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar7"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar7"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar2" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.375, 0, -0.649519, 0, 5, 0, 0.649519, 0, -0.375, -5.86581, 5, 10.1599)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar2"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar2"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar8" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.375, 0, -0.649519, 0, 5, 0, 0.649519, 0, -0.375, 5.866, 5, 10.16)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar8"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar8"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar3" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.704769, 0, -0.256515, 0, 5, 0, 0.256515, 0, -0.704769, -11.0241, 3, 4.01245)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar3"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar3"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar9" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.704769, 0, -0.256515, 0, 5, 0, 0.256515, 0, -0.704769, 11.024, 3, 4.012)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar9"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar9"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar4" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.75, 0, 5.96046e-08, 0, 5, 0, -5.96046e-08, 0, -0.75, -11.7316, 2, -1.90735e-06)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar4"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar4"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar10" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.75, 0, 5.96046e-08, 0, 5, 0, -5.96046e-08, 0, -0.75, 11.732, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar10"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar10"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar5" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.704769, 0, 0.256515, 0, 5, 0, -0.256515, 0, -0.704769, -11.0241, 1, -4.01246)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar5"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar5"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar11" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.704769, 0, 0.256515, 0, 5, 0, -0.256515, 0, -0.704769, 11.024, 1, -4.012)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar11"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar11"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar6" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.574533, 0, 0.482091, 0, 5, 0, -0.482091, 0, -0.574533, -8.98695, 0, -7.54095)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar6"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar6"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar12" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.574533, 0, 0.482091, 0, 5, 0, -0.482091, 0, -0.574533, 8.987, 0, -7.541)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar12"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar12"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar13" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(-0.130236, 0, -0.738606, 0, 5, 0, 0.738606, 0, -0.130236, -2.03738, 5.98428, 11.5537)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar13"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar13"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Pillar14" type="StaticBody3D" parent="Grave/Pillars"]
+transform = Transform3D(0.130236, 0, -0.738606, 0, 5, 0, 0.738606, 0, 0.130236, 2.03709, 5.98428, 11.5537)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Pillars/Pillar14"]
+mesh = SubResource("CylinderMesh_ystdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Pillars/Pillar14"]
+shape = SubResource("CylinderShape3D_5tdr4")
+
+[node name="Tombstone" type="StaticBody3D" parent="Grave"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.438, -34.7571, -18.7459)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Tombstone"]
+transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_jn2ir")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Tombstone"]
+shape = SubResource("BoxShape3D_vgo41")
+
+[node name="Structure" type="Node3D" parent="Grave"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.438, -32.066, -35.0423)
+
+[node name="Base" type="StaticBody3D" parent="Grave/Structure"]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 0, -1.59396, -1.42903)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Structure/Base"]
+mesh = SubResource("BoxMesh_r685e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Structure/Base"]
+shape = SubResource("BoxShape3D_0ifvb")
+
+[node name="Body" type="StaticBody3D" parent="Grave/Structure"]
+transform = Transform3D(3.6303e-15, 2.62268e-08, 1, 1.9, -2.62268e-08, 0, 8.30516e-08, 0.6, -4.37114e-08, 0, -0.413822, -1.60919)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grave/Structure/Body"]
+mesh = SubResource("BoxMesh_x0b1f")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Grave/Structure/Body"]
+transform = Transform3D(1.50844e-15, 0.157895, 2.07054e-08, 1.09278e-07, -2.18557e-08, 1.5, 1.5, -1.4116e-23, -3.93403e-08, -0.243475, 0.386185, 0)
+mesh = SubResource("BoxMesh_0ifvb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grave/Structure/Body"]
+shape = SubResource("BoxShape3D_qtvbj")
