@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqhnwvia67d5k"]
+[gd_scene format=3 uid="uid://cqhnwvia67d5k"]
 
-[ext_resource type="Texture2D" uid="uid://bns5dochoqgr0" path="res://Assets/ascii_pona/18807.png" id="1_3dvgk"]
+[ext_resource type="Texture2D" uid="uid://bns5dochoqgr0" path="res://Assets/ascii_pona/0_pini.png" id="1_3dvgk"]
 [ext_resource type="Theme" uid="uid://clx4cit5x2ngp" path="res://Resources and Assets/Themes/tool.tres" id="1_5d0k5"]
 [ext_resource type="Script" uid="uid://cl7tetnc3ihl4" path="res://Scenes/UI/ToolUI/red_mode.gd" id="1_bfdyk"]
 [ext_resource type="Resource" uid="uid://dy8n72spk1s67" path="res://Resources and Assets/toki pona Labels/pond_sign.tres" id="2_55qch"]

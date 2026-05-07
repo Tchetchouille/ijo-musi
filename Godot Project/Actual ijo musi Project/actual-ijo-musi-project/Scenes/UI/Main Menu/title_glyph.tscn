@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cl1488dffc0it"]
+
+[ext_resource type="Shader" uid="uid://dlbd1rwo8txwy" path="res://Resources and Assets/Shaders/title_glyph.gdshader" id="1_nbgc8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s4dfu"]
+shader = ExtResource("1_nbgc8")
+
+[node name="TitleGlyph" type="TextureRect" unique_id=226617566]
+material = SubResource("ShaderMaterial_s4dfu")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 5
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

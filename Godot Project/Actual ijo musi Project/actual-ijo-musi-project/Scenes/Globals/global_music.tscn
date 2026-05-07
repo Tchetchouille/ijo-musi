@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bduo1c1m3awrq"]
+
+[ext_resource type="AudioStream" uid="uid://chp5bg5qwp3ib" path="res://Resources and Assets/Musics/That Zen Moment.mp3" id="1_iq06o"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer" unique_id=104317224]
+stream = ExtResource("1_iq06o")
+autoplay = true
