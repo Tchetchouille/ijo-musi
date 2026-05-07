@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://4meujsvxdrwo"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1872967961]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1812802430]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1337221, 0.09961013, 0.34804308, 1)

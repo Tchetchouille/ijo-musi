@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PondSign" load_steps=2 format=3 uid="uid://dy8n72spk1s67"]
+[gd_resource type="Resource" script_class="PondSign" format=3 uid="uid://dy8n72spk1s67"]
 
 [sub_resource type="GDScript" id="GDScript_vrgeu"]
 script/source = "class_name PondSign
@@ -10,5 +10,3 @@ extends Resource
 
 [resource]
 script = SubResource("GDScript_vrgeu")
-base_label = ["_", " ", "ni", " ", "li", " ", "_", "."]
-complete_label = ["lipu", " ", "ni", " ", "li", " ", "pakala", "."]
