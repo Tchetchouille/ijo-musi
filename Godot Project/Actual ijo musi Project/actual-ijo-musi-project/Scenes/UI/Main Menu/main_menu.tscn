@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://4meujsvxdrwo"]
 
+[ext_resource type="Script" uid="uid://ckkrhfa1vyv2v" path="res://Scenes/UI/Main Menu/sprite_manager.gd" id="2_p44lu"]
+
 [node name="MainMenu" type="CanvasLayer" unique_id=1872967961]
 
 [node name="Background" type="ColorRect" parent="." unique_id=1812802430]
@@ -8,4 +10,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.1337221, 0.09961013, 0.34804308, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="SpriteManager" type="GridContainer" parent="." unique_id=1265305913]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 32
+script = ExtResource("2_p44lu")

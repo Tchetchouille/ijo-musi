@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyc2paln3s6hi"]
+[gd_scene format=3 uid="uid://dyc2paln3s6hi"]
 
 [ext_resource type="Shader" uid="uid://bmowejp10voff" path="res://Resources and Assets/Shaders/pixel_shader.tres" id="1_qxn1m"]
 [ext_resource type="Shader" uid="uid://c4mjpnmr8njl0" path="res://Resources and Assets/Shaders/ascii_shader.tres" id="2_o5ey5"]
-[ext_resource type="Texture2D" uid="uid://baqf0ul8ebvto" path="res://Assets/ascii_pona/3528.png" id="3_ikex3"]
+[ext_resource type="Texture2D" uid="uid://baqf0ul8ebvto" path="res://Assets/ascii_pona_rejects/3528.png" id="3_ikex3"]
 [ext_resource type="Texture2D" uid="uid://qum8cvo0ym0i" path="res://Assets/ascii_pona/35496.png" id="3_re4hn"]
 [ext_resource type="Texture2D" uid="uid://kvf7kjuflyqm" path="res://Assets/ascii_pona/20677.png" id="5_kt0en"]
 [ext_resource type="Texture2D" uid="uid://cndhsa1ns6p7l" path="res://Assets/ascii_pona/26144.png" id="5_p4fxi"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bikjsfy2mdv3s" path="res://Assets/ascii_pona/16200.png" id="7_88ajh"]
 [ext_resource type="Texture2D" uid="uid://bgk0i7qwaor7c" path="res://Assets/ascii_pona/42371.png" id="8_ansew"]
 [ext_resource type="Texture2D" uid="uid://1hbt6s7c18ff" path="res://Assets/ascii_pona/11363.png" id="8_jd0kc"]
-[ext_resource type="Texture2D" uid="uid://gktcrcemnhkn" path="res://Assets/ascii_pona/7001.png" id="9_mtgw7"]
+[ext_resource type="Texture2D" uid="uid://gktcrcemnhkn" path="res://Assets/ascii_pona_rejects/7001.png" id="9_mtgw7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rqt6c"]
 shader = ExtResource("1_qxn1m")
@@ -29,7 +29,7 @@ shader_parameter/Texture2DParameter8 = ExtResource("8_jd0kc")
 shader_parameter/Texture2DParameter9 = ExtResource("9_mtgw7")
 shader_parameter/Texture2DParameter10 = ExtResource("3_ikex3")
 
-[node name="GeneralVFX" type="Control"]
+[node name="GeneralVFX" type="Control" unique_id=1486467130]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +37,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PixelShader" type="ColorRect" parent="."]
+[node name="PixelShader" type="ColorRect" parent="." unique_id=1488413585]
 material = SubResource("ShaderMaterial_rqt6c")
 layout_mode = 1
 anchors_preset = 15
@@ -46,7 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ASCIIShader" type="ColorRect" parent="."]
+[node name="ASCIIShader" type="ColorRect" parent="." unique_id=499503587]
 material = SubResource("ShaderMaterial_jrsx2")
 layout_mode = 1
 anchors_preset = 15
