@@ -40,37 +40,44 @@ func load_folder(path : String, format : String):
 func populate_grid():
 	var title_coordinates = columns ** 2 / 4 - 0.5 * columns
 	var play_coordinates = columns ** 2 / 2 - 0.5 * columns - 2
-	var quit_coordinates = play_coordinates + columns * 3
+	var credits_coordinates = play_coordinates + columns * 3
+	var quit_coordinates = play_coordinates + columns * 6
 	for n in range(columns ** 2):
 		var child
 		var i = 0
 		# This is a horrible way of doing it but well...
 		if n ==  title_coordinates - 1:
 			child = title_glyph.instantiate()
-			i = 1
+			i = 0
 		elif n == title_coordinates:
 			child = title_glyph.instantiate()
-			i = 2
-		elif n == play_coordinates + 1 or n == quit_coordinates + 1:
+			i = 3
+		elif n == play_coordinates + 1 or n == quit_coordinates + 1 or n == credits_coordinates + 1:
 			child = command_glyph.instantiate()
-			i = 1
-		elif n == play_coordinates + 2 or n == quit_coordinates + 2:
+			i = 0
+		elif n == play_coordinates + 2 or n == quit_coordinates + 2 or n == credits_coordinates + 2:
 			child = command_glyph.instantiate()
-			i = 2
+			i = 3
 		elif n == play_coordinates - 1:
 			child = command_glyph.instantiate()
-			i = 4
+			i = 5
 		elif n == play_coordinates or n == quit_coordinates:
 			child = command_glyph.instantiate()
 			i = 0
 		elif n == quit_coordinates - 1:
 			child = command_glyph.instantiate()
-			i = 5
+			i = 7
+		elif n == credits_coordinates:
+			child = command_glyph.instantiate()
+			i = 6
+		elif n == credits_coordinates - 1:
+			child = command_glyph.instantiate()
+			i = 2
 		else:
 			child = basic_glyph.instantiate()
 			i = randi() % possible_images.size()
 		if (n + columns / 2) % columns == 0:
-			i = 2
+			i = 3
 		if (n + columns / 2 + 1) % columns == 0:
 			i = 1
 		child.texture = possible_images[i]
