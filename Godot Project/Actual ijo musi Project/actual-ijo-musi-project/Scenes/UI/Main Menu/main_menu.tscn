@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4meujsvxdrwo"]
 
-[ext_resource type="Script" uid="uid://ckkrhfa1vyv2v" path="res://Scenes/UI/Main Menu/sprite_manager.gd" id="2_p44lu"]
+[ext_resource type="Script" uid="uid://blj3aqxf1it3f" path="res://Scenes/UI/Main Menu/buttons_manager.gd" id="2_eufse"]
+[ext_resource type="Script" uid="uid://ckkrhfa1vyv2v" path="res://Scenes/UI/Main Menu/glyphs_manager.gd" id="2_p44lu"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1872967961]
 
@@ -12,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="SpriteManager" type="GridContainer" parent="." unique_id=1265305913]
+[node name="GlyphsManager" type="GridContainer" parent="." unique_id=1265305913]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,3 +23,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 32
 script = ExtResource("2_p44lu")
+
+[node name="ButtonsManager" type="VBoxContainer" parent="." unique_id=543687722]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_eufse")
