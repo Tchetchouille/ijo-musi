@@ -3,21 +3,23 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://df7dcyqwo4n4e"
-path="res://.godot/imported/test.glb-fad3b516577e8486da5447ab32256a8b.scn"
+uid="uid://dgovxq67hvfie"
+path="res://.godot/imported/w_r_plant_pot.glb-ad7749ee3104a22121675be97a9a0a2d.scn"
 
 [deps]
 
-source_file="res://Assets/3D Assets/test.glb"
-dest_files=["res://.godot/imported/test.glb-fad3b516577e8486da5447ab32256a8b.scn"]
+source_file="res://Assets/3D Assets/Waiting Room/w_r_plant_pot.glb"
+dest_files=["res://.godot/imported/w_r_plant_pot.glb-ad7749ee3104a22121675be97a9a0a2d.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -32,6 +34,9 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

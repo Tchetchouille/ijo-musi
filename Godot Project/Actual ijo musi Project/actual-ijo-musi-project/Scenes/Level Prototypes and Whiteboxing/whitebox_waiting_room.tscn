@@ -507,6 +507,7 @@ shape = SubResource("BoxShape3D_nvjux")
 
 [node name="Ceiling" type="StaticBody3D" parent="WaitingRoom/FloorAndCeiling" unique_id=785155248]
 transform = Transform3D(44.5621, 0.0100205, 0, -6.26279, 0.0712993, 0, 0, 0, 20, 2.5, 6.9155, -5)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="WaitingRoom/FloorAndCeiling/Ceiling" unique_id=2093628048]
 mesh = SubResource("BoxMesh_5tdr4")

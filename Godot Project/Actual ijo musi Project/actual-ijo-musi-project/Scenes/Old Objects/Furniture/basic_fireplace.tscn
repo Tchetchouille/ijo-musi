@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bd0nqi20bb2m8"]
+[gd_scene format=3 uid="uid://bd0nqi20bb2m8"]
 
 [ext_resource type="Material" uid="uid://cidavfhvfnifm" path="res://Resources and Assets/Materials/basic_wall_material.tres" id="1_6lg7q"]
-[ext_resource type="Script" uid="uid://dqoxsso1xjb66" path="res://Scenes/Objects/Furniture/firplace_light.gd" id="2_aakdq"]
 [ext_resource type="Material" uid="uid://7osme1sal87l" path="res://Resources and Assets/Materials/basic_ceiling_material.tres" id="2_kja83"]
-[ext_resource type="PackedScene" uid="uid://b3stu2p35yo4q" path="res://Scenes/NonUIVFX/campfire_flame.tscn" id="2_xa0q2"]
+[ext_resource type="PackedScene" uid="uid://j82n34vubxw4" path="res://Scenes/Old Objects/Effects/basic_fire.tscn" id="3_yxuu4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkbno"]
 size = Vector3(8, 4, 0.1)
@@ -19,79 +18,64 @@ material = ExtResource("2_kja83")
 
 [sub_resource type="BoxMesh" id="BoxMesh_yuch0"]
 
-[node name="BasicFireplace" type="StaticBody3D"]
+[node name="BasicFireplace" type="StaticBody3D" unique_id=852608446]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=194049759]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("BoxShape3D_nkbno")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=45692490]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013031, 0.503732, -0.190186)
 shape = SubResource("BoxShape3D_tpvo6")
 
-[node name="Whiteboxing" type="Node3D" parent="."]
+[node name="Whiteboxing" type="Node3D" parent="." unique_id=808393247]
 
-[node name="RightWall" type="MeshInstance3D" parent="Whiteboxing"]
+[node name="RightWall" type="MeshInstance3D" parent="Whiteboxing" unique_id=1557659197]
 transform = Transform3D(3, 0, 0, 0, 8, 0, 0, 0, 1, 2.5, 4, 0)
 layers = 3
 mesh = SubResource("QuadMesh_imuy1")
 
-[node name="LeftWall" type="MeshInstance3D" parent="Whiteboxing"]
+[node name="LeftWall" type="MeshInstance3D" parent="Whiteboxing" unique_id=1034217729]
 transform = Transform3D(3, 0, 0, 0, 8, 0, 0, 0, 1, -2.5, 4, 0)
 layers = 3
 mesh = SubResource("QuadMesh_imuy1")
 
-[node name="UpWall" type="MeshInstance3D" parent="Whiteboxing"]
+[node name="UpWall" type="MeshInstance3D" parent="Whiteboxing" unique_id=1926241737]
 transform = Transform3D(3, 0, 0, 0, 7, 0, 0, 0, 1, 0, 4.5, 0)
 layers = 3
 mesh = SubResource("QuadMesh_imuy1")
 
-[node name="Main" type="Node3D" parent="."]
+[node name="Main" type="Node3D" parent="." unique_id=1128640604]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.741924, 0, 0, -0.181637)
 
-[node name="Left" type="MeshInstance3D" parent="Main"]
+[node name="Left" type="MeshInstance3D" parent="Main" unique_id=1615810744]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1.8586, -1, 0.5, 0)
 layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
-[node name="Right" type="MeshInstance3D" parent="Main"]
+[node name="Right" type="MeshInstance3D" parent="Main" unique_id=1201217542]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1.8586, 1, 0.5, 0)
 layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
-[node name="Back" type="MeshInstance3D" parent="Main"]
+[node name="Back" type="MeshInstance3D" parent="Main" unique_id=855367701]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 0.5, -0.350631)
 layers = 3
 mesh = SubResource("BoxMesh_yuch0")
 skeleton = NodePath("../../Whiteboxing")
 
-[node name="Up" type="MeshInstance3D" parent="Main"]
+[node name="Up" type="MeshInstance3D" parent="Main" unique_id=1005767019]
 transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 1.8586, 0, 1, 0)
 layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
-[node name="Down" type="MeshInstance3D" parent="Main"]
+[node name="Down" type="MeshInstance3D" parent="Main" unique_id=717071897]
 transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 1.8586, 0, 0, 0)
 layers = 3
 mesh = SubResource("BoxMesh_gn2na")
 skeleton = NodePath("../../Whiteboxing")
 
-[node name="Light" type="Node3D" parent="."]
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Light"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.416442, -0.0502262)
-light_color = Color(0.909804, 0.407843, 0, 1)
-light_energy = 3.0
-light_cull_mask = 4294966275
-shadow_enabled = true
-omni_range = 10.0
-script = ExtResource("2_aakdq")
-base_intensity = 3.0
-flicker_intensity = 1.0
-offset_intensity = 0.08
-
-[node name="CandleFlame" parent="Light" instance=ExtResource("2_xa0q2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16256, -0.101297)
+[node name="Fire" parent="." unique_id=314666066 instance=ExtResource("3_yxuu4")]

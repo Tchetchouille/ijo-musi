@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://lkxc42o3svha"]
+
+[ext_resource type="PackedScene" uid="uid://jrb8o5ifw0rc" path="res://Assets/3D Assets/Waiting Room/w_r_floor.glb" id="1_hs36l"]
+[ext_resource type="PackedScene" uid="uid://cf0x5xuo8uw8i" path="res://Assets/3D Assets/Waiting Room/w_r_west_wall.glb" id="2_6eyb8"]
+[ext_resource type="PackedScene" uid="uid://nhab0tkfrlcp" path="res://Assets/3D Assets/Waiting Room/w_r_door.glb" id="3_grnn6"]
+[ext_resource type="PackedScene" uid="uid://e5jly8v7usqo" path="res://Assets/3D Assets/Waiting Room/w_r_ceiling.glb" id="4_wphga"]
+[ext_resource type="PackedScene" uid="uid://dri4bxm2adg32" path="res://Assets/3D Assets/Waiting Room/w_r_east_wall.glb" id="5_ftrp5"]
+[ext_resource type="PackedScene" uid="uid://bgh4hkwh6y56s" path="res://Assets/3D Assets/Waiting Room/w_r_plant_shelf.glb" id="6_8310v"]
+[ext_resource type="PackedScene" uid="uid://bxl88w8xbd7l0" path="res://Assets/3D Assets/Waiting Room/w_r_small_walls.glb" id="6_gsijb"]
+[ext_resource type="PackedScene" uid="uid://tk4ca05hkrse" path="res://Assets/3D Assets/Waiting Room/w_r_mural_walls.glb" id="7_0ag0c"]
+[ext_resource type="PackedScene" uid="uid://dvukxgv0ubqk3" path="res://Scenes/Old Objects/Furniture/basic_candle.tscn" id="7_nsjc3"]
+[ext_resource type="PackedScene" uid="uid://cbdiuucllerpo" path="res://Assets/3D Assets/Waiting Room/w_r_fireplace.glb" id="9_nsjc3"]
+[ext_resource type="PackedScene" uid="uid://j82n34vubxw4" path="res://Scenes/Old Objects/Effects/basic_fire.tscn" id="10_1e07g"]
+[ext_resource type="PackedScene" uid="uid://yoqywxiayyv2" path="res://Assets/3D Assets/Waiting Room/w_r_chair.glb" id="12_wwuwa"]
+
+[node name="WaintingRoom" type="Node3D" unique_id=1525833466]
+
+[node name="Door" type="StaticBody3D" parent="." unique_id=2001049233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20707488, -7.7187138)
+
+[node name="w_r_door" parent="Door" unique_id=1218870216 instance=ExtResource("3_grnn6")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, 0, 0)
+
+[node name="Walls_Floor_Ceilling" type="Node3D" parent="." unique_id=244716375]
+
+[node name="w_r_ceiling" parent="Walls_Floor_Ceilling" unique_id=1720575722 instance=ExtResource("4_wphga")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 0, 0, 0)
+visible = false
+
+[node name="EastWall" type="StaticBody3D" parent="Walls_Floor_Ceilling" unique_id=572107715]
+
+[node name="w_r_east_wall" parent="Walls_Floor_Ceilling/EastWall" unique_id=1216341817 instance=ExtResource("5_ftrp5")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 0, 0.19784164, 7.8715115)
+
+[node name="SouthWall" type="StaticBody3D" parent="Walls_Floor_Ceilling" unique_id=327176992]
+
+[node name="w_r_small_walls" parent="Walls_Floor_Ceilling/SouthWall" unique_id=690883020 instance=ExtResource("6_gsijb")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -19.228298, 0, 0)
+
+[node name="BasicCandle" parent="Walls_Floor_Ceilling/SouthWall" unique_id=358402315 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(1, 0, 0, 0, 0.923879, -0.382683, 0, 0.382683, 0.923879, -12.479924, 1.4492323, -6.6687303)
+
+[node name="BasicCandle2" parent="Walls_Floor_Ceilling/SouthWall" unique_id=226731968 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(-1, -3.345523e-08, -8.076806e-08, 0, 0.9238789, -0.38268322, 8.742278e-08, -0.38268322, -0.9238789, -12.479924, 1.4492323, 6.8037624)
+
+[node name="BasicCandle5" parent="Walls_Floor_Ceilling/SouthWall" unique_id=215797240 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(-0.55199516, 0.31909925, 0.770374, 0, 0.923879, -0.382683, -0.8338474, -0.21123925, -0.50997686, -18.299759, 1.4492323, 3.3285513)
+
+[node name="BasicCandle6" parent="Walls_Floor_Ceilling/SouthWall" unique_id=697456971 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(0.4784007, 0.3360499, 0.8112967, 2.630445e-08, 0.923879, -0.38268298, -0.8781418, 0.18307593, 0.4419845, -18.287954, 1.4492323, -3.330953)
+
+[node name="Plant_Shelf" type="StaticBody3D" parent="Walls_Floor_Ceilling/SouthWall" unique_id=1920394373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.512639, 1.8629441, -5.2175965)
+
+[node name="w_r_plant_shelf" parent="Walls_Floor_Ceilling/SouthWall/Plant_Shelf" unique_id=709193953 instance=ExtResource("6_8310v")]
+transform = Transform3D(0.4321462, 0, 0.25149488, 0, 0.5, 0, -0.25149488, 0, 0.4321462, 0, -0.4021263, 0)
+
+[node name="MuralWall" type="StaticBody3D" parent="Walls_Floor_Ceilling" unique_id=370324270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12640762)
+
+[node name="w_r_mural_walls" parent="Walls_Floor_Ceilling/MuralWall" unique_id=1209734295 instance=ExtResource("7_0ag0c")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 19.198938, 0, 0)
+
+[node name="BasicCandle3" parent="Walls_Floor_Ceilling/MuralWall" unique_id=1132535942 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(1, 0, 0, 0, 0.923879, -0.382683, 0, 0.382683, 0.923879, 12.45692, 1.4492323, -6.806165)
+
+[node name="BasicCandle5" parent="Walls_Floor_Ceilling/MuralWall" unique_id=1428489120 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(0.5369757, -0.32283053, -0.7793822, 0, 0.923879, -0.382683, 0.8435977, 0.2054915, 0.49610063, 18.265648, 1.4492323, -3.3081684)
+
+[node name="BasicCandle6" parent="Walls_Floor_Ceilling/MuralWall" unique_id=178528023 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(-0.49404812, -0.33271787, -0.80325246, 2.630445e-08, 0.923879, -0.38268298, 0.86943465, -0.1890639, -0.45644075, 18.252184, 1.4492323, 3.3525944)
+
+[node name="BasicCandle4" parent="Walls_Floor_Ceilling/MuralWall" unique_id=604840480 instance=ExtResource("7_nsjc3")]
+transform = Transform3D(-1, -3.345523e-08, -8.076806e-08, 0, 0.9238789, -0.38268322, 8.742278e-08, -0.38268322, -0.9238789, 12.45692, 1.4492323, 6.685244)
+
+[node name="Floor" type="StaticBody3D" parent="Walls_Floor_Ceilling" unique_id=806353492]
+
+[node name="w_r_floor" parent="Walls_Floor_Ceilling/Floor" unique_id=826399867 instance=ExtResource("1_hs36l")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Walls_Floor_Ceilling/Floor" unique_id=1262345670]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.028511167, 0.0072927475, 0.41985822)
+depth = 0.4
+polygon = PackedVector2Array(-18.985004, 3.5366411, -19.088858, -4.201557, -12.498938, -8.022892, 12.496434, -8.012928, 19.122967, -4.2310143, 19.03587, 3.4458554, 12.498571, 7.2284546, -12.496056, 7.236022)
+
+[node name="WestWall" type="StaticBody3D" parent="Walls_Floor_Ceilling" unique_id=124521746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025281906)
+
+[node name="w_r_west_wall" parent="Walls_Floor_Ceilling/WestWall" unique_id=403418602 instance=ExtResource("2_6eyb8")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, 0.20964384, -7.7228594)
+
+[node name="Fireplace" type="StaticBody3D" parent="." unique_id=763581387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.544779, 0, 0)
+
+[node name="w_r_fireplace" parent="Fireplace" unique_id=48210838 instance=ExtResource("9_nsjc3")]
+
+[node name="Fire" parent="Fireplace" unique_id=314666066 instance=ExtResource("10_1e07g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0.21805191)
+
+[node name="Chair" type="StaticBody3D" parent="." unique_id=1322532512]
+transform = Transform3D(0.6992517, 0, 0.7148755, 0, 1, 0, -0.7148755, 0, 0.6992517, -11.512878, 0.23429012, -2.2431703)
+
+[node name="w_r_chair" parent="Chair" unique_id=982866749 instance=ExtResource("12_wwuwa")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7, 0, 0, 0, 0.70000005, 0, 0, 0)
+
+[node name="Chair2" type="StaticBody3D" parent="." unique_id=1385480818]
+transform = Transform3D(0.7743816, -0.63271886, -2.765702e-08, 0, -4.371139e-08, 1, -0.63271886, -0.7743816, -3.3849293e-08, -11.747853, 0.95459366, 2.89984)
+
+[node name="w_r_chair" parent="Chair2" unique_id=1598609680 instance=ExtResource("12_wwuwa")]
+transform = Transform3D(0.70000005, 0, 0, 0, 0.7, 0, 0, 0, 0.70000005, 0, 0, 0)

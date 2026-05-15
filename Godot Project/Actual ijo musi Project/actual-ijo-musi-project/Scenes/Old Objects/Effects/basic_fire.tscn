@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://j82n34vubxw4"]
+
+[ext_resource type="Script" uid="uid://dqoxsso1xjb66" path="res://Scenes/Old Objects/Furniture/firplace_light.gd" id="1_f7ve1"]
+[ext_resource type="PackedScene" uid="uid://b3stu2p35yo4q" path="res://Scenes/NonUIVFX/campfire_flame.tscn" id="2_vjaa7"]
+
+[node name="Fire" type="Node3D" unique_id=314666066]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1830936998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.416442, -0.0502262)
+light_color = Color(0.909804, 0.407843, 0, 1)
+light_energy = 3.0
+light_cull_mask = 4294966275
+shadow_enabled = true
+omni_range = 30.0
+omni_attenuation = 0.6
+script = ExtResource("1_f7ve1")
+base_intensity = 3.0
+flicker_intensity = 1.0
+offset_intensity = 0.08
+
+[node name="CandleFlame" parent="." unique_id=1641883748 instance=ExtResource("2_vjaa7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16256, -0.101297)
