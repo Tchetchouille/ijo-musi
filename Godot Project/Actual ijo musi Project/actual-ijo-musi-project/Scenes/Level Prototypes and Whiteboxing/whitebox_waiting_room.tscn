@@ -395,8 +395,7 @@ material = SubResource("StandardMaterial3D_ur8w8")
 [sub_resource type="BoxShape3D" id="BoxShape3D_x0b1f"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0sj3b"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_3cnu7"]
+size = Vector3(8, 75, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jn2ir"]
 albedo_texture = ExtResource("1_nvjux")
@@ -2396,16 +2395,10 @@ mesh = SubResource("BoxMesh_ur8w8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pond/Floor/StaticBody3D" unique_id=1074101370]
 shape = SubResource("BoxShape3D_x0b1f")
 
-[node name="Walls" type="Node3D" parent="Pond" unique_id=1885997670]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.6576, -35.7672, 13.8645)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Pond/Walls" unique_id=1569346867]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pond/Walls/StaticBody3D" unique_id=952207936]
+[node name="Waterfall" type="MeshInstance3D" parent="Pond" unique_id=952207936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.312958, 0.28747177, -4.3029175)
 mesh = SubResource("BoxMesh_0sj3b")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pond/Walls/StaticBody3D" unique_id=1816122520]
-shape = SubResource("BoxShape3D_3cnu7")
+skeleton = NodePath("")
 
 [node name="CraftingRoom" type="Node3D" parent="." unique_id=1308651829]
 transform = Transform3D(0.947406, 0, -0.320034, 0, 1, 0, 0.320034, 0, 0.947406, -24.9786, -4.04455, -30.5518)

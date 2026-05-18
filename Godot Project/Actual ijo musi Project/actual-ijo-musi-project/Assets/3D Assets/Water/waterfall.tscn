@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cdpeaia6ie8xj"]
+
+[ext_resource type="Shader" uid="uid://bawu5hb6si8eb" path="res://Resources and Assets/Shaders/waterfall.gdshader" id="1_hl6jn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_642di"]
+render_priority = 0
+shader = ExtResource("1_hl6jn")
+shader_parameter/out_color = Color(0.5058824, 0.5803922, 1, 1)
+shader_parameter/fall_speed = 30.0
+shader_parameter/offset = 0.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_lbjru"]
+material = SubResource("ShaderMaterial_642di")
+size = Vector3(8, 75, 4)
+subdivide_width = 3
+subdivide_height = 100
+subdivide_depth = 3
+
+[node name="Waterfall" type="Node3D" unique_id=1013891562]
+
+[node name="Waterfall" type="MeshInstance3D" parent="." unique_id=1079882591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 37, 0)
+mesh = SubResource("BoxMesh_lbjru")

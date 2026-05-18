@@ -25,7 +25,6 @@ transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-
 
 [node name="w_r_ceiling" parent="Walls_Floor_Ceilling" unique_id=1720575722 instance=ExtResource("4_wphga")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 0, 0, 0)
-visible = false
 
 [node name="EastWall" type="StaticBody3D" parent="Walls_Floor_Ceilling" unique_id=572107715]
 

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dchmws4jvoaem"]
+
+[ext_resource type="Shader" uid="uid://cm8qwgq4f85al" path="res://Resources and Assets/Shaders/water.gdshader" id="1_wnrps"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o2kp8"]
+render_priority = 0
+shader = ExtResource("1_wnrps")
+shader_parameter/out_color = Color(0.5061761, 0.57954174, 1, 1)
+shader_parameter/amount = 0.35000001010522996
+shader_parameter/beer_factor = 1.0
+shader_parameter/ripple_speed = 0.2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_32yee"]
+material = SubResource("ShaderMaterial_o2kp8")
+size = Vector2(100, 100)
+subdivide_width = 50
+subdivide_depth = 50
+
+[node name="Water" type="MeshInstance3D" unique_id=1464650512]
+layers = 9
+mesh = SubResource("PlaneMesh_32yee")

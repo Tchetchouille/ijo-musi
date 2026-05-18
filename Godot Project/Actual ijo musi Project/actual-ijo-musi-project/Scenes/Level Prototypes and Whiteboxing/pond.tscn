@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://62bqy434ml3b"]
+
+[ext_resource type="PackedScene" uid="uid://dchmws4jvoaem" path="res://Assets/3D Assets/Water/water.tscn" id="1_jo1kf"]
+[ext_resource type="PackedScene" uid="uid://cdpeaia6ie8xj" path="res://Assets/3D Assets/Water/waterfall.tscn" id="2_armos"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_jo1kf"]
+
+[node name="Pond" type="Node3D" unique_id=1045762876]
+
+[node name="Water" parent="." unique_id=1464650512 instance=ExtResource("1_jo1kf")]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=952975984]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=384733216]
+shape = SubResource("WorldBoundaryShape3D_jo1kf")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1848942962]
+transform = Transform3D(0.7670868, -2.804275e-08, 0.6415433, -0.6415433, -3.353043e-08, 0.7670868, 0, -1, -4.371139e-08, 0, 89.75688, 0)
+light_color = Color(0.89411765, 0.8352941, 0.52156866, 1)
+light_energy = 3.0
+
+[node name="Waterfall" parent="." unique_id=1013891562 instance=ExtResource("2_armos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -15)
+
+[node name="WaterLights" type="Node3D" parent="." unique_id=1349217319]
+
+[node name="WaterLight" type="DirectionalLight3D" parent="WaterLights" unique_id=1860102181]
+transform = Transform3D(1, 0, 0, 0, 0.9851093, 0.17192909, 0, -0.17192909, 0.9851093, -55.237347, 30.327644, 0)
+layers = 8
+light_energy = 6.0
+light_cull_mask = 4293918728
+
+[node name="WaterLight2" type="DirectionalLight3D" parent="WaterLights" unique_id=107042475]
+transform = Transform3D(-4.371139e-08, -0.17192909, 0.9851093, 0, 0.9851093, 0.17192909, -1, 7.5152595e-09, -4.3060496e-08, -55.237347, 30.327644, 0)
+layers = 8
+light_energy = 5.0
+light_cull_mask = 4293918728
+
+[node name="WaterLight3" type="DirectionalLight3D" parent="WaterLights" unique_id=949138672]
+transform = Transform3D(-1, 1.5030519e-08, -8.612099e-08, 0, 0.9851093, 0.17192909, 8.742278e-08, 0.17192909, -0.9851093, -55.237347, 30.327644, 0)
+layers = 8
+light_energy = 4.0
+light_cull_mask = 4293918728
+
+[node name="WaterLight4" type="DirectionalLight3D" parent="WaterLights" unique_id=401011371]
+transform = Transform3D(-0.8660254, 0.08596454, -0.49255463, 0, 0.9851093, 0.17192909, 0.49999997, 0.14889495, -0.8531297, -55.237347, 30.327644, 0)
+layers = 8
+light_energy = 3.0
+light_cull_mask = 4293918728
