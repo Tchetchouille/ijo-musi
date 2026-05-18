@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3stu2p35yo4q"]
+[gd_scene format=3 uid="uid://b3stu2p35yo4q"]
 
 [ext_resource type="Material" uid="uid://d00ivkmywpa14" path="res://Resources and Assets/Materials/flame_material.tres" id="1_koi4a"]
 [ext_resource type="Curve" uid="uid://bltlk3tegvcvh" path="res://Resources and Assets/Functions/flame_progression.tres" id="2_loslc"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_hdymk"]
 material = ExtResource("1_koi4a")
-size = Vector2(0.2, 0.3)
+size = Vector2(0.4, 0.6)
 
 [sub_resource type="Gradient" id="Gradient_eefwq"]
 offsets = PackedFloat32Array(0, 0.586667, 0.986667)
@@ -14,15 +14,15 @@ colors = PackedColorArray(1, 0.283333, 0, 1, 1, 0.983333, 0, 0.588235, 1, 0.8525
 [sub_resource type="Gradient" id="Gradient_rkhxb"]
 colors = PackedColorArray(0.45, 0.2625, 0, 1, 0.76, 0.478167, 0.0836, 1)
 
-[node name="CandleFlame" type="Node3D"]
+[node name="CandleFlame" type="Node3D" unique_id=541514748]
 
-[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=800720420]
 layers = 3
-amount = 26
-lifetime = 0.5
+amount = 52
+lifetime = 0.7
 mesh = SubResource("QuadMesh_hdymk")
 emission_shape = 3
-emission_box_extents = Vector3(0.2, 0.05, 0.1)
+emission_box_extents = Vector3(0.6, 0.05, 0.1)
 gravity = Vector3(0, 4, 0)
 scale_amount_curve = ExtResource("2_loslc")
 color_ramp = SubResource("Gradient_eefwq")
