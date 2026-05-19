@@ -8,7 +8,7 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_level(1)
+	load_level(0)
 
 func load_level(index):
 	var level = levels[index].instantiate()

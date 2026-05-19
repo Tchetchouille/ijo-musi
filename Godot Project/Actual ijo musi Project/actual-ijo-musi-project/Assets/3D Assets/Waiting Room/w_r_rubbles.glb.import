@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://vupk7b0qid5n"
-path="res://.godot/imported/w_r_floor.glb-fbd44e6ef106ffd441e781d6536f0813.scn"
+uid="uid://cdpxnehrcsk70"
+path="res://.godot/imported/w_r_rubbles.glb-d9408c5ac56c568a15a6563ac94647ed.scn"
 
 [deps]
 
-source_file="res://Scenes/Level Prototypes and Whiteboxing/w_r_floor.glb"
-dest_files=["res://.godot/imported/w_r_floor.glb-fbd44e6ef106ffd441e781d6536f0813.scn"]
+source_file="res://Assets/3D Assets/Waiting Room/w_r_rubbles.glb"
+dest_files=["res://.godot/imported/w_r_rubbles.glb-d9408c5ac56c568a15a6563ac94647ed.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://drqmqtrs78bf4"
-path="res://.godot/imported/w_r_broken_plant_pot.glb-d65ed7eea4e4fef10c9b70083fb645ad.scn"
+uid="uid://5h5ces42low8"
+path="res://.godot/imported/w_r_showcase_broken.glb-07b21c01c3456b27762273120847a622.scn"
 
 [deps]
 
-source_file="res://Assets/3D Assets/Waiting Room/w_r_broken_plant_pot.glb"
-dest_files=["res://.godot/imported/w_r_broken_plant_pot.glb-d65ed7eea4e4fef10c9b70083fb645ad.scn"]
+source_file="res://Assets/3D Assets/Waiting Room/w_r_showcase_broken.glb"
+dest_files=["res://.godot/imported/w_r_showcase_broken.glb-07b21c01c3456b27762273120847a622.scn"]
 
 [params]
 
