@@ -1,0 +1,32 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+% Source: https://tex.stackexchange.com/questions/227639/redefine-emph-to-be-both-bold-and-italic 
+\let\emph\relax % there's no \RedeclareTextFontCommand
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
+\graphicspath{ {./img} }
+
+\title{ijo musi\footnote{"ijo musi" can be roughly translated as "the entertaining object" or "the game thing". Please note that toki pona uses no capital letters. In this document, sentences beginning with a toki pona word - such as will often be the case when referring to the game's title - will then start with a lowercase letter.} : rapport de projet}
+\subtitle{La recherche-création appliquée à un jeu d'acquisition linguistique}
+\author{Jeremias Kuehne}
+
+\begin{document}
+	\maketitle
+	
+	\section*{Introduction}
+	
+	\section{Les jeux d'acquisition linguistique}
+	\subsection*{État de l'art en 2023}
+	\subsection*{Deux ans après}
+	
+	\section{La recherche-création appliquée au jeu vidéo}
+	
+	\section{ijo musi ; hubris et innocence}
+	
+	\section{L'hégémonie de la traduction}
+
+	\section*{Conclusion}
+
+\end{document}

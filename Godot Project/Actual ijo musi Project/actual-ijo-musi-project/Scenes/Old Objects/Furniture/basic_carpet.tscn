@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvqd1v0rodqk7"]
+[gd_scene format=3 uid="uid://cvqd1v0rodqk7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqg4p"]
 albedo_color = Color(0.380199, 0, 0.0283597, 1)
@@ -8,18 +8,20 @@ material = SubResource("StandardMaterial3D_kqg4p")
 size = Vector3(6, 0.02, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0as07"]
-albedo_color = Color(0.32, 0.202667, 0, 1)
+albedo_color = Color(0.99999994, 0.7119317, 0.27656037, 1)
+metallic = 0.1
+roughness = 0.5
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_etw1s"]
 material = SubResource("StandardMaterial3D_0as07")
 size = Vector2(6.2, 4.2)
 
-[node name="BasicCarpet" type="Node3D"]
+[node name="BasicCarpet" type="Node3D" unique_id=165038047]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1475897233]
 layers = 3
 mesh = SubResource("BoxMesh_ydp81")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1164119349]
 layers = 3
 mesh = SubResource("PlaneMesh_etw1s")
