@@ -8,7 +8,7 @@
 
 \graphicspath{ {./img} }
 
-\title{ijo musi\footnote{"ijo musi" can be roughly translated as "the entertaining object" or "the game thing". Please note that toki pona uses no capital letters. In this document, sentences beginning with a toki pona word - such as will often be the case when referring to the game's title - will then start with a lowercase letter.} : rapport de projet}
+\title{ijo musi\footnote{"ijo musi" peut-être grossièrement traduit par "objet amusant" ou "chose ludique". Il est important de noter que le toki pona n'utilise pas de lettres majuscules. Dans ce travail, les phrases débutant en toki pona commenceront donc par une lettre minuscule.} : rapport de projet}
 \subtitle{La recherche-création appliquée à un jeu d'acquisition linguistique}
 \author{Jeremias Kuehne}
 
@@ -23,10 +23,30 @@
 	- Plan
 	
 	\section{Les jeux d'acquisition linguistique}
-	Tout projet artistique ou de recherche repose sur les travaux qui le précèdent. Dans le cas
-	\subsection*{État de l'art en 2023}
+	\subsection*{Étude de jeux vidéo d'acquisition linguistique en 2023}
+	Lorsqu'il fût décidé que le projet pratique prendrait la forme un jeu vidéo d'acquisition linguistique, une brève analyse des propositions existantes fût réalisée. Il fut décidé de se focaliser sur des propositions récentes (avec une fenêtre d'environ 10 ans, le jeu le plus ancien datant de 2014, et les plus récents de 2023) et facilement accessibles (tous les jeux étant disponibles sur steam au moment de l'analyse). Douze jeux furent retenus. Deux d'entres eux visent à enseigner le japonais ; \textit{Learn Japanese RPG: Hiragana Forbidden Speech}(Study Bunny Games LLC, 2023) et \textit{So to Speak\footnote{Version demo.}} (Erik Andersen, 2022). Six d'entres eux visent à enseigner diverses langues selon le choix des joueur·euse·x·s ; \textit{Earthlingo} (Earthlingo, 2019), \textit{Influent} (Howland, 2014), \textit{Lingotopia} (Lingo Ludo, 2018), \textit{Linguist FPS} (Rocket Boy Games, 2022), \textit{Lost Abroad Café\footnote{Version accès anticipé.}} (Lost Abroad, 2023), \textit{Noun Town}\footnote{Version demo.} (SUPER HYPER MEGA, 2023). Trois d'entre eux n'ont aucun objectif pédagogique mais visent malgré tout à enseigner (au moins en partie) une langue fictive ; \textit{Chants of Sennaar} (Rundisc, 2023), \textit{Heaven's Vault} (inkle LTD, 2019), \textit{Tunic} (TUNIC Team, 2022). Enfin, le dernier jeu, \textit{Turing Complete} (LevelHead, 2021) est un cas particulier. En effet, l'inclure dans les jeux d'acquisition linguistique demande une interprétation plutôt souple de ce qu'est l'acquisition linguistique puisqu'il s'agit ici d'un jeu qui vise à enseigner les portes logiques. L'analyse de ces douze jeux effectuée en 2023 est jointe en annexe (Annexe 1). De l'étude de ces douze jeux ressortent plusieurs constats :\\
+
+
+		\emph{Amateurisme}\\
+		La plupart des jeux étudiés ont en commun un apect amateur. Cela peut prendre diverses formes ;  des UI peu esthétiques et/ou peu pratiques, un sound design souvent peu travaillé voir absent, des graphismes souffrant de l’absence d’une direction artistique solide, des glitches fréquents, une évolution de la difficulté et/ou du rythme mal maitrisée, etc\footnote{Il est important de garder à l'esprit que la plupart de ces jeux peuvent malgré tout briller sur l'un ou l'autre de ces aspects. C'est lorsque l'on prend l'un de ces jeux dans son ensemble que le manque de compétences devient apparent.}. Cela peut à mon sens s'expliquer d'une part par un manque de compétences dû à une certaine inexpérience, mais aussi par un manque de ressources matérielles. Beaucoup de ces jeux sont designés et développés par de petites équipes, voir en solo. Et bien souvent, il s'agit soit de “premier projets” - Que ça soit \textit{littéralement} le premier projet de jeu vidéo pour les créateur·ice·x·s du jeu, que ça soit leur premier premier projet \textit{de cet envergure}, ou que ça soit leur premier projet \textit{en tant qu'équipe/studio}. Cela est mis en évidence par les noms utilisés sur les pages steam des différents jeux. En effet, quand il ne s'agit pas simplement du nom de l'unique développeur·euse·x, on retrouve bien souvent des noms qui font directement référence au jeu, indiquant que le studio a été créé spécifiquement pour lui. Ainsi \textit{Earthlingo} est développé par “Earthlingo", \textit{Lingotopia} par “Lingo Ludo”, \textit{Lost Abroad Café} par “Lost Abroad“, etc. Et dans la plupart des cas, ces profil de développeur·euse·x·s ne contiennent qu'un seul jeu.\\
+		
+		Il est intéressant de noter que ce manque d'expérience, de compétences et de moyens est également présent dans le cas d'ijo musi. Lorsque je commence à travailler sur le jeu, il s'agit de mon premier projet en 3D, de mon premier projet utilisant Godot, de mon premier projet à visée pédagogique, de mon premier projet de cette envergure. Mon expérience se limite jusque-là à des “pseudo-jeux” en 2D ; des micro projets bien souvent incomplets qui sont bien plus des brouillons permettant de tester des idées que des oeuvres visant à être terminées.\\
+		
+		\emph{Hégémonie de la traduction}\\
+		À l'exception des jeux sans visée pédagogique et de \textit{Turing Complete}, cas particulier de par les spécificités du “langage” qu'il enseigne, l'ensemble des jeux étudiés ici passent par des traductions directes pour transmettre des connaissances et compétences linguistiques. Cela peut sembler une évidence, voir même paraître inévitable. Et il est vrai que l'aprentissage d'une langue secondaire implique nécessairement des moments où la personne apprenante fait des ponts entre la langue apprise et la ou les langue(s) qu'elle connaît. Mais il n'est pas question ici de se processus interne fait de manière organique par la personne aprennante. Ce que je cherche à décrire - et à critiquer - ic iest le fait que plutôt que de tenter de faire comprendre un terme de manière conceptuelle, l'écrasante majorité des jeux d'acquisition linguistique se contentent de tracer un lien entre le terme cible et un terme qui lui correspond dans une langue maîtrisée. Or les langues ne sont pas de simples copies les unes des autres. Par-exemple, si je vous dit que le mot anglais “mad" se traduit par “fou” - une traduction communément admise - alors la question “Are you mad at me?" (“Es-tu en colère contre moi?") n'a aucun sens.\\
+		
+		L'un des pilliers de design d'ijo musi est de se distinguer des propositions de 2023 en ne laissant aucune place à la traduction dans le processus d'aprentissage. D'une part parce-que je pense le processus plus efficace d'un point de vue pédagogique dans le cadre de l'aprentissage du toki pona (où les mots sont de vaste concepts ne correspondant à aucun mot unique d'une quelconque autre langues) mais aussi parce-que je pense le processus plus efficace d'un point de vue ludique.\\
+		
+		\emph{Hégémonie du vocabulaire}\\
+		L'hégémonie du vocabulaire est écrasant au point que - contrairement à l'hégémonie de la traduction - elle se retrouve dans l'ensemble du corpus des jeux étudiés à l'unique exception de \textit{Turing Complete}. Ce que j'entends par “hégémonie du vocabulaire" est que les jeux d'acquisition linguistique ici étudiés ne sont en réalité pas des jeux d'acquisition linguistique mais des jeux d'acquisition lexicale. Aucune attention n'est portée à la grammaire, à la conjuguaison, aux pratiques culturelles des populations pratiquant la langue, à l'histoire de la langue, etc. C'est ce qui permet à des jeux comme Linguist FPS de proposer \textit{seize} langues à apprendre, sans qu'aucune d'entre elles ne change le gameplay ou quelqu'autre aspect du jeu. Il est intéressant de noter que même \textit{Chants of Sennaar} - qui ne tombe pas dans l'hégémonie de la traduction puisque l'apprentissage des la langue se fait via le contexte -  tend \\
+		
+		ijo musi a été designé avec l'objectif conscient de ne pas tomber dnas l'hégémonie du vocabulaire. Si les efforts fait en ce sens ont laissé des trace dans le prototype présenté avec ce papier, force est de constater qu'ils se soldent par un échec. Les dimensions de cet échec ainsi que ses causes sont discutés dans la partie “ijo musi ; l'hubris innocent” plus bas dans ce travail.
+		
+		\subsection*{Dépasser la tension ludopédagogique}
+		
 	
-	\subsection*{Trois ans plus tard}
+	
+	
 	
 	\section{La recherche-création appliquée au jeu vidéo}
 	\subsection*{La recherche-création}
@@ -37,15 +57,32 @@
 	- “État de la littérature”\\
 	- Spécificités
 	
-	\section{ijo musi ; hubris et innocence}
-	\subsection{Quatre ans d'ijo musi}
-	- Timeline\\
-	- Avant ijo musi\\
+	\section{ijo musi ; l'hubris innocent}
+	\subsection*{Autopoïétique archéologique}
+	- Poïétique 
+	- Autopoïétique
+	- Pourquoi archéologique ?
+	- Premier élément, manque de méthodologie au début du projet (pointer vers moment première lecture recherche-création)
+	- Deuxième élément : TDAH (10 septembre 2020), TSA (16 mai 2024), Trouble anxieux, Dépressions et Burn-outs. PAS COMME EXCUSE mais come contexte nécessaire.
+	\subsection*{Six ans d'ijo musi}
+	- Timeline  => Divisée en périodes\\
+	- Frustrations ludiques (Heaven's vault) et  (20.03.20)\\
+	- Avant ijo musi, l'éthique philosophique\\
 	- Les débuts d'ijo musi : un jeu d'énigmes\\
+	- Chants of Sennaar (30.09.23), Tunic (20.06.23) et la question de la démarcation \\
+	- Début officiel du projet et structure que cela apporte
 	- Transpositions ludiques, transformation du design\\
 	- La dernière ligne droite\\
 
-	\section{L'hégémonie de la traduction}
+	\subsection*{La création}
+	- Ici les problèmes et leur origine dans le design. Peut-être essayer de retrouver les grands choix de design, les changements au fil du projet, et décrire leur conséquences.
+	\subsection*{La recherche}
+	- Annexe 1 -> je ne sais pas faire référence à des jeux à ce stade
+	- Archéologie
+	- Parfois du revoir la timeline
+	\section{La double hégémonie}
+	- Parler de l'apprentissage de l'anglais par exposition.
+	- En plus de Ça : acquisition linguistique accidentelle (mentionner mais sort du cadre de ce papier)
 
 	\section*{Conclusion}
 
