@@ -13,5 +13,5 @@ ambient_light_energy = 0.5
 [node name="LevelList" type="Node3D" parent="." unique_id=602404032]
 script = ExtResource("1_lhgvw")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="LevelList" unique_id=241024624]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=241024624]
 environment = SubResource("Environment_lhgvw")

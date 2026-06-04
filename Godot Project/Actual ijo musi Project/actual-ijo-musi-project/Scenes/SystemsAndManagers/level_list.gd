@@ -2,7 +2,8 @@ extends Node3D
 
 @onready var levels = [
 	preload("res://Scenes/Level Prototypes and Whiteboxing/waiting_room.tscn"),
-	preload("res://Scenes/Level Prototypes and Whiteboxing/pond.tscn")
+	preload("res://Scenes/Level Prototypes and Whiteboxing/pond.tscn"),
+	preload("res://Scenes/Level Prototypes and Whiteboxing/Obsolete/proto_level.tscn")
 ]
 
 

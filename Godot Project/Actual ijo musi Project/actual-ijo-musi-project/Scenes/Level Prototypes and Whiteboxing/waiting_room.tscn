@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://bhjsnw81xn1js" path="res://Assets/3D Assets/Waiting Room/w_r_potted_plant.glb" id="20_6yxn3"]
 [ext_resource type="PackedScene" uid="uid://bsicbljy6ghe3" path="res://Assets/3D Assets/Waiting Room/w_r_broken_pot.glb" id="21_crsl0"]
 [ext_resource type="PackedScene" uid="uid://cvqd1v0rodqk7" path="res://Scenes/Old Objects/Furniture/basic_carpet.tscn" id="22_jc3df"]
+[ext_resource type="PackedScene" uid="uid://yx8rdjxtqofi" path="res://Assets/3D Assets/Waiting Room/w_r_ro_skeleton.tscn" id="26_a4ro2"]
+[ext_resource type="PackedScene" uid="uid://dy8gu1duaily7" path="res://Scenes/UI/Tool Stuff/red_green_essence.tscn" id="27_xs5gg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ie2a1"]
 
@@ -123,6 +125,10 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7fwts")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a4ro2"]
+radius = 0.5888672
+height = 2.2035751
 
 [node name="WaintingRoom" type="Node3D" unique_id=1525833466]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -4.246771)
@@ -351,3 +357,18 @@ transform = Transform3D(-0.48343396, 0, 0.12763853, 0, 0.5, 0, -0.12763853, 0, -
 
 [node name="BasicCarpet" parent="LivingSpace" unique_id=1116324905 instance=ExtResource("22_jc3df")]
 transform = Transform3D(-8.742276e-08, 0, 1.8, 0, 1, 0, -2, 0, -7.86805e-08, -9.460906, 0.23369837, -0.29478192)
+
+[node name="RigidOne" type="StaticBody3D" parent="." unique_id=1523394368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.812896, 0.47000146, 0.7775321)
+collision_layer = 3
+
+[node name="w_r_RO_skeleton" parent="RigidOne" unique_id=1082287556 instance=ExtResource("26_a4ro2")]
+transform = Transform3D(4.2354937e-09, -0.09689681, 0.24126957, -0.26, -1.13649605e-08, -3.2567527e-16, 1.0546228e-08, -0.24126957, -0.09689681, 0, 0, 0)
+
+[node name="CollisionPolygon3D" type="CollisionShape3D" parent="RigidOne" unique_id=1987448176]
+transform = Transform3D(0.930903, 0.3652668, -1.5966318e-08, 0, -4.371139e-08, -1, -0.3652668, 0.930903, -4.069106e-08, -0.28870106, -0.304334, -0.7350631)
+shape = SubResource("CapsuleShape3D_a4ro2")
+
+[node name="RedGreenEssence" parent="RigidOne" unique_id=929980766 instance=ExtResource("27_xs5gg")]
+red_text = "mi toki e ____ pona"
+green_text = "mi toki e toki pona"

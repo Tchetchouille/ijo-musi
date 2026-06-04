@@ -28,6 +28,11 @@ func _input(event):
 			var ray_to_obj = PhysicsRayQueryParameters3D.create(ray_to_obj_start, ray_to_obj_end)
 			ray_to_screen.collide_with_areas = false
 			ray_to_screen.collide_with_bodies = true
-			var obj = get_world_3d().direct_space_state.intersect_ray(ray_to_obj)
-			print(obj)
+			var obj = get_world_3d().direct_space_state.intersect_ray(ray_to_obj).collider
+			# If there is an essence (which means the object is labeled), go to relevant screen mode
+			
+			if obj.get_node_or_null("RedGreenEssence"):
+				print("YAY")
+			else:
+				print("NOO")
 		

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dy8gu1duaily7"]
+
+[ext_resource type="Script" uid="uid://c11bae1ri8oer" path="res://Scenes/UI/Tool Stuff/red_green_essence.gd" id="1_tbwjb"]
+
+[node name="RedGreenEssence" type="Node" unique_id=929980766]
+script = ExtResource("1_tbwjb")

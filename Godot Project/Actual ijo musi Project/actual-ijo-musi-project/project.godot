@@ -81,6 +81,8 @@ click={
 3d_render/layer_3="tool_screen"
 3d_render/layer_4="Water"
 3d_render/layer_10="tool_vision_green_items"
+3d_render/layer_11="tool_vision_yellow"
+3d_render/layer_12="tool_vision_red"
 3d_physics/layer_1="Environment"
 3d_physics/layer_2="Labeled_Objects"
 

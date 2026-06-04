@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://3g86xogvwrgv"]
+[gd_scene format=3 uid="uid://3g86xogvwrgv"]
 
 [ext_resource type="Script" uid="uid://vback6ieg3ma" path="res://Scenes/SystemsAndManagers/player_character.gd" id="1_04qb1"]
 [ext_resource type="Script" uid="uid://dfap4erfabr63" path="res://Scenes/SystemsAndManagers/camera_controller.gd" id="2_aw5yu"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bqe2s58xnb5nn" path="res://Scenes/SystemsAndManagers/tool_controller.gd" id="4_irpfk"]
 [ext_resource type="Material" uid="uid://dmmm4nc4mtnah" path="res://Resources and Assets/Materials/basic_clay_material.tres" id="6_gja8t"]
 [ext_resource type="Script" uid="uid://cv0vo5755ai25" path="res://Scenes/SystemsAndManagers/tool_screen.gd" id="6_ilob1"]
-[ext_resource type="PackedScene" uid="uid://cqhnwvia67d5k" path="res://Scenes/UI/ToolUI/red_mode.tscn" id="7_veynb"]
+[ext_resource type="PackedScene" uid="uid://cqhnwvia67d5k" path="res://Scenes/UI/Tool Stuff/red_mode.tscn" id="7_veynb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_77dal"]
 
@@ -36,115 +36,144 @@ viewport_path = NodePath("ToolUI")
 
 [sub_resource type="BoxMesh" id="BoxMesh_ilob1"]
 
-[node name="PlayerCharacter" type="CharacterBody3D"]
+[node name="PlayerCharacter" type="CharacterBody3D" unique_id=1685033145]
 script = ExtResource("1_04qb1")
 SPEED = 6.0
 
-[node name="CharacterCollision" type="CollisionShape3D" parent="."]
+[node name="CharacterCollision" type="CollisionShape3D" parent="." unique_id=1937660073]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_77dal")
 
-[node name="CameraController" type="Node3D" parent="."]
+[node name="CameraController" type="Node3D" parent="." unique_id=857522588]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 script = ExtResource("2_aw5yu")
 
-[node name="CharacterCamera" type="Camera3D" parent="CameraController"]
+[node name="CharacterCamera" type="Camera3D" parent="CameraController" unique_id=1645078370]
 cull_mask = 1048063
 
-[node name="ToolViewport" type="SubViewport" parent="CameraController/CharacterCamera"]
+[node name="ToolViewport" type="SubViewport" parent="CameraController/CharacterCamera" unique_id=1239174226]
 transparent_bg = true
 canvas_cull_mask = 4294966784
 size = Vector2i(1152, 648)
 
-[node name="ToolCamera" type="Camera3D" parent="CameraController/CharacterCamera/ToolViewport"]
+[node name="ToolCamera" type="Camera3D" parent="CameraController/CharacterCamera/ToolViewport" unique_id=1573151522]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.648895, 0)
 cull_mask = 1048067
 fov = 40.0
 script = ExtResource("3_76q7t")
 
-[node name="Tool_Camera_Front" type="Node3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera"]
+[node name="Tool_Camera_Front" type="Node3D" parent="CameraController/CharacterCamera/ToolViewport/ToolCamera" unique_id=10901714]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="TorchTest" type="OmniLight3D" parent="CameraController/CharacterCamera"]
+[node name="TorchTest" type="OmniLight3D" parent="CameraController/CharacterCamera" unique_id=1082109310]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.391102, 0)
 light_energy = 0.2
 
-[node name="ToolController" type="Node3D" parent="CameraController/CharacterCamera"]
+[node name="ToolController" type="Node3D" parent="CameraController/CharacterCamera" unique_id=181669580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.295882)
 script = ExtResource("4_irpfk")
 
-[node name="Tool" type="Node3D" parent="CameraController/CharacterCamera/ToolController"]
+[node name="Tool" type="Node3D" parent="CameraController/CharacterCamera/ToolController" unique_id=1132515107]
 
-[node name="ToolModel" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
+[node name="ToolModel" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=264225681]
 
-[node name="UpFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
+[node name="UpFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel" unique_id=720888660]
 transform = Transform3D(0.5, 0, 0, 0, 0.05, 0, 0, 0, 0.01, 0, 0.15, 0)
 mesh = SubResource("BoxMesh_a0a2d")
 skeleton = NodePath("../..")
 
-[node name="DownFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
+[node name="DownFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel" unique_id=1491456656]
 transform = Transform3D(0.5, 0, 0, 0, 0.05, 0, 0, 0, 0.01, 0, -0.15, 0)
 mesh = SubResource("BoxMesh_a0a2d")
 skeleton = NodePath("../..")
 
-[node name="LeftFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
+[node name="LeftFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel" unique_id=241403680]
 transform = Transform3D(0.05, 0, 0, 0, 0.35, 0, 0, 0, 0.01, -0.275, 0, 0)
 mesh = SubResource("BoxMesh_a0a2d")
 skeleton = NodePath("../..")
 
-[node name="RightFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
+[node name="RightFrame" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel" unique_id=465129248]
 transform = Transform3D(0.05, 0, 0, 0, 0.35, 0, 0, 0, 0.01, 0.275, 0, 0)
 mesh = SubResource("BoxMesh_a0a2d")
 skeleton = NodePath("../..")
 
-[node name="Screen" type="Area3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel"]
+[node name="Screen" type="Area3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel" unique_id=461537795]
 script = ExtResource("6_ilob1")
 
-[node name="ToolScreen" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen"]
+[node name="ToolScreen" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen" unique_id=601381572]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.00118035)
 layers = 4
 mesh = SubResource("QuadMesh_i6gmh")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen" unique_id=1977933469]
 shape = SubResource("BoxShape3D_77dal")
 
-[node name="GreenToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
+[node name="GreenToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1472764685]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
 layers = 512
-light_color = Color(0.249802, 0.776158, 0, 1)
-light_energy = 10.0
+light_color = Color(1, 0, 1, 1)
+light_energy = 50.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
+light_negative = true
 light_specular = 0.0
-light_cull_mask = 4294966784
+light_cull_mask = 4293919232
 spot_range = 17.6003
 spot_attenuation = 0.0
 spot_angle = 85.7812
 
-[node name="Sprite3D" type="Sprite3D" parent="CameraController/CharacterCamera/ToolController/Tool"]
+[node name="YellowToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=732082548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
+layers = 512
+light_color = Color(0, 0, 1, 1)
+light_energy = 50.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_negative = true
+light_specular = 0.0
+light_cull_mask = 4293919744
+spot_range = 17.6003
+spot_attenuation = 0.0
+spot_angle = 85.7812
+
+[node name="RedToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1556210101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
+layers = 1024
+light_color = Color(0, 1, 1, 1)
+light_energy = 50.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_negative = true
+light_cull_mask = 4293920768
+spot_range = 17.6003
+spot_attenuation = 0.0
+spot_angle = 85.7812
+
+[node name="Sprite3D" type="Sprite3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1665811847]
 transform = Transform3D(0.0976715, 0, 0, 0, 0.0482288, 0, 0, 0, 1, 0, 0, 0.00360131)
 texture = SubResource("ViewportTexture_ilob1")
 
-[node name="Hand" type="Node3D" parent="CameraController/CharacterCamera/ToolController"]
+[node name="Hand" type="Node3D" parent="CameraController/CharacterCamera/ToolController" unique_id=573266146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115793)
 
-[node name="Model" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Hand"]
+[node name="Model" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Hand" unique_id=932552420]
 transform = Transform3D(0.861514, -0.507734, 0, 0.507734, 0.861514, 0, 0, 0, 1, 0.0284569, -0.0514013, 0)
 
-[node name="StaticBody3D" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
+[node name="StaticBody3D" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model" unique_id=988813266]
 transform = Transform3D(0.02, 0, 0, 0, 0.06, 0, 0, 0, 0.02, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_77dal")
 
-[node name="StaticBody3D2" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
+[node name="StaticBody3D2" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model" unique_id=1941663562]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.02, 0.0130032, -0.0394205, 0)
 mesh = SubResource("BoxMesh_ilob1")
 
-[node name="StaticBody3D3" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model"]
+[node name="StaticBody3D3" type="MeshInstance3D" parent="CameraController/CharacterCamera/ToolController/Hand/Model" unique_id=1216611112]
 transform = Transform3D(0.0385339, 1.49012e-08, 0, 0, 0.167154, 0, 0, 0, 0.02, 0.0101811, -0.124598, 0)
 mesh = SubResource("BoxMesh_ilob1")
 
-[node name="ToolUI" type="SubViewport" parent="."]
+[node name="ToolUI" type="SubViewport" parent="." unique_id=2091047710]
 transparent_bg = true
 
-[node name="YellowMode" parent="ToolUI" instance=ExtResource("7_veynb")]
+[node name="RedMode" parent="ToolUI" unique_id=733315251 instance=ExtResource("7_veynb")]
+visible = false
