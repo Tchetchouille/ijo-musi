@@ -475,6 +475,7 @@ material = SubResource("StandardMaterial3D_0sj3b")
 
 [node name="Lights" type="Node3D" parent="." unique_id=867760447]
 transform = Transform3D(-0.5, 0.612372, -0.612372, 0, 0.707107, 0.707107, 0.866025, 0.353553, -0.353553, 0, 0, 0)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=1642913709]
 transform = Transform3D(-0.5, -0.612372, 0.612372, 0.612372, 0.25, 0.75, -0.612372, 0.75, 0.25, 0, 0, 0)

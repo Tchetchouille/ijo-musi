@@ -5,28 +5,28 @@
 [node name="w_r_RO_skeleton" unique_id=1082287556 instance=ExtResource("1_xsok4")]
 
 [node name="Arm" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="0" unique_id=716488804]
-layers = 513
+layers = 2049
 
 [node name="Feet" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="1" unique_id=1640394352]
-layers = 513
+layers = 2049
 
 [node name="Hand" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="2" unique_id=1659515995]
-layers = 513
+layers = 2049
 
 [node name="Hips" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="3" unique_id=1336260977]
-layers = 513
+layers = 2049
 
 [node name="Legs" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="4" unique_id=1527577356]
-layers = 513
+layers = 2049
 
 [node name="Scapula" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="5" unique_id=1424622385]
-layers = 513
+layers = 2049
 
 [node name="Skull" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="6" unique_id=112031304]
-layers = 513
+layers = 2049
 
 [node name="Spine" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="7" unique_id=1555965568]
-layers = 513
+layers = 2049
 
 [node name="Thorax" parent="Armature" parent_id_path=PackedInt32Array(394416667) index="8" unique_id=575399116]
-layers = 513
+layers = 2049

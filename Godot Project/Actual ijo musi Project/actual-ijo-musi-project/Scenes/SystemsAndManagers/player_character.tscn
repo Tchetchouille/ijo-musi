@@ -109,8 +109,14 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolModel/Screen" unique_id=1977933469]
 shape = SubResource("BoxShape3D_77dal")
 
-[node name="GreenToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1472764685]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
+[node name="Sprite3D" type="Sprite3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1665811847]
+transform = Transform3D(0.0976715, 0, 0, 0, 0.0482288, 0, 0, 0, 1, 0, 0, 0.00360131)
+texture = SubResource("ViewportTexture_ilob1")
+
+[node name="ToolLights" type="Node3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1094698745]
+
+[node name="GREENToolLightNegative" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolLights" unique_id=1472764685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.118750006)
 layers = 512
 light_color = Color(1, 0, 1, 1)
 light_energy = 50.0
@@ -123,10 +129,23 @@ spot_range = 17.6003
 spot_attenuation = 0.0
 spot_angle = 85.7812
 
-[node name="YellowToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=732082548]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
+[node name="GREENToolLightPositive" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolLights" unique_id=538842278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.118750006)
 layers = 512
-light_color = Color(0, 0, 1, 1)
+light_color = Color(0, 1, 0, 1)
+light_energy = 50.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_cull_mask = 4293919232
+spot_range = 17.6003
+spot_attenuation = 0.0
+spot_angle = 85.7812
+
+[node name="BLUEToolLightNegative" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolLights" unique_id=732082548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.118750006)
+layers = 512
+light_color = Color(1, 1, 0, 1)
 light_energy = 50.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
@@ -137,8 +156,21 @@ spot_range = 17.6003
 spot_attenuation = 0.0
 spot_angle = 85.7812
 
-[node name="RedToolLight" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1556210101]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.11875)
+[node name="BLUEToolLightPositive" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolLights" unique_id=1335616277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.118750006)
+layers = 512
+light_color = Color(0, 0, 1, 1)
+light_energy = 50.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+light_cull_mask = 4293919744
+spot_range = 17.6003
+spot_attenuation = 0.0
+spot_angle = 85.7812
+
+[node name="REDToolLightNegative" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolLights" unique_id=1556210101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.118750006)
 layers = 1024
 light_color = Color(0, 1, 1, 1)
 light_energy = 50.0
@@ -150,9 +182,17 @@ spot_range = 17.6003
 spot_attenuation = 0.0
 spot_angle = 85.7812
 
-[node name="Sprite3D" type="Sprite3D" parent="CameraController/CharacterCamera/ToolController/Tool" unique_id=1665811847]
-transform = Transform3D(0.0976715, 0, 0, 0, 0.0482288, 0, 0, 0, 1, 0, 0, 0.00360131)
-texture = SubResource("ViewportTexture_ilob1")
+[node name="REDToolLightPositive" type="SpotLight3D" parent="CameraController/CharacterCamera/ToolController/Tool/ToolLights" unique_id=1193815313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.118750006)
+layers = 1024
+light_color = Color(1, 0, 0, 1)
+light_energy = 50.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_cull_mask = 4293920768
+spot_range = 17.6003
+spot_attenuation = 0.0
+spot_angle = 85.7812
 
 [node name="Hand" type="Node3D" parent="CameraController/CharacterCamera/ToolController" unique_id=573266146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.115793)
