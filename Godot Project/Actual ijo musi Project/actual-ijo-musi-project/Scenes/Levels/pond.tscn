@@ -8,6 +8,7 @@
 [node name="Pond" type="Node3D" unique_id=1045762876]
 
 [node name="Water" parent="." unique_id=1464650512 instance=ExtResource("1_jo1kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47456, 0, 0)
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=952975984]
 
@@ -20,7 +21,10 @@ light_color = Color(0.89411765, 0.8352941, 0.52156866, 1)
 light_energy = 3.0
 
 [node name="Waterfall" parent="." unique_id=1013891562 instance=ExtResource("2_armos")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -13.975662)
+
+[node name="SmallWaterfall" parent="." unique_id=1726260699 instance=ExtResource("2_armos")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.6924133, -14.441921, -15)
 
 [node name="WaterLights" type="Node3D" parent="." unique_id=1349217319]
 

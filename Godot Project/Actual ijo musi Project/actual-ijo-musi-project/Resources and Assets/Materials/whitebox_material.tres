@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://br25h7ha1f3u"]
+
+[ext_resource type="Texture2D" uid="uid://ch880hx1kx5ot" path="res://Resources and Assets/Textures/whitebox_texture.png" id="1_xkq7y"]
+
+[resource]
+albedo_texture = ExtResource("1_xkq7y")
+uv1_scale = Vector3(30, 0.2, 20)
+uv1_triplanar = true

@@ -49,6 +49,9 @@ size = Vector3(1, 3.2578125, 5.8916016)
 [sub_resource type="BoxShape3D" id="BoxShape3D_mv145"]
 size = Vector3(4.9505615, 0.39868164, 11.442566)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_k287h"]
+size = Vector3(1, 13.034668, 30.27243)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_wfn2l"]
 size = Vector3(0.84906006, 4.203125, 3.0354004)
 
@@ -156,6 +159,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7fwts")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6p5hf"]
+size = Vector3(20.5484, 2.121582, 1.7452393)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y8rle"]
+size = Vector3(9.246704, 1, 15.526855)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vrgra"]
+radius = 9.687576
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wfn2l"]
+radius = 3.1874344
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_xs5gg"]
 radius = 0.34923363
 
@@ -212,7 +227,7 @@ transform = Transform3D(-0.55199516, 0.31909925, 0.770374, 0, 0.923879, -0.38268
 transform = Transform3D(0.4784007, 0.3360499, 0.8112967, 2.630445e-08, 0.923879, -0.38268298, -0.8781418, 0.18307593, 0.4419845, -18.287954, 1.4492323, -3.330953)
 
 [node name="Plant_Shelf" type="StaticBody3D" parent="Walls_Floor/SouthWall" unique_id=1920394373]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.512639, 1.8629441, -5.2175965)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.512639, 1.5500588, -5.2175965)
 
 [node name="w_r_plant_shelf" parent="Walls_Floor/SouthWall/Plant_Shelf" unique_id=709193953 instance=ExtResource("6_8310v")]
 transform = Transform3D(0.4321462, 0, 0.25149488, 0, 0.5, 0, -0.25149488, 0, 0.4321462, 0, -0.4021263, 0)
@@ -269,7 +284,7 @@ transform = Transform3D(-3.934025e-08, 0, 1, 0, 1, 0, -0.9, 0, -4.3711395e-08, 0
 texture = ExtResource("8_0un4j")
 
 [node name="Sprite3D3" type="Sprite3D" parent="Walls_Floor/MuralWall/w_r_mural_walls" unique_id=1601189899]
-transform = Transform3D(0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660253, 6.989683, 10.077886, -11.210147)
+transform = Transform3D(0.8833459, 0, 0.51, 0, 1.02, 0, -0.51, 0, 0.8833459, 6.969816, 10.054487, -11.232728)
 texture = ExtResource("10_v758h")
 
 [node name="BasicCandle3" parent="Walls_Floor/MuralWall" unique_id=1132535942 instance=ExtResource("7_nsjc3")]
@@ -315,6 +330,14 @@ polygon = PackedVector2Array(4.8940506, 0.16091919, 0.7424936, 6.596992, 0.24384
 [node name="CrackFloor" type="CollisionShape3D" parent="Walls_Floor/MuralWall" unique_id=549962143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.466711, -0.19141817, 10.985892)
 shape = SubResource("BoxShape3D_mv145")
+
+[node name="CrackWall" type="CollisionShape3D" parent="Walls_Floor/MuralWall" unique_id=655793481]
+transform = Transform3D(-0.499097, 0, -0.030036516, 0, 0.5, 0, 0.030036516, 0, -0.499097, 17.0286, 3.5233388, 12.844641)
+shape = SubResource("BoxShape3D_k287h")
+
+[node name="CrackWall2" type="CollisionShape3D" parent="Walls_Floor/MuralWall" unique_id=444192815]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 13.812979, 3.5233388, 14.654758)
+shape = SubResource("BoxShape3D_k287h")
 
 [node name="WestWall" type="StaticBody3D" parent="Walls_Floor" unique_id=124521746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.025281906)
@@ -439,10 +462,26 @@ mesh = SubResource("ArrayMesh_eeny8")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("14_k31ty")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Display/LongDisplay" unique_id=294093790]
+transform = Transform3D(1, 0, -2.842171e-14, 0, 1, 0, 2.842171e-14, 0, 1, -0.024078174, 1.1979065, 0.37261963)
+shape = SubResource("BoxShape3D_6p5hf")
+
 [node name="Rubble" type="StaticBody3D" parent="." unique_id=115889773]
 transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, 9.554549, 0.17397523, 2.7528338)
 
 [node name="w_r_rubbles" parent="Rubble" unique_id=1990967283 instance=ExtResource("17_bap3k")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rubble" unique_id=119629643]
+transform = Transform3D(1, -1.249705e-07, 3.5377226e-08, 1.249705e-07, 0.85161716, -0.52416426, 3.5377226e-08, 0.52416426, 0.85161716, 0.96515465, 3.8073993, 4.0139236)
+shape = SubResource("BoxShape3D_y8rle")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Rubble" unique_id=78575748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57624054, 3.2799768, -4.669655)
+shape = SubResource("SphereShape3D_vrgra")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Rubble" unique_id=1700832536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.05292, 3.6208763, 9.969005)
+shape = SubResource("SphereShape3D_wfn2l")
 
 [node name="LivingSpace" type="Node3D" parent="." unique_id=1589038226]
 
@@ -495,17 +534,17 @@ transform = Transform3D(0.25053644, 0, 0.4067404, 0, 0.5, 0, -0.43270254, 0, 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.38459, 9.536743e-07, -5.3281007)
 
 [node name="Plant1" type="StaticBody3D" parent="LivingSpace/PottedPlants" unique_id=1318214604]
-transform = Transform3D(0.10884169, 0, -0.48800972, 0, 0.5, 0, 0.48800972, 0, 0.10884169, -1.3753891, 1.5260032, 0.8889662)
+transform = Transform3D(0.10884169, 0, -0.48800972, 0, 0.5, 0, 0.48800972, 0, 0.10884169, -1.3753891, 1.2383269, 0.8889662)
 
 [node name="w_r_potted_plant" parent="LivingSpace/PottedPlants/Plant1" unique_id=1535240459 instance=ExtResource("20_6yxn3")]
 
 [node name="Plant2" type="StaticBody3D" parent="LivingSpace/PottedPlants" unique_id=929058257]
-transform = Transform3D(0.4897173, 0, 0.10088088, 0, 0.5, 0, -0.10088088, 0, 0.4897173, -0.57831955, 1.5260032, 0.432379)
+transform = Transform3D(0.4897173, 0, 0.10088088, 0, 0.5, 0, -0.10088088, 0, 0.4897173, -0.57831955, 1.2383269, 0.432379)
 
 [node name="w_r_potted_plant" parent="LivingSpace/PottedPlants/Plant2" unique_id=1903380679 instance=ExtResource("20_6yxn3")]
 
 [node name="Plant3" type="StaticBody3D" parent="LivingSpace/PottedPlants" unique_id=975280962]
-transform = Transform3D(0.4897173, 0, 0.10088088, 0, 0.5, 0, -0.10088088, 0, 0.4897173, 1.0959044, 1.5260032, -0.558848)
+transform = Transform3D(0.4897173, 0, 0.10088088, 0, 0.5, 0, -0.10088088, 0, 0.4897173, 1.0959044, 1.2383269, -0.558848)
 
 [node name="w_r_potted_plant" parent="LivingSpace/PottedPlants/Plant3" unique_id=1085068843 instance=ExtResource("20_6yxn3")]
 
@@ -529,5 +568,4 @@ transform = Transform3D(0.930903, 0.3652668, -1.5966318e-08, 0, -4.371139e-08, -
 shape = SubResource("CapsuleShape3D_a4ro2")
 
 [node name="RedGreenEssence" parent="RigidOne" unique_id=929980766 instance=ExtResource("27_xs5gg")]
-red_text = "mi toki e ____ pona"
-green_text = "mi toki e toki pona"
+text = Array[String](["mi toki e _ pona", "mi toki e toki pona"])
