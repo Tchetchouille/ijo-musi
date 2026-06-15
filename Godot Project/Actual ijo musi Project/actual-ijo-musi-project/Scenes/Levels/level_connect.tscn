@@ -1011,6 +1011,15 @@ mesh = SubResource("BoxMesh_1y35y")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Balcony/CorridorWalls/StaticBody3D" unique_id=281835430]
 shape = SubResource("BoxShape3D_g8yos")
 
+[node name="StaticBody3D2" type="StaticBody3D" parent="Balcony/CorridorWalls" unique_id=1949668170]
+transform = Transform3D(24.9156, 0.308631, -0.0270696, -1.53707, 4.99045, 0.00307659, 1.36039, -0.0140189, 0.499257, -58.46651, -1.78933, -11.9664)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Balcony/CorridorWalls/StaticBody3D2" unique_id=113720382]
+mesh = SubResource("BoxMesh_1y35y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Balcony/CorridorWalls/StaticBody3D2" unique_id=174157892]
+shape = SubResource("BoxShape3D_g8yos")
+
 [node name="Floor" type="Node3D" parent="Balcony" unique_id=1530079018]
 
 [node name="Element" type="StaticBody3D" parent="Balcony/Floor" unique_id=656058205]

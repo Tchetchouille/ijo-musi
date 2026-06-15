@@ -33,10 +33,6 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 
-		# FLYING
-		if Input.is_action_pressed("fly_up"):
-			velocity.y += 0.3
-
 	# Headbob handling
 		if velocity.length() != 0 and is_on_floor():
 			t_bob += delta * HEADBOB_FREQ * float(is_on_floor())
