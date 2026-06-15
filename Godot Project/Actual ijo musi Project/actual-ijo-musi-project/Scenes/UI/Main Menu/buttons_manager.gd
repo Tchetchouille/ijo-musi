@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+@onready var menu_theme = preload("res://Resources and Assets/Themes/main_menu.tres")
+
 var grid_dim : int
 
 var play_relative_pos : float
@@ -33,7 +35,7 @@ func populate_grid():
 				1:
 					if i == play_pos or i == credits_pos or i == quit_pos:
 						child = Button.new()
-						child.text = "TEEEEEEEEEEST"
+						child.theme = menu_theme
 					else:
 						child = Control.new()
 					child.size_flags_stretch_ratio = 4.0 / grid_dim

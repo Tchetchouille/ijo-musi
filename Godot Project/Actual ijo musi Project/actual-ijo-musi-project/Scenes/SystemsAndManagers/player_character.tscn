@@ -216,4 +216,3 @@ mesh = SubResource("BoxMesh_ilob1")
 transparent_bg = true
 
 [node name="RedMode" parent="ToolUI" unique_id=733315251 instance=ExtResource("7_veynb")]
-visible = false

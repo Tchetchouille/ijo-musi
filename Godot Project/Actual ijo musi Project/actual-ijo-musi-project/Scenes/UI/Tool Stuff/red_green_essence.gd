@@ -1,15 +1,11 @@
 extends Node
 
-@export var red_text : String
-@export var green_text : String
-@export var g_r_state : String = "red"
+# First is red text, second is green text
+@export var text : Array[String]
+# 0 is red, 1 is green.
+@export var g_r_state : int = 0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
